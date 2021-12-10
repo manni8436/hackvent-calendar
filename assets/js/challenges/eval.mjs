@@ -8,7 +8,7 @@ export class ChallengeManager {
     }
 
     _loaded(module) {
-        this._challenge = module;
+        this._challenge = new module.Challenge();
     }
 
     _loadFailed(err) {
@@ -36,11 +36,9 @@ export class ChallengeManager {
             // Setup
             const args = this._challenge.setup();
             // Create function
-            const func = new Function('...args', submission);
+            const func = new Function('...args', (this._challenge.boilerPlate + solution));
             // Run code
-            const result = func(args);
-            // Check result
-            return this._challenge.test(result);
+            return this._challenge.runTests(func);
         }
         return false;
     }
