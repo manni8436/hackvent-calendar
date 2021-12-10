@@ -76,8 +76,8 @@ alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devico
 #### Font Awesome:
 [Font Awesome](https://fontawesome.com/) was used for a few icons in the footer on all of this site's pages.
 
-#### Google Fonts:
-[Google Fonts](https://fonts.google.com/) was used for all the text content on the site pages.
+#### Adobe Fonts:
+[Low-res](https://fonts.adobe.com/fonts/lo-res) from Adobe Fonts was used for all the text content on the site pages.
 
 #### Git:
 [Git](https://git-scm.com/) was used for version control by using the Gitpod terminal to add and commit to Git and push to Github.
