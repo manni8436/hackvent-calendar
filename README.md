@@ -55,7 +55,9 @@
 ## DESIGN
 
 ### COLOR SCHEME
+This overall color scheme used throughout the site was the variety of colours in the image below.
 
+![Site Color Scheme](assets/images/colour-scheme.png)
 ## WIREFRAMES
 
 [Here are my wireframes for desktop, mobile and tablet for this project]()
