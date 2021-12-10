@@ -1,3 +1,6 @@
+:root{
+    --main-font:"lores-12",sans-serif;
+}
 /* Body & Containers */
 
 body {
