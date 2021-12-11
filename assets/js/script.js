@@ -8,21 +8,13 @@ $(document).ready(function () {
 
   // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
 
-  let words = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8,", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25"];
+  const words = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8,", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25"];
 
-  let message = "";
-  let date = new Date();
-  let day = date.getDate();
-  let month = date.getMonth() + 1;
-  let scrolled = false;
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+
   let timeDelay = 200;
-
-  // function to reveal message
-  let cardReveal = function () {
-    $("#message").text(message).show();
-  }
-
-  //day=25; // uncomment to skip to 25
 
   // Only work in December
   if (month === 12) {
@@ -45,7 +37,6 @@ $(document).ready(function () {
       if (adventwindow <= day) {
         let word = words[index];
         $(this).append('<div class="revealed">' + word + '</div>');
-        message = message + " " + word;
       }
 
       // On clicking a window, toggle it open/closed
@@ -55,27 +46,9 @@ $(document).ready(function () {
           // close the door to reopen the code window for that day. - Sean
           $(this).children(".door").addClass("open");
         }
-
-        // If 25th, can show the message
-        if (day >= 25 && adventwindow === 25) {
-          messageReveal();
-
-          // Animate scroll to message if not already done
-          if (!scrolled) {
-            $('html, body').animate({
-              scrollTop: $("#message").offset().top
-            }, 2000);
-            scrolled = true;
-          }
-        }
       });
 
     });
-
-    // If beyond 24, show message
-    if (day >= 26) {
-      messageReveal();
-    }
   }
 });
 
