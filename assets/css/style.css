@@ -30,13 +30,17 @@ body {
 
 .navbar {
   height: 15vh;
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(3px) saturate(105%);
+  -webkit-backdrop-filter: blur(3px) saturate(200%);
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #navigation #logo {
-  color: #f8c51f;
+  color: rgb(248, 197, 31);
   text-transform: uppercase;
   font-display: swap;
   margin-left: 3vw;
@@ -56,7 +60,7 @@ body {
 /* Main */
 
 #main-content {
-  padding-top: 5vh;
+  padding-top: 20vh;
 }
 
 .description_section {
@@ -67,7 +71,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  opacity: 0.9;
 }
 
 .description_paragraph {
@@ -98,7 +102,7 @@ body {
   gap: 5rem;
 }
 
-.door_holder {
+li {
   justify-self: center;
   font-weight: 400;
   background-color: #f2f3f8;
@@ -232,9 +236,10 @@ body {
 }
 
 /* Footer */
+
 footer {
   height: 33vh;
-  background-color: green;
+  background-color: transparent;
 }
 
 
