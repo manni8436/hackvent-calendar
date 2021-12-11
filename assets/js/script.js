@@ -146,7 +146,7 @@ $("#code-submit").click(function () {
 /**
  * Open code window on door click
  */
-$(".door").click(function () {
-  const day = $(this).data("day");
+$(".door_holder").click(function () {
+  const day = $(this).children(".door").data("day");
   showCodeWindow(day);
 });
