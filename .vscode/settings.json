@@ -21,7 +21,7 @@
       "**/CVS": true
    },
    "files.autoSave": "afterDelay",
-   "workbench.colorTheme": "Visual Studio Dark",
+   "workbench.colorTheme": "Neon Dark Theme",
    "terminal.integrated.gpuAcceleration": "canvas",
   "editor.defaultFormatter": "HookyQR.beautify",
   "liveServer.settings.port": 5501
