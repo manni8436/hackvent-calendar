@@ -81,7 +81,7 @@ $(document).ready(function () {
 
 /**
  * Shows the code window
- * @param {*} day The day to trigger
+ * @param {*} day: The day (1-25) to trigger
  */
 function showCodeWindow(day) {
   challenges.loadChallenge(day, loadChallengeData);
