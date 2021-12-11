@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
 
-  let words = ["Day 1 ", "Day 2 ", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8,", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25"];
+  let words = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8,", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25"];
 
   let message = "";
   let date = new Date();
@@ -84,10 +84,12 @@ $(document).ready(function () {
  * @param {*} day: The day (1-25) to trigger
  */
 function showCodeWindow(day) {
-  challenges.loadChallenge(day, loadChallengeData);
-  setTimeout(() => {
-    $("#code-window-wrapper").addClass("show");
-  }, 300);
+  challenges.loadChallenge(day, loadChallengeData, closeCodeWindow);
+  // Removed timer as it interfers with preventing the code window
+  // from opening if there's a load error. - Sean
+  $("#code-window-wrapper").addClass("show");
+  // Show the loading section
+  $("#code-loading").addClass("show");
   $("body").addClass("code");
 }
 
@@ -99,6 +101,9 @@ function loadChallengeData() {
   $("#challenge-title").text(challenges.challenge.title);
   $("#challenge-description").text(challenges.challenge.description);
   $("#code-pane").val(challenges.challenge.initial);
+  // Hide loading - show content
+  $("#code-loading").removeClass("show");
+  $("#challenge-content").addClass("show");
 }
 
 /**
@@ -107,6 +112,11 @@ function loadChallengeData() {
 function closeCodeWindow() {
     $("#code-window-wrapper").removeClass("show");
     $("body").removeClass("code");
+
+    $("#code-loading").removeClass("show");
+    $("#challenge-content").removeClass("show");
+    $("#code-content").removeClass("show");
+    $("#output-content").removeClass("show");
 
     $("#challenge-title").text("");
     $("#challenge-description").text("");
@@ -138,9 +148,13 @@ $("#code-pane").keydown(function (e) {
  * Submits the user code for evaluation
  */
 $("#code-submit").click(function () {
-  const success = challenges.evaluate($("#code-pane").val());
-  if (success) alert("Congratulations! Your solution worked!");
-  else alert("Sorry, your solution didn't work!");
+  // Hide code panel
+  $("#code-content").removeClass("show");
+  // Show output panel
+  $("#output-content").addClass("show");
+  // Ensure the output panel is clear
+  $("#code-output").val("");
+  // Run code
 });
 
 /**
