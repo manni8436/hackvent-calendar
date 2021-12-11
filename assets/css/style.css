@@ -263,6 +263,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
+
 }
 
 .contact__title {
@@ -288,6 +289,7 @@ footer {
     0.09rem 0.09rem black;
 }
 
+
 .links_holder {
   max-width: 80%;
   padding-top: 3rem;
@@ -308,7 +310,7 @@ footer {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-}
+
 
 .image_holder {
   width: 5rem;
@@ -323,13 +325,12 @@ footer {
   object-fit: cover;
   border-radius: 50%;
 }
-
 .coder_name {
   margin-top: 2rem;
   text-align: center;
   font-size: 1.5rem;
 }
-
+ main
 @media screen and (max-width: 1000px) {
   #code-window {
     max-width: 90vw;
