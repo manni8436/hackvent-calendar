@@ -192,6 +192,8 @@ body.code {
   margin-top: 3rem;
   background-color: #f2f3f8;
   max-width: 70vw;
+  max-height: 70vh;
+  overflow-y: auto;
   border-radius: 0.8rem;
 }
 
