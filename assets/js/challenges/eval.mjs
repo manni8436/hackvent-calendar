@@ -7,8 +7,9 @@ export class ChallengeManager {
         this._challenge = null;
     }
 
-    _loaded(module) {
-        this._challenge = new module.Challenge();
+    _loaded(module, callback) {
+        this._challenge = module.challenge;
+        if (callback) callback();
     }
 
     _loadFailed(err) {
@@ -16,13 +17,16 @@ export class ChallengeManager {
         this._challenge = null;
     }
 
+    get challenge() { return this._challenge; }
+
     /**
      * Attempts to load the challenge module for the day specified.
-     * @param {Number} day 
+     * @param {*} day - Day to load
+     * @param {Function} callback - Function to call when loaded
      */
-    loadChallenge(day) {
+    loadChallenge(day, callback) {
         import(`./day${day}.mjs`)
-          .then(module => this._loaded(module))
+          .then(module => this._loaded(module, callback))
           .catch(err => this._loadFailed(err));
     }
 

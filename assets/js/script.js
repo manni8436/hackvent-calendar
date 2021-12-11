@@ -1,18 +1,22 @@
+import { ChallengeManager } from './challenges/eval.mjs';
+
+const challenges = new ChallengeManager();
+
 $(document).ready(function () {
 
     // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
 
-    var words = ["Lorem ", "ipsum ", "delor", "sit", "amet", "consect", "adipisci", "elit,", "sed.", "Eiusmod", "tempor", "a", "enim", "minim", "season", "nulla", "dolore", "sint", "id", "est", "laboris", "ut.", "aute", "laborum", "toe"];
+    let words = ["Lorem ", "ipsum ", "delor", "sit", "amet", "consect", "adipisci", "elit,", "sed.", "Eiusmod", "tempor", "a", "enim", "minim", "season", "nulla", "dolore", "sint", "id", "est", "laboris", "ut.", "aute", "laborum", "toe"];
 
-    var message = "";
-    var date = new Date();
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var scrolled = false;
-    var timeDelay = 200;
+    let message = "";
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let scrolled = false;
+    let timeDelay = 200;
 
     // function to reveal message
-    var cardReveal = function () {
+    let cardReveal = function () {
         $("#message").text(message).show();
     }
 
@@ -22,8 +26,8 @@ $(document).ready(function () {
     if (month === 12) {
         // Loop through each calendar window
         $("li").each(function (index) {
-            var adventwindow = index + 1;
-            var item = $(this);
+            let adventwindow = index + 1;
+            let item = $(this);
 
             // Open past windows
             if (day !== adventwindow && adventwindow < day) {
@@ -37,7 +41,7 @@ $(document).ready(function () {
 
             // Add words so far to message variable
             if (adventwindow <= day) {
-                var word = words[index];
+                let word = words[index];
                 $(this).append('<div class="revealed">' + word + '</div>');
                 message = message + " " + word;
             }
@@ -77,7 +81,65 @@ $(document).ready(function () {
         if (day >= 26) {
             messageReveal();
         }
-
     }
+});
 
+/**
+ * Shows the code window
+ * @param {*} day The day to trigger
+ */
+function showCodeWindow(day) {
+    challenges.loadChallenge(day, loadChallengeData);
+    $( "#code-window-wrapper" ).addClass("show");
+}
+
+/**
+ * Callback for challenge module loading.
+ * Fills out the window values.
+ */
+function loadChallengeData() {
+    $( "#challenge-title" ).text(challenges.challenge.title);
+    $( "#challenge-description").text(challenges.challenge.description);
+    $( "#code-pane" ).val(challenges.challenge.initial);
+}
+
+/**
+ * Hides code window when the wrapper is clicked
+ */
+$( "#code-window-wrapper" ).click(function(e) {
+    if (e.target === this) $( this ).removeClass("show");
+});
+
+/**
+ * Adds tab functionality to the textarea
+ */
+$( "#code-pane" ).keydown(function(e) {
+    if (e.key == 'Tab') {
+        e.preventDefault();
+        const start = this.selectionStart;
+        const end = this.selectionEnd;
+    
+        // set textarea value to: text before caret + tab + text after caret
+        this.value = this.value.substring(0, start) + "    " + this.value.substring(end);
+    
+        // put caret at right position again
+        this.selectionStart = this.selectionEnd = start + 4;
+      }
+});
+
+/**
+ * Submits the user code for evaluation
+ */
+$( "#code-submit" ).click(function() {
+    const success = challenges.evaluate($( "#code-pane" ).val());
+    if (success) alert("Congratulations! Your solution worked!");
+    else alert("Sorry, your solution didn't work!");
+});
+
+/**
+ * For testing the code window show hide
+ */
+$( "#test-btn" ).click(function() {
+    const day = $( this ).data("day");
+    showCodeWindow(day);
 });
