@@ -17,7 +17,7 @@ export const challenge = {
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
     boilerPlate: "return mostPopular(args[0]); ",
-    initial: "function convertTemp(degrees, unit) {\n    return degrees;\n}",
+
 
     // Code to be initial placed in the code panel
     initial: "function mostPopular(toys) {\n    return mostPopularToy;\n}",
@@ -26,10 +26,10 @@ export const challenge = {
     // The outer array is the individual tests, the inner array is the argument
     // list to be sent to the user code for each test.
     args: [
-        ["Teddy Bear", "Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw"]
-        ["Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"]
-        ["Teddy Bear", "Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw", 
-        "Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"]
+        ["Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw","Teddy Bear"],
+        ["Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"],
+        ["Teddy Bear", "Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw",
+            "Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"]
     ],
 
     /**
@@ -54,32 +54,32 @@ export const challenge = {
      * Reference implementation. User code should provide the same result
      */
     test: function (toys) {
-            toys.sort()
-              let toysPop = [];
-              let current = toys[0];
-              let count = 0;
-              let mostPop = 0;
-            for (let toy in toys){
-              if(current ===toys[toy]){
-              count++   
-              current = toys[toy]
-              }else{  
-              toysPop.push([toys[toy],count])
-              current = toys[toy]
-              count = 1
-              }
+        toys.sort();
+        let toysPop = [];
+        let current = toys[0];
+        let count = 0;
+        let mostPopularToy = 0;
+        for (let toy in toys) {
+            if (current === toys[toy]) {
+                count++;
+                current = toys[toy];
+            } else {
+                toysPop.push([toys[toy], count])
+                current = toys[toy]
+                count = 1
             }
-            toysPop.push([toys[toys.length-1],count])
-            let mostPopCount = 0 
-            for (let x of toysPop){
-             if (x[1]>mostPopCount){
-               mostPop = x[0]
-               mostPopCount = x[1]
-             }
+        }
+        toysPop.push([toys[toys.length - 1], count])
+        let mostPopCount = 0
+        for (let x of toysPop) {
+            if (x[1] > mostPopCount) {
+                mostPopularToy = x[0]
+                mostPopCount = x[1]
             }
-            return mostPop
-          
-          
+        }
+        return mostPopularToy
+
+
 
     }
 }
