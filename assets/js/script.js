@@ -51,7 +51,9 @@ $(document).ready(function () {
       // On clicking a window, toggle it open/closed
       $(this).on("click", function () {
         if (adventwindow <= day) {
-          $(this).children(".door").toggleClass("open");
+          // I've changed this to add, because it seems clunky to open and 
+          // close the door to reopen the code window for that day. - Sean
+          $(this).children(".door").addClass("open");
         }
 
         // If 25th, can show the message
