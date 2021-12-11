@@ -106,7 +106,9 @@ li {
   user-select: none;
   perspective: 800px;
   transition: all 0.4s ease-in-out;
-
+  -webkit-box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.13);
+  box-shadow: 0px 0px 5px 6px rgba(0, 0, 0, 0.13);
 }
 
 .door {
@@ -114,7 +116,7 @@ li {
   color: #fff;
   font-size: 4.5rem;
   position: absolute;
-  top: 0;
+  top: -1%;
   left: 0;
   background-color: #285b52;
   box-sizing: border-box;
