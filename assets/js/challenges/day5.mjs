@@ -17,10 +17,10 @@ export const challenge = {
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
-    boilerPlate: "let input = args[0]; ",
+    boilerPlate: "return milesToKm(args[0])",
 
     // Code to be initial placed in the code panel
-    initial: "initial code goes here",
+    initial: "function milesToKm(miles) {\n    return kilometers;\n},"
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
