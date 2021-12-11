@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
 
-  let words = ["Lorem ", "ipsum ", "delor", "sit", "amet", "consect", "adipisci", "elit,", "sed.", "Eiusmod", "tempor", "a", "enim", "minim", "season", "nulla", "dolore", "sint", "id", "est", "laboris", "ut.", "aute", "laborum", "toe"];
+  let words = ["Day 1 ", "Day 2 ", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8,", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25"];
 
   let message = "";
   let date = new Date();
@@ -48,20 +48,11 @@ $(document).ready(function () {
         message = message + " " + word;
       }
 
-      // Add jiggle animation to current day window
-      if (adventwindow === day) {
-        $(this).addClass("current");
-        $(this).addClass("jiggle");
-      }
-
-      // On clicking a window, toggle it open/closed and
-      // handle other things such as removing jiggle and 25th
+      // On clicking a window, toggle it open/closed
       $(this).on("click", function () {
         if (adventwindow <= day) {
           $(this).children(".door").toggleClass("open");
         }
-
-        $(this).removeClass("jiggle");
 
         // If 25th, can show the message
         if (day >= 25 && adventwindow === 25) {
@@ -92,7 +83,9 @@ $(document).ready(function () {
  */
 function showCodeWindow(day) {
   challenges.loadChallenge(day, loadChallengeData);
-  $("#code-window-wrapper").addClass("show");
+  setTimeout(() => {
+    $("#code-window-wrapper").addClass("show");
+  }, 300);
   $("body").css("overflow-y", "hidden");
 }
 
@@ -149,9 +142,9 @@ $("#code-submit").click(function () {
 });
 
 /**
- * For testing the code window show hide
+ * Open code window on door click
  */
-$("#test-btn").click(function () {
+$(".door").click(function () {
   const day = $(this).data("day");
   showCodeWindow(day);
 });
