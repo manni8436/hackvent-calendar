@@ -10,7 +10,9 @@ export const challenge = {
     title: "Day Five - Santa's Mile Mix Up",
     description: "Last Christmas Mrs Claus bought Santa a new routing system.\
      Unfortunately she bought it in Europe and Santa’s sleigh uses miles. \
-     Help Santa out by writing an algorithm that converts kilometers into miles.",
+     Help Santa out by writing an algorithm that converts kilometers into miles.\
+     For the purposes of this test a mile is equivelent to 1.6km\
+     Fill in the body of the function to return the correct values",
 
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
@@ -41,7 +43,7 @@ export const challenge = {
     runTests: function (func) {
         for (const test of this.args) {
             if (func(test) != this.test(test)) return false;
-            
+
             if (t1 != t2) {
                 output("Failed!\n");
                 return false;
