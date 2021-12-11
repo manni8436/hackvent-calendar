@@ -5,7 +5,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/manni8436/chrismas-hackathon)
 ![GitHub top language](https://img.shields.io/github/languages/top/manni8436/chrismas-hackathon)
 
-[Here is a link to the final project](add repo name here)
+[Here is a link to the final project](https://manni8436.github.io/chrismas-hackathon/)
 
 ## INITIAL DESIGN
 
