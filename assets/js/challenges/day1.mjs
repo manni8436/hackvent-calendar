@@ -20,11 +20,19 @@ export const challenge = {
 
     setup: function() {},
 
-    runTests: function(func) {
+    runTests: function(func, output=(s)=>s) {
+        output("Starting tests:\n");
         for (const test of this.args) {
+            output(`Running: convertTemp(${test}): `);
+
             const t1 = Math.round(func(test[0],test[1]));
             const t2 = Math.round(this.test(test[0],test[1]));
-            if (t1 != t2) return false;
+
+            if (t1 != t2) {
+                output("Failed!\n");
+                return false;
+            }
+            output("Succeeded!\n");
         }
         return true;
     },

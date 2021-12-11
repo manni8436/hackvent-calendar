@@ -5,6 +5,7 @@
 export class ChallengeManager {
     constructor() {
         this._challenge = null;
+        this._day = 0;
     }
 
     _loaded(module, callback) {
@@ -30,24 +31,32 @@ export class ChallengeManager {
      * @param {Function} callback - Function to call when loaded
      */
     loadChallenge(day, success, failure) {
+        this._day = 0;
+        this._challenge = null;
+
         import(`./day${day}.mjs`)
           .then(module => this._loaded(module, success))
           .catch(err => this._loadFailed(err, day, failure));
     }
 
     /**
-     * Attempts to run the solution code provided
-     * @param {String} solution 
+     * Attempts to run the solution code provided. Test result messages sent to callback function 'output'
+     * @param {String} solution
+     * @param {Function} output
      * @returns {Boolean} whether the result matches expected result
      */
-    evaluate(solution) {
-        if (this._challenge) {
-            // Setup
-            const args = this._challenge.setup();
-            // Create function
-            const func = new Function('...args', (this._challenge.boilerPlate + solution));
-            // Run code
-            return this._challenge.runTests(func);
+    evaluate(solution, output=null) {
+        try {
+            if (this._challenge) {
+                // Setup
+                const args = this._challenge.setup();
+                // Create function
+                const func = new Function('...args', (this._challenge.boilerPlate + solution));
+                // Run code
+                return this._challenge.runTests(func, output);
+            }
+        } catch(err) {
+            if (output) output(`\nError: ${err}`);
         }
         return false;
     }
