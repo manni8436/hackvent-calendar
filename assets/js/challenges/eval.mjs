@@ -12,11 +12,16 @@ export class ChallengeManager {
         if (callback) callback();
     }
 
-    _loadFailed(err) {
-        console.warn(`Challenge loading failed! ${err}`);
+    _loadFailed(err, day, callback) {
+        console.warn(`Challenge loading failed for day ${day}! ${err}`);
+        alert(`This is embarressing, it looks like we couldn't load that challenge! ${err}`);
         this._challenge = null;
+        if (callback) callback();
     }
 
+    /**
+     * Accesses the currently loaded challenge
+     */
     get challenge() { return this._challenge; }
 
     /**
@@ -24,10 +29,10 @@ export class ChallengeManager {
      * @param {*} day - Day to load
      * @param {Function} callback - Function to call when loaded
      */
-    loadChallenge(day, callback) {
+    loadChallenge(day, success, failure) {
         import(`./day${day}.mjs`)
-          .then(module => this._loaded(module, callback))
-          .catch(err => this._loadFailed(err));
+          .then(module => this._loaded(module, success))
+          .catch(err => this._loadFailed(err, day, failure));
     }
 
     /**
