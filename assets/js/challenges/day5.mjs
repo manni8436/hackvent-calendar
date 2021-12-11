@@ -41,6 +41,12 @@ export const challenge = {
     runTests: function (func) {
         for (const test of this.args) {
             if (func(test) != this.test(test)) return false;
+            
+            if (t1 != t2) {
+                output("Failed!\n");
+                return false;
+            }
+            output("Succeeded!\n");
         }
         return true;
     },

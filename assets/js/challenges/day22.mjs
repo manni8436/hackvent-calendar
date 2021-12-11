@@ -26,10 +26,11 @@ export const challenge = {
     // The outer array is the individual tests, the inner array is the argument
     // list to be sent to the user code for each test.
     args: [
-        ["Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw","Teddy Bear"],
+        ["Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw", "Teddy Bear"],
         ["Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"],
         ["Teddy Bear", "Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw",
-            "Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"]
+            "Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"
+        ]
     ],
 
     /**
@@ -46,40 +47,54 @@ export const challenge = {
     runTests: function (func) {
         for (const test of this.args) {
             if (func(test) != this.test(test)) return false;
+
+            if (t1 != t2) {
+                output("Failed!\n");
+                return false;
+            }
+            output("Succeeded!\n");
         }
         return true;
     },
 
-    /**
-     * Reference implementation. User code should provide the same result
-     */
-    test: function (toys) {
-        toys.sort();
-        let toysPop = [];
-        let current = toys[0];
-        let count = 0;
-        let mostPopularToy = 0;
-        for (let toy in toys) {
-            if (current === toys[toy]) {
-                count++;
-                current = toys[toy];
-            } else {
-                toysPop.push([toys[toy], count])
-                current = toys[toy]
-                count = 1
-            }
-        }
-        toysPop.push([toys[toys.length - 1], count])
-        let mostPopCount = 0
-        for (let x of toysPop) {
-            if (x[1] > mostPopCount) {
-                mostPopularToy = x[0]
-                mostPopCount = x[1]
-            }
-        }
-        return mostPopularToy
-
-
-
+    if (t1 != t2) {
+        output("Failed!\n");
+        return false;
     }
+    output("Succeeded!\n");
+}
+return true;
+
+/**
+ * Reference implementation. User code should provide the same result
+ */
+test: function (toys) {
+    toys.sort();
+    let toysPop = [];
+    let current = toys[0];
+    let count = 0;
+    let mostPopularToy = 0;
+    for (let toy in toys) {
+        if (current === toys[toy]) {
+            count++;
+            current = toys[toy];
+        } else {
+            toysPop.push([toys[toy], count])
+            current = toys[toy]
+            count = 1
+        }
+    }
+    toysPop.push([toys[toys.length - 1], count])
+    let mostPopCount = 0
+    for (let x of toysPop) {
+        if (x[1] > mostPopCount) {
+            mostPopularToy = x[0]
+            mostPopCount = x[1]
+        }
+    }
+    return mostPopularToy
+
+
+
+}
 }
