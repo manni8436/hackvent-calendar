@@ -8,6 +8,16 @@
 [Here is a link to the final project](https://manni8436.github.io/chrismas-hackathon/)
 
 ## INITIAL DESIGN
+* The initial idea behind this project was to create a advent calendar style website.
+
+where the user would have to solve a code related challenge in which they would receive a special 
+reward upon successful completion of the challenge.
+
+* The main features that have been included are:
+    * Easy to navigate the page.
+    * Easy to read information.
+    * A christmas related colour scheme that stands out, but not overwhelming.
+
 
 ## FINAL DESIGN
 
@@ -43,14 +53,30 @@
 * [Acknowledgements](#ACKNOWLEDGEMENTS)    
 
 ## USER EXPERIENCE
+The structure of the site was designed to be simple, easy to use and have a good content balance as to not
+overload the user and give them enough information as not to leave them lost of needing more information in what to do.
+
+* The website is for the following user types:
+   
+    * Users that have basic knowledge of coding, who are looking to try new things.
+    * Users with advanced knowledge of coding and looking for a challenge.
+    * Users with beyond advanved knowledge of coding who are looking for something fun to do.
 
 ## USER STORIES
 
 #### CLIENT GOALS
+* The site needs to be easily accessible.
+* The site needs to be simple to use on several devices including desktop, tablet and mobile.
+* The site should be informative and all the text should be easy to read.
+* The images should be clear and not stretched or squashed.
 
 #### FIRST TIME VISITORS
+* The site to be easy to understand and self explanatory.
+* The site content to be easily read and understandble.
 
 #### RETURNING USER
+* To recommend the site to friends and family.
+* To come back every year to see and try new challenges.
 
 ## DESIGN
 
@@ -58,11 +84,17 @@
 This overall color scheme used throughout the site was the variety of colours in the image below.
 
 ![Site Color Scheme](assets/images/colour-scheme.png)
+
+This color theme was used to represent slightly off traditional christmas colors, which is world wide know to be green and red,
+with hint of yellow and white for text on the site to stand out.
+
 ## WIREFRAMES
 
 [Here are my wireframes for desktop, mobile and tablet for this project]()
 
 ## FEATURES
+The following features have been used in this project:
+    
 
 ## SOLVED BUGS
 
