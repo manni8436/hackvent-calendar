@@ -8,10 +8,9 @@
 [Here is a link to the final project](https://manni8436.github.io/chrismas-hackathon/)
 
 ## INITIAL DESIGN
-* The initial idea behind this project was to create a advent calendar style website.
-
-where the user would have to solve a code related challenge in which they would receive a special 
-reward upon successful completion of the challenge.
+* The initial idea behind this project was to create a advent calendar style website, where the user 
+would have to solve a code related challenge in which they would receive a special reward upon successful 
+completion of the challenge.
 
 * The main features that have been included are:
     * Easy to navigate the page.
