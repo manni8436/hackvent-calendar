@@ -86,7 +86,7 @@ function showCodeWindow(day) {
   setTimeout(() => {
     $("#code-window-wrapper").addClass("show");
   }, 300);
-  $("body").css("overflow-y", "hidden");
+  $("body").addClass("code");
 }
 
 /**
