@@ -58,12 +58,6 @@ $(document).ready(function () {
  */
 function showCodeWindow(day) {
   challenges.loadChallenge(day, loadChallengeData, closeCodeWindow);
-  // Removed timer as it interfers with preventing the code window
-  // from opening if there's a load error. - Sean
-  $("#code-window-wrapper").addClass("show");
-  // Show the loading section
-  $("#code-loading").addClass("show");
-  $("body").addClass("code");
 }
 
 /**
@@ -71,11 +65,13 @@ function showCodeWindow(day) {
  * Fills out the window values.
  */
 function loadChallengeData() {
+  $("#code-window-wrapper").addClass("show");
+  $("body").addClass("code");
+
   $("#challenge-title").text(challenges.challenge.title);
   $("#challenge-description").text(challenges.challenge.description);
   $("#code-pane").val(challenges.challenge.initial);
-  // Hide loading - show content
-  $("#code-loading").removeClass("show");
+
   $("#challenge-content").addClass("show");
 }
 
@@ -93,17 +89,17 @@ $("#show-code-panel").click(function() {
  * Hides code window
  */
 function closeCodeWindow() {
-    $("#code-window-wrapper").removeClass("show");
-    $("body").removeClass("code");
+  $("#code-window-wrapper").removeClass("show");
+  $("body").removeClass("code");
 
-    $("#code-loading").removeClass("show");
-    $("#challenge-content").removeClass("show");
-    $("#code-content").removeClass("show");
-    $("#output-content").removeClass("show");
+  $("#code-loading").removeClass("show");
+  $("#challenge-content").removeClass("show");
+  $("#code-content").removeClass("show");
+  $("#output-content").removeClass("show");
 
-    $("#challenge-title").text("");
-    $("#challenge-description").text("");
-    $("#code-pane").val("");
+  $("#challenge-title").text("");
+  $("#challenge-description").text("");
+  $("#code-pane").val("");
 }
 $("#code-window-wrapper").click(function (e) {
   if (e.target === this) closeCodeWindow();
@@ -141,6 +137,14 @@ $("#code-submit").click(function () {
   const success = challenges.evaluate($("#code-pane").val(), updateOutput);
   if (success) updateOutput("\nAll tests run: Challenge complete!");
   else updateOutput("\nChallenge failed!");
+});
+
+/**
+ * Back to description button
+ */
+$("#back-btn").click(function() {
+  $("#challenge-content").addClass("show");
+  $("#code-content").removeClass("show");
 });
 
 $("#retry-btn").click(function() {
