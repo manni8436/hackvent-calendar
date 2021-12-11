@@ -81,6 +81,27 @@ $(document).ready(function () {
         if (day >= 26) {
             messageReveal();
         }
+    }
+});
+
+/**
+ * Shows the code window
+ * @param {*} day The day to trigger
+ */
+function showCodeWindow(day) {
+    challenges.loadChallenge(day, loadChallengeData);
+    $( "#code-window-wrapper" ).addClass("show");
+}
+
+/**
+ * Callback for challenge module loading.
+ * Fills out the window values.
+ */
+function loadChallengeData() {
+    $( "#challenge-title" ).text(challenges.challenge.title);
+    $( "#challenge-description").text(challenges.challenge.description);
+    $( "#code-pane" ).val(challenges.challenge.initial);
+}
 
     }
 
