@@ -6,7 +6,13 @@
 
 body {
   font-size: 10px;
-  background: url(/assets/images/snowbg.svg) no-repeat fixed;
+  width: 100%;
+  background-color: rgb(42, 61, 165);
+  background-image: url("/assets/images/snowbg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
   font-family: Lores-12, sans-serif;
 }
 
