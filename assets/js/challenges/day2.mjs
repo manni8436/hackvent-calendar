@@ -26,8 +26,6 @@ export const challenge = {
             const t1 = func([...test]).join(',');
             const t2 = this.test([...test]).join(',');
 
-            console.log(t1);
-            console.log(t2);
             if (t1 != t2) {
                 output("Failed!\n");
                 return false;
