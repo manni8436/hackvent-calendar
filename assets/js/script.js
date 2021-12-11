@@ -107,6 +107,16 @@ function loadChallengeData() {
 }
 
 /**
+ * Solve now button. Hides challenge brief and shows code panel
+ */
+$("#show-code-panel").click(function() {
+    // Hide challenge brief
+    $("#challenge-content").removeClass("show");
+    // Show code panel
+    $("#code-content").addClass("show");
+});
+
+/**
  * Hides code window
  */
 function closeCodeWindow() {
@@ -157,6 +167,16 @@ $("#code-submit").click(function () {
   // Run code
 });
 
+$("#retry-btn").click(function() {
+  // Hide code panel
+  $("#code-content").addClass("show");
+  // Show output panel
+  $("#output-content").removeClass("show");
+  // Ensure the output panel is clear
+  $("#code-output").val("");
+});
+
+$("#done-btn").click(closeCodeWindow);
 /**
  * Open code window on door click
  */
