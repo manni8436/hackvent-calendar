@@ -60,7 +60,7 @@ body {
 /* Main */
 
 #main-content {
-  padding-top: 20vh;
+  padding-top: 5vh;
 }
 
 .description_section {
@@ -72,13 +72,18 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 0.9;
+  background-color: #651522;
+}
+
+.description_title {
+  font-weight: 900;
 }
 
 .description_paragraph {
   width: 70%;
   text-align: center;
   font-size: 1.5rem;
-  background-color: #651522;
+
   border-radius: 1rem;
   padding: 1.5rem;
 }
