@@ -53,7 +53,33 @@ export const challenge = {
     /**
      * Reference implementation. User code should provide the same result
      */
-    test: function (input) {
-        return false;
+    test: function (toys) {
+            toys.sort()
+              let toysPop = [];
+              let current = toys[0];
+              let count = 0;
+              let mostPop = 0;
+            for (let toy in toys){
+              if(current ===toys[toy]){
+              count++   
+              current = toys[toy]
+              }else{  
+              toysPop.push([toys[toy],count])
+              current = toys[toy]
+              count = 1
+              }
+            }
+            toysPop.push([toys[toys.length-1],count])
+            let mostPopCount = 0 
+            for (let x of toysPop){
+             if (x[1]>mostPopCount){
+               mostPop = x[0]
+               mostPopCount = x[1]
+             }
+            }
+            return mostPop
+          
+          
+
     }
 }
