@@ -16,16 +16,20 @@ export const challenge = {
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
-    boilerPlate: "let input = args[0]; ",
+    boilerPlate: "return mostPopular(args[0]); ",
+    initial: "function convertTemp(degrees, unit) {\n    return degrees;\n}",
 
     // Code to be initial placed in the code panel
-    initial: "initial code goes here",
+    initial: "function mostPopular(toys) {\n    return mostPopularToy;\n}",
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
     // list to be sent to the user code for each test.
     args: [
-        []
+        ["Teddy Bear", "Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw"]
+        ["Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"]
+        ["Teddy Bear", "Rubix Cube", "Teddy Bear", "Jigsaw", "Teddy Bear", "Jigsaw", 
+        "Jigsaw", "Teddy bear", "Rubix Cube", "Jigsaw", "Jigsaw", "Teddy Bear"]
     ],
 
     /**
