@@ -57,6 +57,6 @@ export const challenge = {
      * Reference implementation. User code should provide the same result
      */
     test: function (input) {
-        return false;
+        return miles * 1.6
     }
 }
