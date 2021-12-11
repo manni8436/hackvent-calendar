@@ -102,7 +102,7 @@ body {
   gap: 5rem;
 }
 
-li {
+.door_holder {
   justify-self: center;
   font-weight: 400;
   background-color: #f2f3f8;
@@ -233,18 +233,77 @@ li {
   margin-top: 2vh;
   background-color: #651522;
   color: #fff;
+  border: none;
+  outline: none;
+}
+
+.btn_submit:hover {
+  background-color: #651522d3;
+  color: #fff;
+}
+
+.btn_submit:focus {
+  outline: none;
 }
 
 /* Footer */
-
 footer {
-  height: 33vh;
-  background-color: transparent;
+  padding-top: 3rem;
+  background-color: #651522;
+  opacity: 0.9;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.contact__title {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.contact__name {
+  color: #f8c51f;
+  text-transform: uppercase;
+  font-display: swap;
+  margin-left: 3vw;
+  font-size: 5.5vh;
+  font-weight: bold;
+  text-shadow:
+    0.09rem 0 black,
+    0 0.09rem black,
+    -0.09rem 0 black,
+    0 -0.09rem black,
+    -0.09rem -0.09rem black,
+    -0.09rem 0.09rem black,
+    0.09rem -0.09rem black,
+    0.09rem 0.09rem black;
+}
+
+.links_holder {
+  max-width: 80%;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+  grid-auto-flow: dense;
+  gap: 5rem;
+}
+
+.image_holder {
+  width: 5rem;
+  height: 5rem;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
 @media screen and (max-width: 1000px) {
-
   #code-window {
     max-width: 90vw;
   }
