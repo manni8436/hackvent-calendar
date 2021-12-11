@@ -165,6 +165,9 @@ $("#code-submit").click(function () {
   // Ensure the output panel is clear
   $("#code-output").val("");
   // Run code
+  const success = challenges.evaluate($("#code-pane").val(), updateOutput);
+  if (success) updateOutput("\nAll tests run: Challenge complete!");
+  else updateOutput("\nChallenge failed!");
 });
 
 $("#retry-btn").click(function() {
@@ -177,6 +180,16 @@ $("#retry-btn").click(function() {
 });
 
 $("#done-btn").click(closeCodeWindow);
+
+/**
+ * Updates the output panel as the users code is evaluated
+ * @param {String} output 
+ */
+function updateOutput(output) {
+  const text = $("#code-output").val() + output;
+  $("#code-output").val(text);
+}
+
 /**
  * Open code window on door click
  */
