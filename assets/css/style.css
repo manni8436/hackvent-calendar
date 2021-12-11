@@ -30,7 +30,7 @@ body {
 
 .navbar {
   height: 15vh;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(98, 22, 34, 0.25);
   backdrop-filter: blur(3px) saturate(105%);
   -webkit-backdrop-filter: blur(3px) saturate(200%);
   z-index: 9999;
@@ -67,13 +67,13 @@ body {
   padding-top: 2rem;
   margin-bottom: 5rem;
   color: #f2f3f8;
-  width: 100wv;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0.9;
-  background-color: #651522;
+  background-color: rgba(98, 22, 34, 0.9);
+  backdrop-filter: blur(2px) saturate(105%);
+  -webkit-backdrop-filter: blur(2px) saturate(105%);
 }
 
 .description_title {
@@ -81,7 +81,7 @@ body {
 }
 
 .description_paragraph {
-  width: 70%;
+  width: 90%;
   text-align: center;
   font-size: 1.5rem;
 
@@ -182,7 +182,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 #code-window {
@@ -256,8 +255,9 @@ body {
 /* Footer */
 footer {
   padding-top: 3rem;
-  background-color: #651522;
-  opacity: 0.9;
+  background-color: rgba(98, 22, 34, 0.9);
+  backdrop-filter: blur(2px) saturate(105%);
+  -webkit-backdrop-filter: blur(2px) saturate(105%);
   width: 100vw;
   display: flex;
   flex-direction: column;
