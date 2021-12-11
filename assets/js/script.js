@@ -115,6 +115,14 @@ $("#code-window-wrapper").click(function (e) {
 });
 
 /**
+ * Hides code window when the closing btn is clicked
+ */
+$("#close-code-window").click(function (e) {
+  if (e.target === this) $("#code-window-wrapper").removeClass("show");
+  $("body").css("overflow-y", "scroll");
+});
+
+/**
  * Adds tab functionality to the textarea
  */
 $("#code-pane").keydown(function (e) {
