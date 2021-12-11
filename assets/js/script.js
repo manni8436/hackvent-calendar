@@ -52,8 +52,6 @@ $(document).ready(function () {
       $(this).on("click", function () {
         if (adventwindow <= day) {
           $(this).children(".door").toggleClass("open");
-          const day = $(this).data("day");
-          showCodeWindow(day);
         }
 
         // If 25th, can show the message
@@ -85,7 +83,9 @@ $(document).ready(function () {
  */
 function showCodeWindow(day) {
   challenges.loadChallenge(day, loadChallengeData);
-  $("#code-window-wrapper").addClass("show");
+  setTimeout(() => {
+    $("#code-window-wrapper").addClass("show");
+  }, 300);
   $("body").css("overflow-y", "hidden");
 }
 
@@ -142,9 +142,9 @@ $("#code-submit").click(function () {
 });
 
 /**
- * For testing the code window show hide
+ * Open code window on door click
  */
-$("#test-btn").click(function () {
+$(".door").click(function () {
   const day = $(this).data("day");
   showCodeWindow(day);
 });
