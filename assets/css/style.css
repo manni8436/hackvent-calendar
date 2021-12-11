@@ -163,7 +163,7 @@ li {
 /* Code window */
 #code-window-wrapper {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   top: 0;
   bottom: 0;
@@ -228,4 +228,12 @@ li {
 footer {
   height: 33vh;
   background-color: transparent;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  #code-window {
+    max-width: 90vw;
+  }
 }

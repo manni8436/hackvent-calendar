@@ -93,6 +93,7 @@ $(document).ready(function () {
 function showCodeWindow(day) {
   challenges.loadChallenge(day, loadChallengeData);
   $("#code-window-wrapper").addClass("show");
+  $("body").css("overflow-y", "hidden");
 }
 
 /**
@@ -110,6 +111,7 @@ function loadChallengeData() {
  */
 $("#code-window-wrapper").click(function (e) {
   if (e.target === this) $(this).removeClass("show");
+  $("body").css("overflow-y", "scroll");
 });
 
 /**
