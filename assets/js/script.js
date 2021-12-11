@@ -48,22 +48,13 @@ $(document).ready(function () {
         message = message + " " + word;
       }
 
-      // Add jiggle animation to current day window
-      if (adventwindow === day) {
-        $(this).addClass("current");
-        $(this).addClass("jiggle");
-      }
-
-      // On clicking a window, toggle it open/closed and
-      // handle other things such as removing jiggle and 25th
+      // On clicking a window, toggle it open/closed
       $(this).on("click", function () {
         if (adventwindow <= day) {
           $(this).children(".door").toggleClass("open");
           const day = $(this).data("day");
           showCodeWindow(day);
         }
-
-        $(this).removeClass("jiggle");
 
         // If 25th, can show the message
         if (day >= 25 && adventwindow === 25) {
