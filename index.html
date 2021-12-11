@@ -135,12 +135,29 @@
     </section>
     <section id="code-window-wrapper">
       <div id="code-window">
-        <div id="code-content" class="code_content">
-          <button class="close_code_window" id="close-code-window">&times;</button>
-          <h2 id="challenge-title" class="challenge_title">Challenge Title</h2>
-          <p id="challenge-description" class="challenge_description">Challenge Description</p>
-          <textarea id="code-pane" class="code_area" rows="8" cols="150"></textarea>
-          <button id="code-submit" class="btn btn_submit">Submit</button>
+        <div class="code-wrapper">
+          <div id="code-loading" class="code-content">
+            Loading...
+          </div>
+          <div id="code-header" class="code-content">
+            <button id="close-code-window">&times;</button>
+            <h2 id="challenge-title">Challenge Title</h2>
+          </div>
+          <div id="challenge-content" class="code-content">
+            <p id="challenge-description">Challenge Description</p>
+            <button id="show-code-panel" class="btn btn_submit">Solve now</button>
+          </div>
+          <div id="code-content" class="code-content">
+            <textarea id="code-pane" class="code-pane" rows="8" cols="150"></textarea>
+            <button id="code-submit" class="btn btn_submit">Submit</button>
+          </div>
+          <div id="output-content" class="code-content">
+            <textarea id="code-output" class="code-pane" rows="8" cols="150" readonly></textarea>
+            <div class="toolbar">
+              <button id="retry-btn" class="btn btn_submit">Retry</button>
+              <button id="done-btn" class="btn btn_submit">Done</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

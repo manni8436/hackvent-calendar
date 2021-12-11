@@ -32,12 +32,22 @@ export const challenge = {
 
     /**
      * Iterates through the input list and runs the user code for each test.
-     * @param {function} func 
+     * Output is a callback function which accepts a string message as tests
+     * are completed.
+     * @param {function} func
+     * @param {function} output
      * @returns {Boolean} false if any tests fail, otherwise true.
      */
-    runTests: function(func) {
+    runTests: function(func, output) {
+        output("Starting tests:\n");
         for (const test of this.args) {
-            if (func(test) != this.test(test)) return false;
+            output(`Running: ${test}`);
+            if (func(test) != this.test(test)) {
+                output("Failed!\n");
+                return false;
+            } else {
+                output("Succeeded!\n");
+            }
         }
         return true;
     },
