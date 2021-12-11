@@ -14,7 +14,7 @@ export class ChallengeManager {
 
     _loadFailed(err, day, callback) {
         console.warn(`Challenge loading failed for day ${day}! ${err}`);
-        alert(`This is embarressing, it looks like we couldn't load that challenge! ${err}`);
+        alert(`This is embarrassing, it looks like we couldn't load that challenge! ${err}`);
         this._challenge = null;
         if (callback) callback();
     }
