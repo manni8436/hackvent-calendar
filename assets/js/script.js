@@ -103,6 +103,18 @@ function loadChallengeData() {
     $( "#code-pane" ).val(challenges.challenge.initial);
 }
 
+/**
+ * Hides code window when the wrapper is clicked
+ */
+$( "#code-window-wrapper" ).click(function(e) {
+    if (e.target === this) $( this ).removeClass("show");
+});
     }
 
+/**
+ * For testing the code window show hide
+ */
+$( "#test-btn" ).click(function() {
+    const day = $( this ).data("day");
+    showCodeWindow(day);
 });
