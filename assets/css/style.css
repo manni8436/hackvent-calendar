@@ -7,8 +7,8 @@
 body {
   font-size: 10px;
   width: 100%;
-  background-color: rgb(42, 61, 165);
-  background-image: url("/assets/images/snowbg.svg");
+  background-color: brown;
+  background-image: url("../images/snowbg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
