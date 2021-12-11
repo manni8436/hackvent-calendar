@@ -75,6 +75,7 @@ body {
 }
 
 li {
+  justify-self: center;
   font-weight: 400;
   background-color: #f2f3f8;
   box-sizing: border-box;
