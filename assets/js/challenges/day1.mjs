@@ -8,8 +8,8 @@ export const challenge = {
                   out by writing code that will convert celsius to farenheit or farenheit to celsius. \
                   /nFill in the body of the function to return the correct values",
     
-    boilerPlate: "return converTemp(args[0], args[1]); ",
-    initial: "function convertTemp(degrees, unit) {/n/treturn degrees;/n}",
+    boilerPlate: "return convertTemp(args[0], args[1]); ",
+    initial: "function convertTemp(degrees, unit) {\n    return degrees;\n}",
 
     args: [
         [100, 'f'],
@@ -22,16 +22,18 @@ export const challenge = {
 
     runTests: function(func) {
         for (const test of this.args) {
-            if (Math.round(func(test)) != Math.round(this.test(test))) return false;
+            const t1 = Math.round(func(test[0],test[1]));
+            const t2 = Math.round(this.test(test[0],test[1]));
+            if (t1 != t2) return false;
         }
         return true;
     },
 
-    test: function(input) {
-        if (input[1] === 'f') {
-            return ((input[0] - 32) / 1.8);
+    test: function(degrees, unit) {
+        if (unit === 'f') {
+            return ((degrees - 32) / 1.8);
         } else {
-            return ((input[0] * 1.8) + 32);
+            return ((degrees * 1.8) + 32);
         }
     }
 }
