@@ -51,7 +51,9 @@ $(document).ready(function () {
       // On clicking a window, toggle it open/closed
       $(this).on("click", function () {
         if (adventwindow <= day) {
-          $(this).children(".door").toggleClass("open");
+          // I've changed this to add, because it seems clunky to open and 
+          // close the door to reopen the code window for that day. - Sean
+          $(this).children(".door").addClass("open");
         }
 
         // If 25th, can show the message
@@ -79,14 +81,14 @@ $(document).ready(function () {
 
 /**
  * Shows the code window
- * @param {*} day The day to trigger
+ * @param {*} day: The day (1-25) to trigger
  */
 function showCodeWindow(day) {
   challenges.loadChallenge(day, loadChallengeData);
   setTimeout(() => {
     $("#code-window-wrapper").addClass("show");
   }, 300);
-  $("body").css("overflow-y", "hidden");
+  $("body").addClass("code");
 }
 
 /**
@@ -100,20 +102,20 @@ function loadChallengeData() {
 }
 
 /**
- * Hides code window when the wrapper is clicked
+ * Hides code window
  */
-$("#code-window-wrapper").click(function (e) {
-  if (e.target === this) $(this).removeClass("show");
-  $("body").css("overflow-y", "scroll");
-});
+function closeCodeWindow() {
+    $("#code-window-wrapper").removeClass("show");
+    $("body").removeClass("code");
 
-/**
- * Hides code window when the closing btn is clicked
- */
-$("#close-code-window").click(function (e) {
-  if (e.target === this) $("#code-window-wrapper").removeClass("show");
-  $("body").css("overflow-y", "scroll");
+    $("#challenge-title").text("");
+    $("#challenge-description").text("");
+    $("#code-pane").val("");
+}
+$("#code-window-wrapper").click(function (e) {
+  if (e.target === this) closeCodeWindow();
 });
+$("#close-code-window").click(closeCodeWindow);
 
 /**
  * Adds tab functionality to the textarea
@@ -144,7 +146,7 @@ $("#code-submit").click(function () {
 /**
  * Open code window on door click
  */
-$(".door").click(function () {
-  const day = $(this).data("day");
+$(".door_holder").click(function () {
+  const day = $(this).children(".door").data("day");
   showCodeWindow(day);
 });

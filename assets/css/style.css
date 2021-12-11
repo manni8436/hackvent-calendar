@@ -24,6 +24,10 @@ body {
   background-position: center center;
   background-attachment: fixed;
   font-family: Lores-12, sans-serif;
+  overflow-y: scroll;
+}
+body.code {
+  overflow-y: hidden;
 }
 
 /* Navbar */
@@ -188,6 +192,8 @@ body {
   margin-top: 3rem;
   background-color: #f2f3f8;
   max-width: 70vw;
+  max-height: 70vh;
+  overflow-y: auto;
   border-radius: 0.8rem;
 }
 
