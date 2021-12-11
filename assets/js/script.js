@@ -54,6 +54,10 @@ $(document).ready(function () {
           // I've changed this to add, because it seems clunky to open and 
           // close the door to reopen the code window for that day. - Sean
           $(this).children(".door").addClass("open");
+          // Sound from Zapsplat.com https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/
+          // Play door open audio
+          let audioDoor = new Audio("assets/audio/dooropen.mp3");
+          audioDoor.play();
         }
 
         // If 25th, can show the message
