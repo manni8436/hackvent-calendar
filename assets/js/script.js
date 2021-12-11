@@ -1,3 +1,7 @@
+import { ChallengeManager } from './challenges/eval.mjs';
+
+const challenges = new ChallengeManager();
+
 $(document).ready(function () {
 
     // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
