@@ -98,7 +98,7 @@ body {
   gap: 5rem;
 }
 
-li {
+.door_holder {
   justify-self: center;
   font-weight: 400;
   background-color: #f2f3f8;
