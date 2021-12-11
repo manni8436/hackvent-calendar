@@ -17,7 +17,7 @@
 body {
   font-size: 10px;
   width: 100%;
-  background-color: brown;
+  background-color: #651522;
   background-image: url("../images/snowbg.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,6 +61,26 @@ body {
 
 #main-content {
   padding-top: 20vh;
+}
+
+.description_section {
+  margin-bottom: 5rem;
+  color: #f2f3f8;
+  width: 100wv;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.description_paragraph {
+  width: 70%;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: #651522;
+  border-radius: 1rem;
+  padding: 1.5rem;
 }
 
 .calendar_section {
