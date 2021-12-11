@@ -112,6 +112,15 @@ $( "#code-window-wrapper" ).click(function(e) {
     }
 
 /**
+ * Submits the user code for evaluation
+ */
+$( "#code-submit" ).click(function() {
+    const success = challenges.evaluate($( "#code-pane" ).val());
+    if (success) alert("Congratulations! Your solution worked!");
+    else alert("Sorry, your solution didn't work!");
+});
+
+/**
  * For testing the code window show hide
  */
 $( "#test-btn" ).click(function() {
