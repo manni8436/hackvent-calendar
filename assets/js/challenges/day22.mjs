@@ -7,7 +7,7 @@
 
 
 export const challenge = {
-    title: "Day Two - What's the most popular toy? ",
+    title: "Day Twenty-Two - What's the most popular toy? ",
     description: "It’s almost Christmas and Santa and his elves still have a lot of toys to make. \
     But they don’t know where to start. \
     Write a function that when passed an array of toys works out which is the most popular toy.\
