@@ -189,6 +189,7 @@ body.code {
 }
 
 #code-window {
+  position: relative;
   margin-top: 3rem;
   background-color: #f2f3f8;
   max-width: 70vw;
@@ -197,37 +198,45 @@ body.code {
   border-radius: 0.8rem;
 }
 
-.code_content {
-  display: flex;
+.code-wrapper {
+  padding: 3rem;
+}
+
+.code-content {
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
-  position: relative;
 }
 
-.close_code_window {
+.code-content.show,
+#code-header.code-content {
+  display: flex;
+}
+
+#close-code-window {
   position: absolute;
   font-family: sans-serif;
-  top: 0.5rem;
-  right: 1.9rem;
+  top: 1rem;
+  right: 1rem;
+  line-height: 2rem;
   font-size: 4rem;
   cursor: pointer;
   border: none;
   background: none;
 }
 
-.challenge_title {
+#challenge-title {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.challenge_description {
+#challenge-description {
   font-size: 1.5rem;
   padding: 2vh 0;
 }
 
-.code_area {
+.code-pane {
   resize: none;
   font-size: 2rem;
   padding: 1em;
