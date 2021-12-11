@@ -2,17 +2,17 @@ $(document).ready(function () {
 
     // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
 
-    var words = ["Lorem ", "ipsum ", "delor", "sit", "amet", "consect", "adipisci", "elit,", "sed.", "Eiusmod", "tempor", "a", "enim", "minim", "season", "nulla", "dolore", "sint", "id", "est", "laboris", "ut.", "aute", "laborum", "toe"];
+    let words = ["Lorem ", "ipsum ", "delor", "sit", "amet", "consect", "adipisci", "elit,", "sed.", "Eiusmod", "tempor", "a", "enim", "minim", "season", "nulla", "dolore", "sint", "id", "est", "laboris", "ut.", "aute", "laborum", "toe"];
 
-    var message = "";
-    var date = new Date();
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var scrolled = false;
-    var timeDelay = 200;
+    let message = "";
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let scrolled = false;
+    let timeDelay = 200;
 
     // function to reveal message
-    var cardReveal = function () {
+    let cardReveal = function () {
         $("#message").text(message).show();
     }
 
@@ -22,8 +22,8 @@ $(document).ready(function () {
     if (month === 12) {
         // Loop through each calendar window
         $("li").each(function (index) {
-            var adventwindow = index + 1;
-            var item = $(this);
+            let adventwindow = index + 1;
+            let item = $(this);
 
             // Open past windows
             if (day !== adventwindow && adventwindow < day) {
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
             // Add words so far to message variable
             if (adventwindow <= day) {
-                var word = words[index];
+                let word = words[index];
                 $(this).append('<div class="revealed">' + word + '</div>');
                 message = message + " " + word;
             }
