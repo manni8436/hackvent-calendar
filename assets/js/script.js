@@ -102,20 +102,20 @@ function loadChallengeData() {
 }
 
 /**
- * Hides code window when the wrapper is clicked
+ * Hides code window
  */
-$("#code-window-wrapper").click(function (e) {
-  if (e.target === this) $(this).removeClass("show");
-  $("body").css("overflow-y", "scroll");
-});
+function closeCodeWindow() {
+    $("#code-window-wrapper").removeClass("show");
+    $("body").removeClass("code");
 
-/**
- * Hides code window when the closing btn is clicked
- */
-$("#close-code-window").click(function (e) {
-  if (e.target === this) $("#code-window-wrapper").removeClass("show");
-  $("body").css("overflow-y", "scroll");
+    $("#challenge-title").text("");
+    $("#challenge-description").text("");
+    $("#code-pane").val("");
+}
+$("#code-window-wrapper").click(function (e) {
+  if (e.target === this) closeCodeWindow();
 });
+$("#close-code-window").click(closeCodeWindow);
 
 /**
  * Adds tab functionality to the textarea
