@@ -124,7 +124,7 @@ $( "#code-pane" ).keydown(function(e) {
     
         // put caret at right position again
         this.selectionStart = this.selectionEnd = start + 4;
-    }
+      }
 });
 
 /**
