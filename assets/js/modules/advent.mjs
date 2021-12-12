@@ -46,7 +46,6 @@ export function setupAdvent(words) {
           $(this).children(".door").addClass("open");
         }
       });
-
     });
   }
 }

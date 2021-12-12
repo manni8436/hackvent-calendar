@@ -40,11 +40,11 @@ export class ChallengeStorage {
      */
 
     getSoundSetting() {
-        const toggle = (localStorage.getItem(`sound-mute`) === 'true');
+        const toggle = (localStorage.getItem(`play-sound`) === 'true');
         return (toggle ? true : false);
     }
 
     setSoundSetting(toggle) {
-        localStorage.setItem(`sound-mute`, toggle);
+        localStorage.setItem(`play-sound`, toggle);
     }
 }
