@@ -1,7 +1,7 @@
 
 export class CodeWindow {
 
-  constructor(challenges, pages) {
+  constructor(challenges) {
     this._challenges = challenges
 
     this._wrapper = document.getElementById("code-window-wrapper");
@@ -44,7 +44,6 @@ export class CodeWindow {
     // Add content to code window elements
     this._elements.title.innerText = this._challenges.challenge.title;
     this._elements.description.innerText = this._challenges.challenge.description;
-    this._editor.setValue(this._challenges.challenge.initial);
     // Show the initial screen
     this._wrapper.classList.add("show");
     this.showPage("challenge");
@@ -55,9 +54,12 @@ export class CodeWindow {
     this._hideAllPages();
     // Show the requested page
     this._pages[page + "Page"].classList.add("show");
+    // Editor component can only be updated when shown. Should be updated to save user input
+    if (page === "code") this._editor.setValue(this._challenges.challenge.initial);
   }
 
   close() {
+    this._editor.setValue("");
     // Let the body scroll again
     document.body.classList.remove("code");
     this._wrapper.classList.remove("show");
@@ -66,7 +68,6 @@ export class CodeWindow {
     // Clear the challenge information
     this._elements.title.innerText = "";
     this._elements.description.innerText = "";
-    this._editor.setValue("");
     this._elements.output.value = "";
   }
 
