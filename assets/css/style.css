@@ -105,8 +105,8 @@ body.code {
 .sound-toggle input:not(:checked) ~ label#sound-off {
   color: #fff;
 }
-/* Main */
 
+/* Main */
 #main-content {
   padding-top: 5vh;
 }
