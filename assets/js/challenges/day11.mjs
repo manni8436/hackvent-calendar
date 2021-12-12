@@ -7,9 +7,9 @@ export const challenge = {
                   Remember that Elves should be polite and use names correctly.' \
     ",
 
-  boilerPlate: "congratulateStranger(args[0]); ",
+  boilerPlate: "return congratulateStranger(args[0]); ",
 
-  initial: "function congratulateStranger(stranger) {\n    return person.congratulations();\n}",
+  initial: "function congratulateStranger(stranger) {\n    return mess;\n}",
 
   args: [
     'Dan', 'tim', 'Richard', 'mary', 'sunny', 'Daisy', 'mike', 'Chris'
@@ -22,12 +22,12 @@ export const challenge = {
   runTests: function (func, output = s => s) {
     output("Starting tests:\n");
     for (const test of this.args) {
-      output(`Running test ${this.args.indexOf(test)}: `);
+      output("Running: congratulateStranger(): ");
 
       const t1 = func(test);
-      const t2 = this.test(test).join(',');
+      const t2 = this.test(test);
 
-      if (!Array.isArray(t1) || t1.join(',') != t2) {
+      if (t1 != t2) {
         output("Failed!\n");
         return false;
       }
@@ -47,6 +47,7 @@ export const challenge = {
     }
 
     let person = new Human(stranger)
-    return person.congratulations()
+    let mess = person.congratulations()
+    return mess
   }
 }
