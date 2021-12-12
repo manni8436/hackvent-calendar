@@ -3,7 +3,7 @@
 
 
 export const challenge = {
-    title: "Day Twenty-four - Feeding the Reindeer",
+    title: "Christmas Eve - Feeding the Reindeer",
     description: "Santa’s reindeer require a lot of energy to pull his sleigh.\
     He needs your help to work out exactly how many sacks of carrots he needs to order to ensure that his reindeer don’t run out of energy when he’s halfway over the Atlantic.\
     Write a function that takes two parameters miles and reindeer and works out exactly how many sacks of carrots Santa needs.\

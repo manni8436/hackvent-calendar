@@ -26,7 +26,7 @@ export const challenge = {
     for (const test of this.args) {
       output("Running: arrangeBalls(arr): ");
 
-      if (func(test) != this.test(test)) {
+      if (func([...test]) != this.test([...test])) {
         output("Failed!\n");
         return false;
       }
