@@ -14,7 +14,7 @@ export const challenge = {
     boilerPlate: "return milesToKm(args[0]); ",
 
     // Code to be initial placed in the code panel
-    initial: "function milesToKm(miles) {\n    return kilometers;\n},",
+    initial: "function milesToKm(miles) {\n    return kilometers;\n}",
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
@@ -35,11 +35,14 @@ export const challenge = {
      * @param {function} func 
      * @returns {Boolean} false if any tests fail, otherwise true.
      */
-    runTests: function (func) {
+     runTests: function(func, output=s=>s) {
         for (const test of this.args) {
             output(`Running: milesToKm(${test}): `);
             if (func(test) != this.test(test)) return false;
 
+            const t1 = Math.round(func(test[0],test[1]));
+            const t2 = Math.round(this.test(test[0],test[1]));
+            
             if (t1 != t2) {
                 output("Failed!\n");
                 return false;
