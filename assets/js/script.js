@@ -1,8 +1,8 @@
 
+import { setupAdvent, setWindow } from './modules/advent.mjs';
 import { ChallengeManager } from './modules/eval.mjs';
 import { ChallengeStorage } from "./modules/storage.mjs";
 import { CodeWindow } from './modules/codewindow.mjs';
-import { setupAdvent } from './modules/advent.mjs';
 
 const storage = new ChallengeStorage();
 const codeWindow = new CodeWindow(new ChallengeManager(), storage);
@@ -13,23 +13,14 @@ const windowText = generateWindowText();
 function generateWindowText() {
   const windows = [];
   for (let i = 1; i <= 25; i++) {
-    let text = `Day ${i}`;
-    const started = storage.hasUserStartedChallenge(i);
-
-    if (started) {
-      if (storage.getChallengeSuccess(i)) {
-        text += "<br>Complete!";
-      } else {
-        text += "<br>Started";  
-      }
-    } else {
-      text += "<br>Not Started";
-    }
-    windows.push(text);
+    windows.push({
+      day: i,
+      started: storage.hasUserStartedChallenge(i),
+      complete: storage.getChallengeSuccess(i)
+    });
   }
   return windows;
 }
-
 setupAdvent(windowText);
 
 // Load sound settings
