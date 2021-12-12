@@ -35,6 +35,16 @@ export class ChallengeStorage {
         localStorage.setItem(`day${day}-code`, code);
     }
 
+    hasUserStartedChallenge(day) {
+        const key1 = localStorage.getItem(`day${day}-success`)
+        const key2 = localStorage.getItem(`day${day}-code`);
+
+        if (key1 != null && key2 != null) {
+            return true;
+        }
+        return false;
+    }
+
     /*
      * Site settings
      */

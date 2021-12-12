@@ -1,6 +1,6 @@
 
 // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
-export function setupAdvent(words) {
+export function setupAdvent(windows) {
   const date = new Date();
   const day = date.getDate();
   const month = date.getMonth() + 1;
@@ -10,7 +10,7 @@ export function setupAdvent(words) {
   // Only work in December
   if (month === 12) {
     // Loop through each calendar window
-    $("li").each(function (index) {
+    $("ul.cards_holder li").each(function (index) {
       let adventwindow = index + 1;
       let item = $(this);
 
@@ -23,12 +23,7 @@ export function setupAdvent(words) {
 
       // timeout offset for past window opening animation
       timeDelay += 100;
-
-      // Add words so far to message variable
-      if (adventwindow <= day) {
-        let word = words[index];
-        $(this).append('<div class="revealed">' + word + '</div>');
-      }
+      setWindow(windows[index]);
 
       // On clicking a window, toggle it open/closed
       $(this).on("click", function () {
@@ -47,5 +42,26 @@ export function setupAdvent(words) {
         }
       });
     });
+  }
+}
+
+function getWindowText(window) {
+  let text = `Day ${window.day}`;
+  if (window.complete) {
+    text += "<br>Complete!";
+  } else if (window.started) {
+    text += "<br>Started";
+  } else {
+    text += "<br>Not started";
+  }
+  return text;
+}
+
+export function setWindow(window) {
+  const elem = $( $(`ul.cards_holder li`).get(window.day-1) );
+  elem.children(".inner").html(getWindowText(window));
+
+  if (window.complete) {
+    elem.addClass("complete");
   }
 }
