@@ -1,5 +1,3 @@
-// import { /* imports here */ } from './libs.mjs';
-
 export const challenge = {
   title: "Day Ten - Elves' Report",
   description: "Elves has to count how many balls of each color they have to decorate their Christmas tree. \
@@ -7,17 +5,9 @@ export const challenge = {
                   And help them to send a message to Santa: 'We have ... red balls, ... blue balls, ... yellow balls.' \
     ",
 
-  // Code to be append to the user submission.
-  // Here it converts the first argument to an input variable,
-  // (so the user can access the first parameter as input instead of arg[0]).
   boilerPlate: "return arrangeBalls(args[0]); ",
 
-  // Code to be initial placed in the code panel
   initial: "function arrangeBalls(arr) {\n    return message;\n}",
-
-  // The argument list to be sent to user code. Should be an array of arrays.
-  // The outer array is the individual tests, the inner array is the argument
-  // list to be sent to the user code for each test.
 
   args: [
     ['red', 'blue', 'yellow', 'blue', 'red', 'blue', 'red', 'blue', 'yellow', 'red',
@@ -45,9 +35,6 @@ export const challenge = {
     return true;
   },
 
-  /**
-   * Reference implementation. User code should provide the same result
-   */
   test: function (arr) {
     let redBalls = [];
     let blueBalls = [];
