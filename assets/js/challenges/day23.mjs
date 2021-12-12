@@ -2,7 +2,7 @@
 
 
 export const challenge = {
-    title: "Challenge Title Here",
+    title: "Day Twenty-three - ",
     description: "Short Challenge description here",
 
     boilerPlate: "let input = args[0]; ",

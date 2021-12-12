@@ -14,7 +14,7 @@ export const challenge = {
     boilerPlate: "return milesToKm(args[0]); ",
 
     // Code to be initial placed in the code panel
-    initial: "function milesToKm(miles) {\n    return kilometers;\n},"
+    initial: "function milesToKm(miles) {\n    return kilometers;\n},",
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
