@@ -1,7 +1,7 @@
 //import { /* imports here */ } from './libs.mjs';
 
 export const challenge = {
-    title: "Day Five - Santa's Mile Mix Up",
+    title: "Day Twenty-one - Santa's Mile Mix Up",
     description: "Last Christmas Mrs Claus bought Santa a new routing system.\
                 Unfortunately she bought it in Europe and Santa’s sleigh uses miles. \
                 Help Santa out by writing an algorithm that converts kilometers into miles.\
