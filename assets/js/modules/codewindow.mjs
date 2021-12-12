@@ -102,6 +102,8 @@ export class CodeWindow {
     const code = this._editor.getValue();
 
     const success = this._challenges.evaluate(code, this.output);
+    this._storage.setChallengeSuccess(this._challenges.day, success);
+
     if (success) this.output("\nAll tests run: Challenge complete!");
     else this.output("\nChallenge failed!");
   }
