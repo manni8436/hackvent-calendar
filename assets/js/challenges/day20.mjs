@@ -3,24 +3,24 @@
 
 
 export const challenge = {
-    title: "Day 18 - Square Area Calculation",
-    description:"Santa needs to find out the size of the area he needs to fly over to deliver gifts. \
-                Luckily, the area is a perfect square! He knows that the length of 1 side of the square is 10,000 KM. \
-                Complete the Javascript function to calculate the area of the square.",
+    title: "Day 20 - Countdown to Christmas Day",
+    description:"Oh No! The elves' Christmas Day countdown clock has broken! \
+                They need to know how many days they have left to work before Christmas Day, their only day off in the year! \
+                Can you write a function that will calculate the number of days left until Christmas Day (25th December)?",
 
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
-    boilerPlate: "return squareArea(args[0]);",
+    boilerPlate: "return countdownDays(args[0]);",
 
     // Code to be initial placed in the code panel
-    initial: "function squareArea(side) {\n    return area;\n}",
+    initial: "function countdownDays() {\n    return countdownDays;\n}",
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
     // list to be sent to the user code for each test.
     args: [
-        [10000],
+        [],
     ],
 
     /**
@@ -40,7 +40,7 @@ export const challenge = {
     runTests: function(func, output) {
         output("Starting tests:\n");
         for (const test of this.args) {
-            output("Running: squareArea(): ");
+            output("Running: triangleArea(): ");
             if (func([...test]) != this.test([...test])) {
                 output("Failed!\n");
                 return false;
@@ -54,8 +54,17 @@ export const challenge = {
     /**
      * Reference implementation. User code should provide the same result
      */
-    test: function(side) {
-        let area = side * side;
-        return area;
+    // Credit: https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
+    test: function() {
+        today=new Date();
+        var cmas=new Date(today.getFullYear(), 11, 25);
+        if (today.getMonth()==11 && today.getDate()>25) 
+        {
+        cmas.setFullYear(cmas.getFullYear()+1); 
+        }  
+        var one_day=1000*60*60*24;
+        let countdownDays = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
+        console.log(countdownDays);
+        return countdownDays;
     }
 }
