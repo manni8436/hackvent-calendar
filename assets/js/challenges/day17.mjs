@@ -1,20 +1,25 @@
+
+/*
+ * This is a template for the advent challenge definitions.
+ */
+
 // Any required library imports:
 //import { /* imports here */ } from './libs.mjs';
 
 
 export const challenge = {
-    title: "Day 16 - List Sorting",
-    description:"Santa has a list of names on his nice list. \
-                However, he wants to deliver presents in alphabetical order! \
-                Can you write a javascript function that sorts the list 'names' alphabetically?",
+    title: "Day 17 - List Length",
+    description:"Santa needs to know how many houses he needs to visit! \
+                Write a javascript function that finds the length of his nice list, \
+                and assigns the length to the variable 'houses'.",
 
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
-    boilerPlate: "return sortNames(args[0]);",
+    boilerPlate: "return listLength(args[0]);",
 
     // Code to be initial placed in the code panel
-    initial: "function sortNames(names) {\n    return names;\n}",
+    initial: "function listLength(names) {\n    return houses;\n}",
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
@@ -43,7 +48,7 @@ export const challenge = {
     runTests: function(func, output) {
         output("Starting tests:\n");
         for (const test of this.args) {
-            output("Running: sortNames(): ");
+            output("Running: listLength(): ");
             if (func([...test]).join(',') != this.test([...test]).join(',')) {
                 output("Failed!\n");
                 return false;
@@ -58,7 +63,7 @@ export const challenge = {
      * Reference implementation. User code should provide the same result
      */
     test: function(names) {
-        names.sort();
-        return names;
+        let houses = names.length;
+        return houses;
     }
 }
