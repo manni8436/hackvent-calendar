@@ -89,7 +89,9 @@ with hint of yellow and white for text on the site to stand out.
 
 ## WIREFRAMES
 
-[Here are my wireframes for desktop, mobile and tablet for this project]()
+* [Here is the main page wireframes](assets/images/codevent-wireframe1.jpg)
+* [Here is the code challenge wireframes](assets/images/codevent-wireframe2.jpg)
+* [Here is the code challenge input box wireframes](assets/images/codevent-wireframe3.jpg)
 
 ## FEATURES
 The following features have been used in this project:
