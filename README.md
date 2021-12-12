@@ -100,13 +100,13 @@ with hint of yellow and white for text on the site to stand out.
 
 ## FEATURES
 The following features have been used in this project:
-    * Hover
-        * Tells the user solve now, submit and back buttons are highlighted.
-        * Mouse pointer changes to a hand to indicate a clickable area.
+* Hover
+    * Tells the user solve now, submit and back buttons are highlighted.
+    * Mouse pointer changes to a hand to indicate a clickable area.
 
-    * Sound
-        * Sound can be heard when the advent door is clicked opened.
-        * The user can turn the sound off.
+* Sound
+    * Sound can be heard when the advent door is clicked opened.
+    * The user can turn the sound off.
 
 [Back to top](#christmas-hackathon)
 
