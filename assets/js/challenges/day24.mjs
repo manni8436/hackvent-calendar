@@ -15,7 +15,7 @@ export const challenge = {
 
     initial: "function reindeerFood(miles,reindeer) {\n    return sacks;\n}",
     args: [
-        [1,1],
+        [1000,12],
         [1,1],
         [2500,9]
     ],
@@ -35,7 +35,7 @@ export const challenge = {
         output("Starting tests:\n");
         for (const test of this.args) {
             output(`Running: ${test}`);
-            if (func(test) != this.test(test)) {
+            if (func(test[0], test[1]) != this.test(test[0],test[1])) {
                 output("Failed!\n");
                 return false;
             } else {
@@ -46,7 +46,7 @@ export const challenge = {
     },
 
     test: function(miles,reindeer){
-        let sacks = Math.ceil((miles*1000*reindeer)/400);
+            let sacks = Math.ceil((miles*1000*reindeer)/400);
             return sacks;
     }
 }
