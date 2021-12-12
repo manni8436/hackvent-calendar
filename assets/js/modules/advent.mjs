@@ -59,7 +59,7 @@ function getWindowText(window) {
 
 export function setWindow(window) {
   const elem = $( $(`ul.cards_holder li`).get(window.day-1) );
-  elem.append(getWindowText(window));
+  elem.children(".inner").html(getWindowText(window));
 
   if (window.complete) {
     elem.addClass("complete");

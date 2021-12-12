@@ -5,9 +5,9 @@ import { ChallengeStorage } from "./modules/storage.mjs";
 import { CodeWindow } from './modules/codewindow.mjs';
 
 const storage = new ChallengeStorage();
-const codeWindow = new CodeWindow(new ChallengeManager(), storage);
+const codeWindow = new CodeWindow(new ChallengeManager(), storage, updateWindow);
 
-const windowText = generateWindowText();
+const windowMap = generateWindowText();
 
 // Generates text for the advant windows based on saved state
 function generateWindowText() {
@@ -21,7 +21,13 @@ function generateWindowText() {
   }
   return windows;
 }
-setupAdvent(windowText);
+setupAdvent(windowMap);
+
+function updateWindow(day, complete) {
+  windowMap[day-1].started = true;
+  windowMap[day-1].complete = complete;
+  setWindow(windowMap[day-1]);
+}
 
 // Load sound settings
 $( "#sound-toggle" ).prop('checked', storage.getSoundSetting());
