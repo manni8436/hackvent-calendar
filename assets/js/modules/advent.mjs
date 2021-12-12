@@ -33,13 +33,14 @@ export function setupAdvent(words) {
       // On clicking a window, toggle it open/closed
       $(this).on("click", function () {
         if (adventwindow <= day) {
-          // I've changed this to add, because it seems clunky to open and 
-          // close the door to reopen the code window for that day. - Sean
-          $(this).children(".door").addClass("open");
           // Sound from Zapsplat.com https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/
           // Play door open audio
-          let audioDoor = new Audio("assets/audio/dooropen.mp3");
-          audioDoor.play();
+          if (!$(this).children(".door").hasClass("open")) {
+            // Only play the sound if this door isn't open yet.
+            const audioDoor = new Audio("assets/audio/dooropen.mp3");
+            audioDoor.play();
+          }
+          $(this).children(".door").addClass("open");
         }
       });
 
