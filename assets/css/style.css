@@ -245,10 +245,11 @@ body.code {
 
 .code-pane {
   resize: none;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1em;
   border-radius: 0.4rem;
   width: 100%;
+  min-height: 9rem;
 }
 
 .toolbar {
