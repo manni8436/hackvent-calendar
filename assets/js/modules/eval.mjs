@@ -23,8 +23,14 @@ export class ChallengeManager {
 
     /**
      * Accesses the currently loaded challenge
+     * @returns {Object}
      */
     get challenge() { return this._challenge; }
+    /**
+     * Accesses the current challenge day
+     * @returns {Number}
+     */
+    get day() { return this._day; }
 
     /**
      * Attempts to load the challenge module for the day specified.

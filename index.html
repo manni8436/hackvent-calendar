@@ -38,9 +38,14 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" id="navigation">
       <div class="container-fluid">
-        <a class="navbar_logo" id="logo" href="">
+        <a class="navbar_logo" id="logo" href="index.html">
           Code-vent Calendar
         </a>
+        <div id="sound-wrapper" class="sound-toggle">
+          <input type="checkbox" name="sound-toggle" id="sound-toggle">
+          <label for="sound-toggle" id="sound-on"><i class="fas fa-volume-up"></i></label>
+          <label for="sound-toggle" id="sound-off"><i class="fas fa-volume-mute"></i></label>
+        </div>
       </div>
     </nav>
   </header>
@@ -153,7 +158,7 @@
             </div>
           </div>
           <div id="output-content" class="code-content">
-            <textarea id="code-output" class="code-pane" rows="8" cols="150" readonly></textarea>
+            <textarea id="code-output" class="code-pane" readonly></textarea>
             <div class="toolbar">
               <button id="retry-btn" class="btn btn_retry">Retry</button>
               <button id="done-btn" class="btn btn_done">Done</button>

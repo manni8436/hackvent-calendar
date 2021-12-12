@@ -37,13 +37,15 @@ export function setupAdvent(words) {
           // Play door open audio
           if (!$(this).children(".door").hasClass("open")) {
             // Only play the sound if this door isn't open yet.
-            const audioDoor = new Audio("assets/audio/dooropen.mp3");
-            audioDoor.play();
+            if ($( "#sound-toggle" ).prop("checked")) {
+              // Only play the sound if site is not muted.
+              const audioDoor = new Audio("assets/audio/dooropen.mp3");
+              audioDoor.play();
+            }
           }
           $(this).children(".door").addClass("open");
         }
       });
-
     });
   }
 }

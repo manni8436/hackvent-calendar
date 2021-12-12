@@ -66,8 +66,47 @@ body.code {
   text-decoration: none;
 }
 
-/* Main */
 
+/* Mute button */
+
+.sound-toggle {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 2vh;
+  right: 5vw;
+}
+
+.sound-toggle input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.sound-toggle label {
+  color: black;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  padding: 8px 16px;
+  margin-right: -1px;
+  transition: all 0.4s ease-in-out;
+}
+
+.sound-toggle label:hover {
+  cursor: pointer;
+}
+
+.sound-toggle input:checked ~ label#sound-on,
+.sound-toggle input:not(:checked) ~ label#sound-off {
+  color: #fff;
+}
+
+/* Main */
 #main-content {
   padding-top: 5vh;
 }
@@ -210,7 +249,8 @@ body.code {
   height: 100%;
 }
 
-#code-content {
+#code-content,
+#output-content {
   flex: 2;
 }
 
@@ -254,6 +294,7 @@ body.code {
 
 .code-pane {
   flex: 1;
+  resize: none; 
   font-size: 1rem;
   padding: 1em;
   border-radius: 0.4rem;
