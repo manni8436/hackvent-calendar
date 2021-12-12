@@ -1,8 +1,9 @@
 
 export class CodeWindow {
 
-  constructor(challenges) {
-    this._challenges = challenges
+  constructor(challenges, storage) {
+    this._challenges = challenges;
+    this._storage = storage;
 
     this._wrapper = document.getElementById("code-window-wrapper");
 
@@ -34,8 +35,28 @@ export class CodeWindow {
 
   _hideAllPages() {
     for (const elem in this._pages) {
+      // Code page needs to save the user code on hide
+      if (elem == "codePage") this._saveCode();
       this._pages[elem].classList.remove("show");
     }
+  }
+
+  _saveCode() {
+    const day = this._challenges.day;
+    
+    if (day > 0) this._storage.setChallengeCode(day, this._editor.getValue());
+  }
+
+  _getCode() {
+    const day = this._challenges.day;
+
+    if (day > 0) {
+      const code = this._storage.getChallengeCode(day);
+
+      if (code) return code;
+      else return this._challenges.challenge.initial;
+    }
+    return "";
   }
 
   show() {
@@ -55,7 +76,7 @@ export class CodeWindow {
     // Show the requested page
     this._pages[page + "Page"].classList.add("show");
     // Editor component can only be updated when shown. Should be updated to save user input
-    if (page === "code") this._editor.setValue(this._challenges.challenge.initial);
+    if (page === "code") this._editor.setValue(this._getCode());
   }
 
   close() {
