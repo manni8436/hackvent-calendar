@@ -13,6 +13,8 @@ export const challenge = {
 
     args: [
         [["John","Sean","Juliia","Alison","Manni", "Ben", "Sandra", "Sarah", "Vicky", "Linda", "Scott"],["Vicky", "Linda", "Scott","Ben", "John"]],
+        [["Sean","Ben","Manni","Ian","Liz","Robert","Jack","Sam","Sandy","Juliia","Alison","Rose","Kat"],["John","Sean","Juliia","Alison","Manni"]],
+        [["John","Sean","Juliia","Alison","Manni","Ben", "Sandra", "Sarah","Rose","Kat"]["Ben", "Sandra", "Sarah","Rose","Kat"]]
     ],
 
  
