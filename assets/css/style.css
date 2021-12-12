@@ -213,6 +213,10 @@ body.code {
   color: #285b52;
 }
 
+.door_holder .inner {
+  text-shadow: 1px 1px white;
+}
+
 /* Code window */
 #code-window-wrapper {
   display: none;
