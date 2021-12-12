@@ -1,7 +1,7 @@
 //import { /* imports here */ } from './libs.mjs';
 
 export const challenge = {
-    title: "Day Five - Santa's Mile Mix Up",
+    title: "Day Twenty-one - Santa's Mile Mix Up",
     description: "Last Christmas Mrs Claus bought Santa a new routing system.\
                 Unfortunately she bought it in Europe and Santa’s sleigh uses miles. \
                 Help Santa out by writing an algorithm that converts kilometers into miles.\
@@ -14,7 +14,7 @@ export const challenge = {
     boilerPlate: "return milesToKm(args[0]); ",
 
     // Code to be initial placed in the code panel
-    initial: "function milesToKm(miles) {\n    return kilometers;\n},"
+    initial: "function milesToKm(miles) {\n    return kilometers;\n},",
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument

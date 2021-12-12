@@ -40,7 +40,7 @@ export class ChallengeManager {
             this._day = day;
             this._challenge = null;
 
-            import(`./day${day}.mjs`)
+            import(`../challenges/day${day}.mjs`)
             .then(module => this._loaded(module, success))
             .catch(err => this._loadFailed(err, day, failure));
         }
