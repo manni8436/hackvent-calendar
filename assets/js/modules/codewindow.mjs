@@ -35,8 +35,6 @@ export class CodeWindow {
 
   _hideAllPages() {
     for (const elem in this._pages) {
-      // Code page needs to save the user code on hide
-      if (elem == "codePage") this._saveCode();
       this._pages[elem].classList.remove("show");
     }
   }
@@ -71,6 +69,7 @@ export class CodeWindow {
   }
 
   showPage(page) {
+    this._saveCode();
     // Hide all pages
     this._hideAllPages();
     // Show the requested page
@@ -100,9 +99,13 @@ export class CodeWindow {
     this.showPage("output");
     this._elements.output.value = "";
     const code = this._editor.getValue();
+    this._saveCode();
 
     const success = this._challenges.evaluate(code, this.output);
-    this._storage.setChallengeSuccess(this._challenges.day, success);
+
+    if (!this._storage.getChallengeSuccess(this._challenges.day)) {
+      this._storage.setChallengeSuccess(this._challenges.day, success);
+    }
 
     if (success) this.output("\nAll tests run: Challenge complete!");
     else this.output("\nChallenge failed!");
