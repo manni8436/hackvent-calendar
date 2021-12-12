@@ -80,16 +80,16 @@ test: function (toys) {
             current = toys[toy];
         } else {
             toysPop.push([toys[toy], count])
-            current = toys[toy]
-            count = 1
+            current = toys[toy];
+            count = 1;
         }
     }
     toysPop.push([toys[toys.length - 1], count])
-    let mostPopCount = 0
+    let mostPopCount = 0;
     for (let x of toysPop) {
         if (x[1] > mostPopCount) {
-            mostPopularToy = x[0]
-            mostPopCount = x[1]
+            mostPopularToy = x[0];
+            mostPopCount = x[1];
         }
     }
     return mostPopularToy

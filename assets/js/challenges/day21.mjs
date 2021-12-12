@@ -1,23 +1,17 @@
-/*
- * This is a template for the advent challenge definitions.
- */
-
-// Any required library imports:
 //import { /* imports here */ } from './libs.mjs';
-
 
 export const challenge = {
     title: "Day Five - Santa's Mile Mix Up",
     description: "Last Christmas Mrs Claus bought Santa a new routing system.\
-     Unfortunately she bought it in Europe and Santa’s sleigh uses miles. \
-     Help Santa out by writing an algorithm that converts kilometers into miles.\
-     For the purposes of this test a mile is equivelent to 1.6km\
-     Fill in the body of the function to return the correct values",
+                Unfortunately she bought it in Europe and Santa’s sleigh uses miles. \
+                Help Santa out by writing an algorithm that converts kilometers into miles.\
+                For the purposes of this test a mile is equivelent to 1.6km\
+                Fill in the body of the function to return the correct values",
 
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
-    boilerPlate: "return milesToKm(args[0])",
+    boilerPlate: "return milesToKm(args[0]); ",
 
     // Code to be initial placed in the code panel
     initial: "function milesToKm(miles) {\n    return kilometers;\n},"
@@ -26,7 +20,8 @@ export const challenge = {
     // The outer array is the individual tests, the inner array is the argument
     // list to be sent to the user code for each test.
     args: [
-        []
+        [1000],
+        [1500]
     ],
 
     /**
@@ -42,6 +37,7 @@ export const challenge = {
      */
     runTests: function (func) {
         for (const test of this.args) {
+            output(`Running: milesToKm(${test}): `);
             if (func(test) != this.test(test)) return false;
 
             if (t1 != t2) {
@@ -56,7 +52,7 @@ export const challenge = {
     /**
      * Reference implementation. User code should provide the same result
      */
-    test: function (input) {
-        return miles * 1.6
+    test: function (miles) {
+        return miles * 1.6;
     }
 }
