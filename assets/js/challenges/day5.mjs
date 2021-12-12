@@ -20,7 +20,7 @@ export const challenge = {
         }
     },
 
-    runTests: function(func, output=(s)=>s) {
+    runTests: function(func, output=s=>s) {
         output("Starting tests:\n");
         for (let i = 0; i < this.args.length; i++) {
             output(`Running test ${i+1}: `);
