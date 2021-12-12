@@ -18,10 +18,6 @@ export const challenge = {
         ['1995-12-26T03:24:00']
     ],
 
-    /**
-     * Performs any setup prior to running the tests. Can be used to generate
-     * random inputs.
-     */
     setup: function() {},
 
     /**
@@ -49,9 +45,6 @@ export const challenge = {
         }
         return true;
     },
-    /**
-     * Reference implementation. User code should provide the same result
-     */
     test: function(date){
             date = new Date(date);
             let year = date.getFullYear();
