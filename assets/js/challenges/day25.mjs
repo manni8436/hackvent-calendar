@@ -17,7 +17,7 @@ export const challenge = {
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
-    boilerPlate: "return daysTillXmas(args[0]); "
+    boilerPlate: "return daysTillXmas(args[0]); ",
 
     // Code to be initial placed in the code panel
     initial: "function daysTillXmas(args[0]) {\n    return daysTill;\n}",
@@ -25,7 +25,11 @@ export const challenge = {
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
     // list to be sent to the user code for each test.
-    args: [[]],
+    args: [
+        ['1997-11-24T03:24:00'],
+        ['1995-12-24T03:24:00'],
+        ['1995-12-26T03:24:00']
+    ],
 
     /**
      * Performs any setup prior to running the tests. Can be used to generate
