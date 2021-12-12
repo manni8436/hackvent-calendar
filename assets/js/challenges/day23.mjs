@@ -14,7 +14,7 @@ export const challenge = {
     args: [
         [["John","Sean","Juliia","Alison","Manni", "Ben", "Sandra", "Sarah", "Vicky", "Linda", "Scott"],["Vicky", "Linda", "Scott","Ben", "John"]],
         [["Sean","Ben","Manni","Ian","Liz","Robert","Jack","Sam","Sandy","Juliia","Alison","Rose","Kat"],["John","Sean","Juliia","Alison","Manni"]],
-        [["John","Sean","Juliia","Alison","Manni","Ben", "Sandra", "Sarah","Rose","Kat"]["Ben", "Sandra", "Sarah","Rose","Kat"]]
+        [["John","Sean","Juliia","Alison","Manni","Ben", "Sandra", "Sarah","Rose","Kat"],["Ben", "Sandra", "Sarah","Rose","Kat"]]
     ],
 
  
@@ -28,11 +28,11 @@ export const challenge = {
      * @param {function} output
      * @returns {Boolean} false if any tests fail, otherwise true.
      */
-    runTests: function(func, output) {
+     runTests: function(func, output=s=>s) {
         output("Starting tests:\n");
         for (const test of this.args) {
             output(`Running: ${test}`);
-            if (func(test) != this.test(test)) {
+            if (func(test[0], test[1]) != this.test(test[0],test[1])) {
                 output("Failed!\n");
                 return false;
             } else {
