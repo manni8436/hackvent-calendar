@@ -196,20 +196,28 @@ body.code {
   position: relative;
   background-color: #f2f3f8;
   width: 80vw;
-  max-height: 70%;
+  height: 80%;
   overflow-y: auto;
   border-radius: 0.8rem;
 }
 
-
 .code-wrapper {
-  padding: 3rem;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height: 100%;
+}
+
+#code-content {
+  flex: 2;
 }
 
 .code-content {
   display: none;
   flex-direction: column;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
 }
 
@@ -245,7 +253,7 @@ body.code {
 }
 
 .code-pane {
-  resize: none;
+  flex: 1;
   font-size: 1rem;
   padding: 1em;
   border-radius: 0.4rem;
@@ -436,7 +444,7 @@ footer {
   #code-window {
     position: relative;
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     border-radius: 0;
   }
 }
