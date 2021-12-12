@@ -66,6 +66,39 @@ body.code {
   text-decoration: none;
 }
 
+
+/* Mute button */
+
+#mute-wrapper {
+  color: #f2f3f8;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#mute-button,
+#unmute-button {
+  font-size: 2rem;
+}
+
+#mute-label {
+  font-size: 1rem;
+}
+
+#mute-button>i,
+#unmute-button>i,
+#mute-label {
+  text-shadow:
+    0.09rem 0 black,
+    0 0.09rem black,
+    -0.09rem 0 black,
+    0 -0.09rem black,
+    -0.09rem -0.09rem black,
+    -0.09rem 0.09rem black,
+    0.09rem -0.09rem black,
+    0.09rem 0.09rem black;
+}
+
 /* Main */
 
 #main-content {
