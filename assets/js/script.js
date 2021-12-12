@@ -1,14 +1,33 @@
 
+import { setupAdvent, setWindow } from './modules/advent.mjs';
 import { ChallengeManager } from './modules/eval.mjs';
 import { ChallengeStorage } from "./modules/storage.mjs";
 import { CodeWindow } from './modules/codewindow.mjs';
-import { setupAdvent } from './modules/advent.mjs';
 
 const storage = new ChallengeStorage();
-const codeWindow = new CodeWindow(new ChallengeManager(), storage);
+const codeWindow = new CodeWindow(new ChallengeManager(), storage, updateWindow);
 
-const windowText = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25"];
-setupAdvent(windowText);
+const windowMap = generateWindowText();
+
+// Generates text for the advant windows based on saved state
+function generateWindowText() {
+  const windows = [];
+  for (let i = 1; i <= 25; i++) {
+    windows.push({
+      day: i,
+      started: storage.hasUserStartedChallenge(i),
+      complete: storage.getChallengeSuccess(i)
+    });
+  }
+  return windows;
+}
+setupAdvent(windowMap);
+
+function updateWindow(day, complete) {
+  windowMap[day-1].started = true;
+  windowMap[day-1].complete = complete;
+  setWindow(windowMap[day-1]);
+}
 
 // Load sound settings
 $( "#sound-toggle" ).prop('checked', storage.getSoundSetting());

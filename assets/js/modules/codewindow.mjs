@@ -1,9 +1,10 @@
 
 export class CodeWindow {
 
-  constructor(challenges, storage) {
+  constructor(challenges, storage, callback) {
     this._challenges = challenges;
     this._storage = storage;
+    this._callback = callback;
 
     this._wrapper = document.getElementById("code-window-wrapper");
 
@@ -24,7 +25,6 @@ export class CodeWindow {
     this._editor = ace.edit("code-pane");
     //this._editor.setTheme("ace/theme/monokai");
     this._editor.session.setMode("ace/mode/javascript");
-
 
     // Bind methods that may be used as callbacks
     this.show = this.show.bind(this);
@@ -106,6 +106,8 @@ export class CodeWindow {
 
     if (success) this.output("\nAll tests run: Challenge complete!");
     else this.output("\nChallenge failed!");
+
+    this._callback(this._challenges.day, success);
   }
 
   output(msg) {
