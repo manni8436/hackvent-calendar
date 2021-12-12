@@ -528,3 +528,130 @@ footer {
     align-items: center;
   }
 }
+
+/* Rewards background images for each door */
+
+#door-1.complete {
+  background: #f2f3f8 url("../images/rewards/1cracker.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-2.complete {
+  background: #f2f3f8 url("../images/rewards/2latte.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-3.complete {
+  background: #f2f3f8 url("../images/rewards/3xmas-cat.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-4.complete {
+  background: #f2f3f8 url("../images/rewards/4menorah.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-5.complete {
+  background: #f2f3f8 url("../images/rewards/5hotchoc.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-6.complete {
+  background: #f2f3f8 url("../images/rewards/6present.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-7.complete {
+  background: #f2f3f8 url("../images/rewards/7pixelcandycane.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-8.complete {
+  background: #f2f3f8 url("../images/rewards/8tree-cookie.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-9.complete {
+  background: #f2f3f8 url("../images/rewards/9cookies.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-10.complete {
+  background: #f2f3f8 url("../images/rewards/10holidayarmadillo.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-11.complete {
+  background: #f2f3f8 url("../images/rewards/11reindeer.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-12.complete {
+  background: #f2f3f8 url("../images/rewards/12Tree.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-13.complete {
+  background: #f2f3f8 url("../images/rewards/13pixelgingerbread.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-14.complete {
+  background: #f2f3f8 url("../images/rewards/14xmas-shark.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-15.complete {
+  background: #f2f3f8 url("../images/rewards/15xmaspenguin.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-16.complete {
+  background: #f2f3f8 url("../images/rewards/16dreidel.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-17.complete {
+  background: #f2f3f8 url("../images/rewards/17jumper2.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-18.complete {
+  background: #f2f3f8 url("../images/rewards/18mittens.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-19.complete {
+  background: #f2f3f8 url("../images/rewards/19snowglobe.svg") no-repeat center;
+  background-size: contain;
+}
+
+#door-20.complete {
+  background: #f2f3f8 url("../images/rewards/20bauble.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-21.complete {
+  background: #f2f3f8 url("../images/rewards/21snowday.svg") no-repeat center;
+  background-size: cover;
+}
+
+#door-22.complete {
+  background: #f2f3f8 url("../images/rewards/22xmasmouse.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-23.complete {
+  background: #f2f3f8 url("../images/rewards/23Wreath.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-24.complete {
+  background: #f2f3f8 url("../images/rewards/24owls.png") no-repeat center;
+  background-size: contain;
+}
+
+#door-25.complete {
+  background: #58b69b url("../images/rewards/25pixelsanta.svg") no-repeat center;
+  background-size: contain;
+}
