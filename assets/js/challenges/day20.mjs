@@ -3,27 +3,24 @@
 
 
 export const challenge = {
-    title: "Day 19 - Triangle Area Calculation",
-    description:"Uh Oh! Some names have been moved to the naughty list at the last minute!\
-                Now the area that Santa needs deliver gifts to is a perfect triangle, and he needs to find out how big the area of the triangle is. \
-                Luckily, the area is a perfect square! He knows that the length of 1 side of the square is 10,000 KM. \
-                We know that the triangle's base = 7000 KM, and it's height = 9000 KM.\
-                Complete the Javascript function to calculate the area of the triangle. \
-                (You will need to define the base & height variables in your code)",
+    title: "Day 20 - Countdown to Christmas Day",
+    description:"Oh No! The elves' Christmas Day countdown clock has broken! \
+                They need to know how many days they have left to work before Christmas Day, their only day off in the year! \
+                Can you write a function that will calculate the number of days left until Christmas Day (25th December)?",
 
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
-    boilerPlate: "return triangleArea(args[0]);",
+    boilerPlate: "return countdownDays(args[0]);",
 
     // Code to be initial placed in the code panel
-    initial: "function triangleArea() {\n    return area;\n}",
+    initial: "function countdownDays() {\n    return countdownDays;\n}",
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
     // list to be sent to the user code for each test.
     args: [
-        [7000, 9000],
+        [],
     ],
 
     /**
@@ -57,10 +54,17 @@ export const challenge = {
     /**
      * Reference implementation. User code should provide the same result
      */
+    // Credit: https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
     test: function() {
-        let base = 7000;
-        let height = 9000;
-        let area = (base * height) / 2;
-        return area;
+        today=new Date();
+        var cmas=new Date(today.getFullYear(), 11, 25);
+        if (today.getMonth()==11 && today.getDate()>25) 
+        {
+        cmas.setFullYear(cmas.getFullYear()+1); 
+        }  
+        var one_day=1000*60*60*24;
+        let countdownDays = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
+        console.log(countdownDays);
+        return countdownDays;
     }
 }
