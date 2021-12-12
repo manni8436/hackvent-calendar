@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="">
-  <meta name="twitter:card">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="">
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content="">
@@ -38,7 +38,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark" id="navigation">
       <div class="container-fluid">
-        <a class="navbar-brand" id="logo" href="">
+        <a class="navbar_logo" id="logo" href="">
           Code-vent Calendar
         </a>
       </div>
@@ -49,9 +49,10 @@
     <section id="description-section" class="description_section col-10 offset-1">
       <h1 id="description-text" class="text-center description_title">Hacktastic Adventure</h1>
       <p class="description_paragraph">
-        Welcome to the Code-vent Calendar, below are your code-vent doors for each day of December. 
+        Welcome to the Code-vent Calendar, below are your code-vent doors for each day of December.
       </p>
-      <p class="description_paragraph">Behind each door there is a coding puzzle that needs be solved to receive a special reward 
+      <p class="description_paragraph">Behind each door there is a coding puzzle that needs be solved to receive a
+        special reward
         upon successful completion of the puzzle.</p>
     </section>
     <section class="row calendar_section" id="calendar-section">
@@ -136,20 +137,20 @@
     <section id="code-window-wrapper">
       <div id="code-window">
         <div class="code-wrapper">
-          <div id="code-loading" class="code-content">
-            Loading...
-          </div>
           <div id="code-header" class="code-content">
             <button id="close-code-window">&times;</button>
             <h2 id="challenge-title">Challenge Title</h2>
           </div>
           <div id="challenge-content" class="code-content">
             <p id="challenge-description">Challenge Description</p>
-            <button id="show-code-panel" class="btn btn_submit">Solve now</button>
+            <button id="show-code-panel" class="btn btn_solve">Solve now</button>
           </div>
           <div id="code-content" class="code-content">
             <textarea id="code-pane" class="code-pane" rows="8" cols="150"></textarea>
-            <button id="code-submit" class="btn btn_submit">Submit</button>
+            <div class="toolbar">
+              <button id="back-btn" class="btn btn_back">Back</button>
+              <button id="code-submit" class="btn btn_submit">Submit</button>
+            </div>
           </div>
           <div id="output-content" class="code-content">
             <textarea id="code-output" class="code-pane" rows="8" cols="150" readonly></textarea>
@@ -161,53 +162,54 @@
         </div>
       </div>
     </section>
+
   </main>
   <footer>
     <!-- Footer -->
     <div class="contact__main">
       <div class="contact__title">
         The Dev Team:</div>
-      <div class="contact__name">Santa's little Hackers</div>
+      <div class="contact__name">Santa's lil Hackers</div>
     </div>
     <!-- <div class="contact__links"> -->
-    <div class="links_holder">
-      <div class="contact__github"><a href="https://github.com/seanyoung247" target="_blank" rel="noopener"
+    <ul class="links_holder">
+      <li class="contact__github"><a href="https://github.com/seanyoung247" target="_blank" rel="noopener"
           aria-label="Visit Sean Young github page">
           <div class="image_holder">
             <img src="assets/images/coders/sean_young.png" alt="Sean Young photo" class="photo">
           </div>
           <div class="coder_name">Sean Young</div>
         </a></div>
-      <div class="contact__github"><a href="https://github.com/manni8436" target="_blank" rel="noopener" aria-label="Visit 
+      <li class="contact__github"><a href="https://github.com/manni8436" target="_blank" rel="noopener" aria-label="Visit 
         Emanuel Silva github page">
           <div class="image_holder">
             <img src="assets/images/coders/emanuel_silva.jpg" alt="Emanuel Silva photo" class="photo">
           </div>
           <div class="coder_name">Emanuel Silva</div>
         </a>
-      </div>
-      <div class="contact__github"><a href="https://github.com/adowlin" target="_blank" rel="noopener"
+      </li>
+      <li class="contact__github"><a href="https://github.com/adowlin" target="_blank" rel="noopener"
           aria-label="Visit Alison Dowling github page">
           <div class="image_holder">
             <img src="assets/images/coders/alison_dowling.jpg" alt="Alison Dowling photo" class="photo">
           </div>
           <div class="coder_name">Alison Dowling</div>
-        </a></div>
-      <div class="contact__github"><a href="https://github.com/IuliiaKonovalova" target="_blank" rel="noopener"
+        </a></li>
+      <li class="contact__github"><a href="https://github.com/IuliiaKonovalova" target="_blank" rel="noopener"
           aria-label="Visit Iuliia Konovalova github page">
           <div class="image_holder">
             <img src="assets/images/coders/iuliia_konovalova.JPG" alt="Iuliia Konovalova photo" class="photo">
           </div>
           <div class="coder_name">Iuliia Konovalova</div>
-        </a></div>
-      <div class="contact__github"><a href="https://github.com/John-McPherson" target="_blank" rel="noopener"
+        </a></li>
+      <li class="contact__github"><a href="https://github.com/John-McPherson" target="_blank" rel="noopener"
           aria-label="Visit John-McPherson github page">
           <div class="image_holder">
             <img src="assets/images/coders/john_mcpherson.jpg" alt="John-McPherson photo" class="photo">
           </div>
           <div class="coder_name">John-McPherson</div>
-        </a></div>
-    </div>
+        </a></li>
+    </ul>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">

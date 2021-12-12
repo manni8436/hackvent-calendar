@@ -6,7 +6,9 @@ export const challenge = {
     description: "The temperature is dropping and elves have an optimum temperature for toy making. \
                   Unfortunately elves only know farenheit, while Santa only knows celsius. Help Santa \
                   out by writing code that will convert celsius to farenheit or farenheit to celsius. \
-                  Fill in the body of the function to return the correct values",
+                  Complete the provided function to return the correct values. Degrees will be a number \
+                  while unit will be either 'f' or 'c'. If unit is 'f' degrees is in farenheit and you \
+                  need to return celsius and vice versa ",
     
     boilerPlate: "return convertTemp(args[0], args[1]); ",
     initial: "function convertTemp(degrees, unit) {\n    return degrees;\n}",
@@ -20,7 +22,7 @@ export const challenge = {
 
     setup: function() {},
 
-    runTests: function(func, output=(s)=>s) {
+    runTests: function(func, output=s=>s) {
         output("Starting tests:\n");
         for (const test of this.args) {
             output(`Running: convertTemp(${test}): `);
