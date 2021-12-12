@@ -2,8 +2,11 @@
 
 
 export const challenge = {
-    title: "Day Twenty-three - ",
-    description: "Short Challenge description here",
+    title: "Day Twenty-three - Naughty list",
+    description: "Santa’s been making a list and now he’s checking them twice.\
+    He’s got a list of all the children and another with just the naughty children.\
+    Help him out by writing a function that returns a list with just the children that deserve presents.\
+    Fill in the body of the function to return the correct values",
 
     boilerPlate: "let input = args[0]; ",
     initial: "initial code goes here",
