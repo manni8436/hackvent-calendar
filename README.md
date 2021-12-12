@@ -1,4 +1,4 @@
-# CHRISTMAS HACKATHON - 
+# CHRISTMAS HACKATHON
 
 ![GitHub contributors](https://img.shields.io/github/contributors/manni8436/chrismas-hackathon)
 ![GitHub last commit](https://img.shields.io/github/last-commit/manni8436/chrismas-hackathon)
@@ -17,10 +17,9 @@ completion of the challenge.
     * Easy to read information.
     * A christmas related colour scheme that stands out, but not overwhelming.
 
-
 ## FINAL DESIGN
 
-![Final project image home page]()
+![Final project image home page](assets/images/readme/resonsive-image.png)
 
 ## CONTENTS
 
@@ -61,6 +60,8 @@ overload the user and give them enough information as not to leave them lost of 
     * Users with advanced knowledge of coding and looking for a challenge.
     * Users with beyond advanved knowledge of coding who are looking for something fun to do.
 
+[Back to top](#christmas-hackathon)
+
 ## USER STORIES
 
 #### CLIENT GOALS
@@ -77,34 +78,44 @@ overload the user and give them enough information as not to leave them lost of 
 * To recommend the site to friends and family.
 * To come back every year to see and try new challenges.
 
+[Back to top](#christmas-hackathon)
+
 ## DESIGN
 
 ### COLOR SCHEME
 This overall color scheme used throughout the site was the variety of colours in the image below.
 
-![Site Color Scheme](assets/images/colour-scheme.png)
+![Site Color Scheme](assets/images/readme/colour-scheme.png)
 
 This color theme was used to represent slightly off traditional christmas colors, which is world wide know to be green and red,
 with hint of yellow and white for text on the site to stand out.
 
+[Back to top](#christmas-hackathon)
+
 ## WIREFRAMES
 
-* [Here is the main page wireframes](assets/images/codevent-wireframe1.jpg)
-* [Here is the code challenge wireframes](assets/images/codevent-wireframe2.jpg)
-* [Here is the code challenge input box wireframes](assets/images/codevent-wireframe3.jpg)
+* [Here is the main page wireframes](assets/images/readme/codevent-wireframe1.jpg)
+* [Here is the code challenge wireframes](assets/images/readme/codevent-wireframe2.jpg)
+* [Here is the code challenge input box wireframes](assets/images/readme/codevent-wireframe3.jpg)
+
+[Back to top](#christmas-hackathon)
 
 ## FEATURES
 The following features have been used in this project:
-    
 
+[Back to top](#christmas-hackathon)
+    
 ## SOLVED BUGS
+
+[Back to top](#christmas-hackathon)
 
 ## TECHNOLOGIES USED
 
 ###  LANGUAGES USED
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" 
-alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap logo" height="50px" width="50px" />   
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap logo" height="50px" width="50px" />   
+
+[Back to top](#christmas-hackathon)
 
 ### PROGRAMS USED:
 
@@ -127,7 +138,9 @@ alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devico
 [Am i Responsive](http://ami.responsivedesign.is/) was used to create the image in my [Final Design](#FINAL-DESIGN) section.
 
 #### Adode:
-Adode was used in the initial design process to make wireframes.
+[Adode](https://www.adobe.com/products/xd.html) was used in the initial design process to make wireframes.
+
+[Back to top](#christmas-hackathon)
 
 ## DEPLOYMENT:
 
@@ -136,7 +149,7 @@ Adode was used in the initial design process to make wireframes.
 This site was deployed using GitHub Pages with the following the steps below:
 
 1. Login or Sign Up to [GitHub](www.github.com).
-2. Create a new repository named "(add repo name here)".
+2. Create a new repository named "chrismas-hackathon".
 3. Once created, click on "Settings" on the navigation bar under the repository title.
 4. Click on "Pages", on the left hand side below Secrets.
 5. Under "Source", choose which branch you wish to deploy, In most cases it will be "main".
@@ -149,8 +162,10 @@ This site was deployed using GitHub Pages with the following the steps below:
 If you need to make a copy of a repository:
 
 1. Login or Sign Up to [GitHub](www.github.com).
-2. On GitHub, go to [add repo name here]().
+2. On GitHub, go to [manni8436/chrismas-hackathon](https://github.com/manni8436/chrismas-hackathon).
 3. In the top right corner, click "Fork".
+
+[Back to top](#christmas-hackathon)
 
 ### HOW TO CLONE A REPOSITORY
 
@@ -178,6 +193,8 @@ If you need to make a local clone:
 7. Type git clone and then paste the URL you copied in step 4.
 8. Press Enter, and your local clone will be created.
 
+[Back to top](#christmas-hackathon)
+
 ## TESTING
 
 ### CODE VALIDATORS
@@ -191,9 +208,11 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 * JavaScript Validator
 
+[Back to top](#christmas-hackathon)
+
 ### FULL TESTING
 
-[Click Here](testing.md) to view the full testing steps that were completed on every device and browser.
+[Click Here](TESTING.md) to view the full testing steps that were completed on every device and browser.
 
 ### LIGHTHOUSE
 
@@ -215,5 +234,9 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 ### TEXT CONTENT
 
-    
+[Back to top](#christmas-hackathon)
+
 ## ACKNOWLEDGEMENTS:
+
+
+[Back to top](#christmas-hackathon)
