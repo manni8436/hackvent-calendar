@@ -26,6 +26,7 @@ body {
   font-family: Lores-12, sans-serif;
   overflow-y: scroll;
 }
+
 body.code {
   overflow-y: hidden;
 }
@@ -279,7 +280,7 @@ footer {
   background-color: rgba(98, 22, 34, 0.9);
   backdrop-filter: blur(2px) saturate(105%);
   -webkit-backdrop-filter: blur(2px) saturate(105%);
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -313,7 +314,8 @@ footer {
 
 
 .links_holder {
-  max-width: 80%;
+  padding-left: 0;
+  max-width: 80vw;
   padding-top: 3rem;
   padding-bottom: 5rem;
   display: grid;
@@ -347,6 +349,7 @@ footer {
   object-fit: cover;
   border-radius: 50%;
 }
+
 .coder_name {
   margin-top: 2rem;
   text-align: center;
