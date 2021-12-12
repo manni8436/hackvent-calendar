@@ -19,7 +19,7 @@ completion of the challenge.
 
 ## FINAL DESIGN
 
-![Final project image home page](assets/images/readme/resonsive-image.png)
+![Final project image home page](assets/images/readme/responsive-image.png)
 
 ## CONTENTS
 
@@ -104,8 +104,35 @@ with hint of yellow and white for text on the site to stand out.
 The following features have been used in this project:
 
 [Back to top](#christmas-hackathon)
-    
+
+## BUGS FOUND
+
+1. While creating the footer, the bug below was found on the firefox browser where the footer github image links would sit horizonatal on the page instead of vertical.
+
+![Footer Bug](assets/images/readme/horizontal-footer-bug.png)
+
+2. A horizontal overflow was found after the footer was created.
+
+![Footer Bug](assets/images/readme/footer-horizontal-overflow.png)
+
+3. While working on the code window, it would overflow the screen height and couldn't be scrolled, leading to parts of the interface being inaccessible.
+
+![Code Window Bug](assets/images/readme/code-window-bug.png)
+
 ## SOLVED BUGS
+
+1. In the `footer`, the width value was changed from `100vw` to `100%` and also in the `links-holder` class selector the `max-width`
+was changed from `80%` to `80vw` and added `padding-left: 0;` and the results are shown below.
+
+![Solved Footer Bug](assets/images/readme/solved-footer-bug.png)
+
+2. To resolve this issue, `width: 100vw;` was removed from the `footer` selector.
+
+![Solved Footer Horizontal Overflow Bug](assets/images/readme/solved-footer-horizontal-overflow.png)
+
+3. In order to fix the code window bug, two additions were made in `body.code`, `max-height: 70vh;` and `overflow-y: auto;` was added.
+
+![Solved Code Window Bug](assets/images/readme/solved-code-window-bug.png)
 
 [Back to top](#christmas-hackathon)
 
@@ -113,9 +140,7 @@ The following features have been used in this project:
 
 ###  LANGUAGES USED
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap logo" height="50px" width="50px" />   
-
-[Back to top](#christmas-hackathon)
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap logo" height="50px" width="50px" /> 
 
 ### PROGRAMS USED:
 
