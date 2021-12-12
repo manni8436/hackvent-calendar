@@ -1,7 +1,7 @@
 
 export class CodeWindow {
 
-  constructor(challenges, pages) {
+  constructor(challenges) {
     this._challenges = challenges
 
     this._wrapper = document.getElementById("code-window-wrapper");
