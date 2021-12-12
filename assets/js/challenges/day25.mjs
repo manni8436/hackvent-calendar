@@ -62,7 +62,15 @@ export const challenge = {
     /**
      * Reference implementation. User code should provide the same result
      */
-    test: function(input) {
-        return false;
+    test: function(date){
+            date = new Date(date)
+            let year = date.getFullYear()
+            let xmas = new Date(`${year}-12-25T03:24:00`)
+            if (xmas.getTime() < date.getTime()){
+              xmas = new Date(`${year+1}-12-25T03:24:00`)
+            }
+            
+            let daysTill = (xmas.getTime()-date.getTime())/ 86400000
+            return daysTill
     }
 }
