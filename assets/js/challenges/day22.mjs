@@ -26,7 +26,7 @@ export const challenge = {
 
     setup: function () {},
 
-    runTests: function (func, output=(s)=>s) {
+    runTests: function (func, output=s=>s) {
         output("Starting tests:\n");
         for (const test of this.args) {
             output("Running: mostPopular(toys): ");
