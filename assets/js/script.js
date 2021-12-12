@@ -1,6 +1,6 @@
+
 import { ChallengeManager } from './modules/eval.mjs';
 import { CodeWindow } from './modules/codewindow.mjs';
-
 import { setupAdvent } from './modules/advent.mjs';
 
 const codeWindow = new CodeWindow(new ChallengeManager());
@@ -15,42 +15,26 @@ $("#show-code-panel").click(function() {
 
 // Closing the code window
 $("#code-window-wrapper").click(function (e) {
+  // Only close if the wrapper was clicked, not if one of it's children recieved the event
   if (e.target === this) codeWindow.close();
 });
 $("#close-code-window").click(codeWindow.close);
+$("#done-btn").click(codeWindow.close);
 
-/**
- * Adds tab functionality to the textarea
- */
-$("#code-pane").keydown(function (e) {
-  if (e.key == 'Tab') {
-    e.preventDefault();
-    const start = this.selectionStart;
-    const end = this.selectionEnd;
-
-    // set textarea value to: text before caret + tab + text after caret
-    this.value = this.value.substring(0, start) + "    " + this.value.substring(end);
-
-    // put caret at right position again
-    this.selectionStart = this.selectionEnd = start + 4;
-  }
-});
-
+// Submit button - submit run and test user code
 $("#code-submit").click(codeWindow.submitCode);
 
+// Return to description from code pane
 $("#back-btn").click(function() {
   codeWindow.showPage("challenge");
 });
 
+// Retry button - Return to code view
 $("#retry-btn").click(function() {
   codeWindow.showPage("code");
 });
 
-$("#done-btn").click(codeWindow.close);
-
-/**
- * Open code window on door click
- */
+// Open code window on door click
 $(".door_holder").click(function () {
   const day = $(this).children(".door").data("day");
   codeWindow.loadChallenge(day);
