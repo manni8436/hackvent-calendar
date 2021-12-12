@@ -38,7 +38,7 @@ export const challenge = {
      * @param {function} output
      * @returns {Boolean} false if any tests fail, otherwise true.
      */
-    runTests: function(func, output) {
+    runTests: function(func, output=s=>s) {
         output("Starting tests:\n");
         for (const test of this.args) {
             output(`Running: ${test}`);

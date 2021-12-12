@@ -19,6 +19,12 @@ export class CodeWindow {
       output: document.getElementById("code-output")
     }
 
+    // Setup code editor
+    this._editor = ace.edit("code-pane");
+    //this._editor.setTheme("ace/theme/monokai");
+    this._editor.session.setMode("ace/mode/javascript");
+
+
     // Bind methods that may be used as callbacks
     this.show = this.show.bind(this);
     this.close = this.close.bind(this);
@@ -38,7 +44,7 @@ export class CodeWindow {
     // Add content to code window elements
     this._elements.title.innerText = this._challenges.challenge.title;
     this._elements.description.innerText = this._challenges.challenge.description;
-    this._elements.codePane.value = this._challenges.challenge.initial;
+    this._editor.setValue(this._challenges.challenge.initial);
     // Show the initial screen
     this._wrapper.classList.add("show");
     this.showPage("challenge");
@@ -60,7 +66,7 @@ export class CodeWindow {
     // Clear the challenge information
     this._elements.title.innerText = "";
     this._elements.description.innerText = "";
-    this._elements.codePane.value = "";
+    this._editor.setValue("");
     this._elements.output.value = "";
   }
 
@@ -71,7 +77,7 @@ export class CodeWindow {
   submitCode() {
     this.showPage("output");
     this._elements.output.value = "";
-    const code = this._elements.codePane.value;
+    const code = this._editor.getValue();
 
     const success = this._challenges.evaluate(code, this.output);
     if (success) this.output("\nAll tests run: Challenge complete!");
