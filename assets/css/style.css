@@ -235,6 +235,7 @@ body.code {
   font-weight: bold;
   padding-bottom: 2rem;
   text-align: center;
+  max-width: 85%;
 }
 
 #challenge-description {
@@ -245,10 +246,11 @@ body.code {
 
 .code-pane {
   resize: none;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1em;
   border-radius: 0.4rem;
   width: 100%;
+  min-height: 9rem;
 }
 
 .toolbar {
@@ -257,6 +259,7 @@ body.code {
   justify-content: space-around;
 }
 
+/* Btns */
 .btn {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -274,20 +277,33 @@ body.code {
   color: #fff;
 }
 
-.btn_back {
+.btn_solve:hover {
+  background-color: #285b52bb;
+  color: #fff;
+}
+
+.btn_back,
+.btn_retry {
   margin-top: 2vh;
   background-color: #285b52;
   color: #fff;
-
 }
 
-.btn_submit {
+.btn_back:hover,
+.btn_retry:hover {
+  background-color: #285b52bb;
+  color: #fff;
+}
+
+.btn_submit,
+.btn_done {
   margin-top: 2vh;
   background-color: #651522;
   color: #fff;
 }
 
-.btn_submit:hover {
+.btn_submit:hover,
+.btn_done:hover {
   background-color: #651522d3;
   color: #fff;
 }
@@ -434,5 +450,31 @@ footer {
     max-width: 90%;
     font-size: 2.5rem;
     text-align: center;
+  }
+
+  #challenge-title {
+    padding-top: 1rem;
+  }
+
+  #challenge-description {
+    max-width: 98%;
+  }
+
+  .btn {
+    font-size: 1.7rem;
+    width: 8rem;
+  }
+
+  .btn_solve {
+    width: 12rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .toolbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
