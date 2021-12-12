@@ -2,13 +2,13 @@
 import { randomInt } from './libs.mjs';
 
 export const challenge = {
-    title: "Day Five - Total gift cost",
-    description: "The accountant Elf now needs to know the total costs of all the gifts! \
-                  Complete the function provided so that it returns the sum of all the \
-                  gift prices in the gifts Array.",
+    title: "Day Six - Average gift cost",
+    description: "The accountant Elf is getting very stressed. He needs to know the \
+                  average gift price now. Complete the function so that it returns \
+                  cost of all the gifts in the gifts array.",
     
-    boilerPlate: "return getTotalCost(args[0]); ",
-    initial: "function getTotalCost(gifts) {\n    return gifts;\n}",
+    boilerPlate: "return getAverageCost(args[0]); ",
+    initial: "function getAverageCost(gifts) {\n    return gifts;\n}",
 
     args: [],
 
@@ -25,7 +25,7 @@ export const challenge = {
         for (let i = 0; i < this.args.length; i++) {
             output(`Running test ${i+1}: `);
 
-            const t1 = func([...this.args[i]]);
+            const t1 = Math.round(func([...this.args[i]]));
             const t2 = this.test([...this.args[i]]);
 
             if (t1 != t2) {
@@ -38,6 +38,6 @@ export const challenge = {
     },
 
     test: function(gifts) {
-        return gifts.reduce((p,c)=>p+=c);
+        return Math.round(gifts.reduce((p,c)=>p+=c) / gifts.length);
     }
 }
