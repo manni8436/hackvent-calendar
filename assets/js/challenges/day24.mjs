@@ -13,9 +13,9 @@ export const challenge = {
 
     boilerPlate: "return reindeerFood(args[0],args[1]); ",
 
-    initial: "function reindeerFood(miles,reindeer) {\n    return sacks;\n},",
+    initial: "function reindeerFood(miles,reindeer) {\n    return sacks;\n}",
     args: [
-        [1000,12],
+        [1,1],
         [1,1],
         [2500,9]
     ],
@@ -45,7 +45,8 @@ export const challenge = {
         return true;
     },
 
-    test: function(input) {
-        return false;
+    test: function(miles,reindeer){
+        let sacks = Math.ceil((miles*1000*reindeer)/400);
+            return sacks;
     }
 }
