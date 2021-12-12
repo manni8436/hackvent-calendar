@@ -279,7 +279,6 @@ footer {
   background-color: rgba(98, 22, 34, 0.9);
   backdrop-filter: blur(2px) saturate(105%);
   -webkit-backdrop-filter: blur(2px) saturate(105%);
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
