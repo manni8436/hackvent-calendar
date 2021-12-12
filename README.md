@@ -98,10 +98,15 @@ with hint of yellow and white for text on the site to stand out.
 * [Here is the code challenge wireframes](assets/images/readme/codevent-wireframe2.jpg)
 * [Here is the code challenge input box wireframes](assets/images/readme/codevent-wireframe3.jpg)
 
-[Back to top](#christmas-hackathon)
-
 ## FEATURES
 The following features have been used in this project:
+    * Hover
+        * Tells the user solve now, submit and back buttons are highlighted.
+        * Mouse pointer changes to a hand to indicate a clickable area.
+
+    * Sound
+        * Sound can be heard when the advent door is clicked opened.
+        * The user can turn the sound off.
 
 [Back to top](#christmas-hackathon)
 
