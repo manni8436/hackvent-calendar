@@ -3,7 +3,7 @@ var muteWrapper = document.getElementById("mute-wrapper");
 var muteButton = document.getElementById("mute-button");
 var unmuteButton = document.getElementById("unmute-button");
 var muteLabel = document.getElementById("mute-label");
-let muted = false;
+var muted = false;
 
 muteWrapper.onclick = function () {
 
@@ -64,8 +64,11 @@ export function setupAdvent(words) {
           // Play door open audio
           if (!$(this).children(".door").hasClass("open")) {
             // Only play the sound if this door isn't open yet.
-            const audioDoor = new Audio("assets/audio/dooropen.mp3");
-            audioDoor.play();
+            if (muted == false) {
+              // Only play the sound if site is not muted.
+              var audioDoor = new Audio("assets/audio/dooropen.mp3");
+              audioDoor.play();
+            }
           }
           $(this).children(".door").addClass("open");
         }
