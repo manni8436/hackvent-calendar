@@ -197,19 +197,10 @@ body.code {
   background-color: #f2f3f8;
   max-width: 60vw;
   max-height: 70%;
-  min-height: 50vh;
   overflow-y: auto;
   border-radius: 0.8rem;
 }
 
-.visible-scrollbar::-webkit-scrollbar {
-  width: 1rem;
-}
-
-.visible-scrollbar::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: #285b525e;
-}
 
 .code-wrapper {
   padding: 3rem;
@@ -387,6 +378,12 @@ footer {
   font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1400px) {
+  #code-window {
+    max-width: 80vw;
+  }
+}
+
 @media screen and (max-width: 1000px) {
 
   #navigation #logo {
@@ -416,6 +413,14 @@ footer {
 
   #code-window {
     max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #code-window {
+    position: relative;
+    max-width: 100vw;
+    min-height: 100vh;
   }
 }
 
