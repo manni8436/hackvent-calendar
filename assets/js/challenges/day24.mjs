@@ -6,14 +6,14 @@ export const challenge = {
     title: "Day Twenty-four - Feeding the Reindeer",
     description: "Santa’s reindeer require a lot of energy to pull his sleigh.\
     He needs your help to work out exactly how many sacks of carrots he needs to order to ensure that his reindeer don’t run out of energy when he’s halfway over the Atlantic.\
-    Write a function that takes two parameters miles and numReindeer and works out exactly how many sacks of carrots Santa needs.\
+    Write a function that takes two parameters miles and reindeer and works out exactly how many sacks of carrots Santa needs.\
     Each sck of carrots is 400 calories, and each reindeer uses 100 calories per mile.\
     Remember santa buys his carrots wholesale, so he cannot buy fractions of a sack.\
     Fill in the body of the function to return the correct values",
 
-    boilerPlate: "let input = args[0]; ",
+    boilerPlate: "return reindeerFood(args[0],args[1]); ",
 
-    initial: "initial code goes here",
+    initial: "function reindeerFood(miles,reindeer) {\n    return sacks;\n},",
     args: [[]],
 
 
