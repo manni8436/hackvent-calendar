@@ -69,38 +69,44 @@ body.code {
 
 /* Mute button */
 
-#mute-wrapper {
-  color: #f2f3f8;
+.sound-toggle {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 2vh;
+  right: 5vw;
+}
+
+.sound-toggle input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.sound-toggle label {
+  color: black;
+  font-size: 20px;
+  line-height: 1;
   text-align: center;
+  padding: 8px 16px;
+  margin-right: -1px;
+  transition: all 0.4s ease-in-out;
 }
 
-#mute-button,
-#unmute-button {
-  font-size: 2rem;
+.sound-toggle label:hover {
+  cursor: pointer;
 }
 
-#mute-label {
-  font-size: 1rem;
-}
-
-#mute-button>i,
-#unmute-button>i,
-#mute-label {
-  text-shadow:
-    0.09rem 0 black,
-    0 0.09rem black,
-    -0.09rem 0 black,
-    0 -0.09rem black,
-    -0.09rem -0.09rem black,
-    -0.09rem 0.09rem black,
-    0.09rem -0.09rem black,
-    0.09rem 0.09rem black;
+.sound-toggle input:checked ~ label#sound-on,
+.sound-toggle input:not(:checked) ~ label#sound-off {
+  color: #fff;
 }
 
 /* Main */
-
 #main-content {
   padding-top: 5vh;
 }

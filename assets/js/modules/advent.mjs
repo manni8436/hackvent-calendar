@@ -1,30 +1,3 @@
-// Mute button functionality (added here since door open audio is included in this advent script)
-var muteWrapper = document.getElementById("mute-wrapper");
-var muteButton = document.getElementById("mute-button");
-var unmuteButton = document.getElementById("unmute-button");
-var muteLabel = document.getElementById("mute-label");
-var muted = false;
-
-muteWrapper.onclick = function () {
-
-  if (muteWrapper.classList.contains("unmute")) {
-    muted = true;
-    muteButton.classList.toggle("d-none");
-    unmuteButton.classList.toggle("d-none");
-    muteLabel.innerHTML = "Unmute";
-    muteWrapper.classList.toggle("unmute");
-    muteWrapper.classList.toggle("mute");
-  } else {
-    muted = false;
-    muteButton.classList.toggle("d-none");
-    unmuteButton.classList.toggle("d-none");
-    muteLabel.innerHTML = "Mute"
-    muteWrapper.classList.toggle("unmute");
-    muteWrapper.classList.toggle("mute");
-  }
-
-};
-
 
 // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
 export function setupAdvent(words) {
@@ -64,16 +37,15 @@ export function setupAdvent(words) {
           // Play door open audio
           if (!$(this).children(".door").hasClass("open")) {
             // Only play the sound if this door isn't open yet.
-            if (muted == false) {
+            if ($( "#sound-toggle" ).prop("checked")) {
               // Only play the sound if site is not muted.
-              var audioDoor = new Audio("assets/audio/dooropen.mp3");
+              const audioDoor = new Audio("assets/audio/dooropen.mp3");
               audioDoor.play();
             }
           }
           $(this).children(".door").addClass("open");
         }
       });
-
     });
   }
 }

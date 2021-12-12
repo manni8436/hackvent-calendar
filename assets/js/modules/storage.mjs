@@ -2,10 +2,8 @@
  * Stores user code submissions and completion in localStorage
  */
 export class ChallengeStorage {
-    /**
-     * Loads stored data for the given day
-     * @param {String or Number} day 
-     * @returns {Object}
+    /*
+     * Challenge data
      */
     getChallengeData(day) {
         const success = (localStorage.getItem(`day${day}-success`) === 'true');
@@ -35,5 +33,18 @@ export class ChallengeStorage {
 
     setChallengeCode(day, code) {
         localStorage.setItem(`day${day}-code`, code);
+    }
+
+    /*
+     * Site settings
+     */
+
+    getSoundSetting() {
+        const toggle = (localStorage.getItem(`play-sound`) === 'true');
+        return (toggle ? true : false);
+    }
+
+    setSoundSetting(toggle) {
+        localStorage.setItem(`play-sound`, toggle);
     }
 }
