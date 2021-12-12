@@ -14,7 +14,11 @@ export const challenge = {
     boilerPlate: "return reindeerFood(args[0],args[1]); ",
 
     initial: "function reindeerFood(miles,reindeer) {\n    return sacks;\n},",
-    args: [[]],
+    args: [
+        [1000,12],
+        [1,1],
+        [2500,9]
+    ],
 
 
     setup: function() {},
