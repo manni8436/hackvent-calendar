@@ -11,7 +11,9 @@ export const challenge = {
     boilerPlate: "return naughtyNice(args[0],args[1]); ",
     initial: "function naughtyNice(list,naughtyList) {\n    return nice;\n}",
 
-    args: [[]],
+    args: [
+        [["John","Sean","Juliia","Alison","Manni", "Ben", "Sandra", "Sarah", "Vicky", "Linda", "Scott"],["Vicky", "Linda", "Scott","Ben", "John"]],
+    ],
 
  
     setup: function() {},
@@ -39,7 +41,18 @@ export const challenge = {
     },
 
 
-    test: function(input) {
-        return false;
-    }
+    test: function(list,naughtyList){
+        for (let x of naughtyList){
+          for (let y in list){
+           if (list[y]===x){
+            list.splice(y,1);
+            
+           }
+          }
+        }
+        let nice = list;
+        return nice
+      }
+    
+      
 }
