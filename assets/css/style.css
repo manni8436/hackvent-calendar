@@ -210,7 +210,8 @@ body.code {
   height: 100%;
 }
 
-#code-content {
+#code-content,
+#output-content {
   flex: 2;
 }
 
@@ -254,6 +255,7 @@ body.code {
 
 .code-pane {
   flex: 1;
+  resize: none; 
   font-size: 1rem;
   padding: 1em;
   border-radius: 0.4rem;
