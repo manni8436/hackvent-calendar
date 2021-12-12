@@ -8,8 +8,11 @@
 
 
 export const challenge = {
-    title: "Challenge Title Here",
-    description: "Short Challenge description here",
+    title: "Christmas Day - How Many Days Until Christmas",
+    description: "Santa isn’t always that organised. \
+    He always ends up leaving the presents to the last minute. \
+    Write a function that works out exactly how many days there are left until christmas so he knows exactly how panicked he needs to be.\
+    Fill in the body of the function to return the correct values",
 
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
