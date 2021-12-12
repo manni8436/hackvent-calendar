@@ -8,21 +8,13 @@ $(document).ready(function () {
 
   // Calendar animation adapted from: https://codepen.io/dazulu/pen/ByoWee
 
-  let words = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8,", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25"];
+  const words = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8,", "Day 9", "Day 10", "Day 11", "Day 12", "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25"];
 
-  let message = "";
-  let date = new Date();
-  let day = date.getDate();
-  let month = date.getMonth() + 1;
-  let scrolled = false;
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+
   let timeDelay = 200;
-
-  // function to reveal message
-  let cardReveal = function () {
-    $("#message").text(message).show();
-  }
-
-  //day=25; // uncomment to skip to 25
 
   // Only work in December
   if (month === 12) {
@@ -45,7 +37,6 @@ $(document).ready(function () {
       if (adventwindow <= day) {
         let word = words[index];
         $(this).append('<div class="revealed">' + word + '</div>');
-        message = message + " " + word;
       }
 
       // On clicking a window, toggle it open/closed
@@ -59,27 +50,9 @@ $(document).ready(function () {
           let audioDoor = new Audio("assets/audio/dooropen.mp3");
           audioDoor.play();
         }
-
-        // If 25th, can show the message
-        if (day >= 25 && adventwindow === 25) {
-          messageReveal();
-
-          // Animate scroll to message if not already done
-          if (!scrolled) {
-            $('html, body').animate({
-              scrollTop: $("#message").offset().top
-            }, 2000);
-            scrolled = true;
-          }
-        }
       });
 
     });
-
-    // If beyond 24, show message
-    if (day >= 26) {
-      messageReveal();
-    }
   }
 });
 
@@ -89,12 +62,6 @@ $(document).ready(function () {
  */
 function showCodeWindow(day) {
   challenges.loadChallenge(day, loadChallengeData, closeCodeWindow);
-  // Removed timer as it interfers with preventing the code window
-  // from opening if there's a load error. - Sean
-  $("#code-window-wrapper").addClass("show");
-  // Show the loading section
-  $("#code-loading").addClass("show");
-  $("body").addClass("code");
 }
 
 /**
@@ -102,11 +69,13 @@ function showCodeWindow(day) {
  * Fills out the window values.
  */
 function loadChallengeData() {
+  $("#code-window-wrapper").addClass("show");
+  $("body").addClass("code");
+
   $("#challenge-title").text(challenges.challenge.title);
   $("#challenge-description").text(challenges.challenge.description);
   $("#code-pane").val(challenges.challenge.initial);
-  // Hide loading - show content
-  $("#code-loading").removeClass("show");
+
   $("#challenge-content").addClass("show");
 }
 
@@ -124,17 +93,17 @@ $("#show-code-panel").click(function() {
  * Hides code window
  */
 function closeCodeWindow() {
-    $("#code-window-wrapper").removeClass("show");
-    $("body").removeClass("code");
+  $("#code-window-wrapper").removeClass("show");
+  $("body").removeClass("code");
 
-    $("#code-loading").removeClass("show");
-    $("#challenge-content").removeClass("show");
-    $("#code-content").removeClass("show");
-    $("#output-content").removeClass("show");
+  $("#code-loading").removeClass("show");
+  $("#challenge-content").removeClass("show");
+  $("#code-content").removeClass("show");
+  $("#output-content").removeClass("show");
 
-    $("#challenge-title").text("");
-    $("#challenge-description").text("");
-    $("#code-pane").val("");
+  $("#challenge-title").text("");
+  $("#challenge-description").text("");
+  $("#code-pane").val("");
 }
 $("#code-window-wrapper").click(function (e) {
   if (e.target === this) closeCodeWindow();
@@ -172,6 +141,14 @@ $("#code-submit").click(function () {
   const success = challenges.evaluate($("#code-pane").val(), updateOutput);
   if (success) updateOutput("\nAll tests run: Challenge complete!");
   else updateOutput("\nChallenge failed!");
+});
+
+/**
+ * Back to description button
+ */
+$("#back-btn").click(function() {
+  $("#challenge-content").addClass("show");
+  $("#code-content").removeClass("show");
 });
 
 $("#retry-btn").click(function() {

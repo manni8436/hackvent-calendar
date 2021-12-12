@@ -244,6 +244,12 @@ body.code {
   width: 100%;
 }
 
+.toolbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
 .btn {
   padding: 0.5rem 2rem;
   font-size: 2rem;

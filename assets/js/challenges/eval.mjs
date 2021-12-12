@@ -2,6 +2,7 @@
  * Manages loading of challenge code and execution of user submission code
  * 
  */
+const testing = true;
 export class ChallengeManager {
     constructor() {
         this._challenge = null;
@@ -31,12 +32,18 @@ export class ChallengeManager {
      * @param {Function} callback - Function to call when loaded
      */
     loadChallenge(day, success, failure) {
-        this._day = 0;
-        this._challenge = null;
+        const date = new Date();
+        const today = date.getDate();
+        const month = date.getMonth() + 1;
 
-        import(`./day${day}.mjs`)
-          .then(module => this._loaded(module, success))
-          .catch(err => this._loadFailed(err, day, failure));
+        if (testing || (month===12 && today >= day)) {
+            this._day = day;
+            this._challenge = null;
+
+            import(`./day${day}.mjs`)
+            .then(module => this._loaded(module, success))
+            .catch(err => this._loadFailed(err, day, failure));
+        }
     }
 
     /**
