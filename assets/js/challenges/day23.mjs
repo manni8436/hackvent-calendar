@@ -8,8 +8,8 @@ export const challenge = {
     Help him out by writing a function that returns a list with just the children that deserve presents.\
     Fill in the body of the function to return the correct values",
 
-    boilerPlate: "let input = args[0]; ",
-    initial: "initial code goes here",
+    boilerPlate: "return naughtyNice(args[0],args[1]); ",
+    initial: "function naughtyNice(list,naughtyList) {\n    return nice;\n}",
 
     args: [[]],
 
