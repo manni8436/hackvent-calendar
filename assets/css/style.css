@@ -194,12 +194,21 @@ body.code {
 
 #code-window {
   position: relative;
-  margin-top: 3rem;
   background-color: #f2f3f8;
-  max-width: 70vw;
-  max-height: 70vh;
+  max-width: 60vw;
+  max-height: 70%;
+  min-height: 50vh;
   overflow-y: auto;
   border-radius: 0.8rem;
+}
+
+.visible-scrollbar::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.visible-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #285b525e;
 }
 
 .code-wrapper {
@@ -233,11 +242,14 @@ body.code {
 #challenge-title {
   font-size: 2rem;
   font-weight: bold;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 
 #challenge-description {
   font-size: 1.5rem;
   padding: 2vh 0;
+  max-width: 85%;
 }
 
 .code-pane {
@@ -255,17 +267,33 @@ body.code {
 }
 
 .btn {
-  padding: 0.5rem 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 2rem;
   border-radius: 0.4rem;
+  width: 12rem;
+  border: none;
+  outline: none;
+}
+
+.btn_solve {
+  width: 14rem;
+  margin-top: 2vh;
+  background-color: #285b52;
+  color: #fff;
+}
+
+.btn_back {
+  margin-top: 2vh;
+  background-color: #285b52;
+  color: #fff;
+
 }
 
 .btn_submit {
   margin-top: 2vh;
   background-color: #651522;
   color: #fff;
-  border: none;
-  outline: none;
 }
 
 .btn_submit:hover {
