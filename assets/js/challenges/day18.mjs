@@ -3,27 +3,24 @@
 
 
 export const challenge = {
-    title: "Day 16 - List Sorting",
-    description:"Santa has a list of names on his nice list. \
-                However, he wants to deliver presents in alphabetical order! \
-                Can you write a javascript function that sorts the list 'names' alphabetically?",
+    title: "Day 18 - Area Calculation",
+    description:"Santa needs to find out the size of the area he needs to fly over to deliver gifts. \
+                Luckily, the area is a perfect square! He knows that the length of 1 side of the square is 10,000 KM. \
+                Complete the Javascript function to calculate the area of the square.",
 
     // Code to be append to the user submission.
     // Here it converts the first argument to an input variable,
     // (so the user can access the first parameter as input instead of arg[0]).
-    boilerPlate: "return sortNames(args[0]);",
+    boilerPlate: "return squareArea(args[0]);",
 
     // Code to be initial placed in the code panel
-    initial: "function sortNames(names) {\n    return names;\n}",
+    initial: "function squareArea(side) {\n    return area;\n}",
 
     // The argument list to be sent to user code. Should be an array of arrays.
     // The outer array is the individual tests, the inner array is the argument
     // list to be sent to the user code for each test.
     args: [
-        ["Sean", "Julia", "Manni", "John", "Alison"],
-        ["Julia", "Manni", "John", "Alison", "Sean"],
-        ["Manni", "John", "Alison", "Sean", "Julia"],
-        ["Alison", "Julia", "John", "Sean", "Manni"],
+        [10000],
     ],
 
     /**
@@ -43,8 +40,8 @@ export const challenge = {
     runTests: function(func, output) {
         output("Starting tests:\n");
         for (const test of this.args) {
-            output("Running: sortNames(): ");
-            if (func([...test]).join(',') != this.test([...test]).join(',')) {
+            output("Running: squareArea(): ");
+            if (func([...test]) != this.test([...test])) {
                 output("Failed!\n");
                 return false;
             } else {
@@ -57,8 +54,8 @@ export const challenge = {
     /**
      * Reference implementation. User code should provide the same result
      */
-    test: function(names) {
-        names.sort();
-        return names;
+    test: function(side) {
+        let area = side * side;
+        return area;
     }
 }
