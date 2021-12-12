@@ -5,7 +5,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/manni8436/chrismas-hackathon)
 ![GitHub top language](https://img.shields.io/github/languages/top/manni8436/chrismas-hackathon)
 
-[Here is a link to the final project](https://manni8436.github.io/chrismas-hackathon/)
+[Here is a link to the final project](https://manni8436.github.io/hackvent-calendar/)
 
 ## INITIAL DESIGN
 * The initial idea behind this project was to create a advent calendar style website, where the user 
@@ -98,10 +98,15 @@ with hint of yellow and white for text on the site to stand out.
 * [Here is the code challenge wireframes](assets/images/readme/codevent-wireframe2.jpg)
 * [Here is the code challenge input box wireframes](assets/images/readme/codevent-wireframe3.jpg)
 
-[Back to top](#christmas-hackathon)
-
 ## FEATURES
 The following features have been used in this project:
+    * Hover
+        * Tells the user solve now, submit and back buttons are highlighted.
+        * Mouse pointer changes to a hand to indicate a clickable area.
+
+    * Sound
+        * Sound can be heard when the advent door is clicked opened.
+        * The user can turn the sound off.
 
 [Back to top](#christmas-hackathon)
 
@@ -174,7 +179,7 @@ was changed from `80%` to `80vw` and added `padding-left: 0;` and the results ar
 This site was deployed using GitHub Pages with the following the steps below:
 
 1. Login or Sign Up to [GitHub](www.github.com).
-2. Create a new repository named "chrismas-hackathon".
+2. Create a new repository named "hackvent-calendar".
 3. Once created, click on "Settings" on the navigation bar under the repository title.
 4. Click on "Pages", on the left hand side below Secrets.
 5. Under "Source", choose which branch you wish to deploy, In most cases it will be "main".
@@ -187,7 +192,7 @@ This site was deployed using GitHub Pages with the following the steps below:
 If you need to make a copy of a repository:
 
 1. Login or Sign Up to [GitHub](www.github.com).
-2. On GitHub, go to [manni8436/chrismas-hackathon](https://github.com/manni8436/chrismas-hackathon).
+2. On GitHub, go to [hackvent-calendar](https://github.com/manni8436/hackvent-calendar).
 3. In the top right corner, click "Fork".
 
 [Back to top](#christmas-hackathon)
@@ -197,7 +202,7 @@ If you need to make a copy of a repository:
 If you need to make a clone:    
 
 1. Login in to [GitHub](www.github.com).
-2. Fork the repository (add repo name here) using the steps above in [How To Fork a Repository](#HOW-TO-FORK-A-REPOSITORY).
+2. Fork the repository [hackvent-calendar](https://github.com/manni8436/hackvent-calendar) using the steps above in [How To Fork a Repository](#HOW-TO-FORK-A-REPOSITORY).
 3. Above the file list, click "Code".
 4. Choose if you want to close using HTTPS, SSH or GitHub CLI, then click the copy button to the right.
 5. Open Git Bash.
