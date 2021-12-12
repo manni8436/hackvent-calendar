@@ -49,7 +49,7 @@ body.code {
   text-transform: uppercase;
   font-display: swap;
   margin-left: 3vw;
-  font-size: 5.5vh;
+  font-size: 5rem;
   font-weight: bold;
   text-shadow:
     0.09rem 0 black,
@@ -60,6 +60,10 @@ body.code {
     -0.09rem 0.09rem black,
     0.09rem -0.09rem black,
     0.09rem 0.09rem black;
+}
+
+.navbar_logo {
+  text-decoration: none;
 }
 
 /* Main */
@@ -89,7 +93,6 @@ body.code {
   width: 90%;
   text-align: center;
   font-size: 1.5rem;
-
   border-radius: 1rem;
   padding: 1.5rem;
 }
@@ -357,7 +360,46 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+
+  #navigation #logo {
+    font-size: 3.5rem;
+  }
+
+  #main-content {
+    padding-top: 4rem;
+  }
+
+  .description_section {
+    max-width: 90vw;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    padding-left: 0;
+  }
+
+  .description_title {
+    font-weight: 900;
+  }
+
+  .description_paragraph {
+    font-size: 1.3rem;
+    padding: 0.1rem;
+  }
+
   #code-window {
     max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  #navigation #logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    font-size: 2.5rem;
+    text-align: center;
   }
 }
