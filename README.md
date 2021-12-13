@@ -17,6 +17,8 @@ completion of the challenge.
     * Easy to read information.
     * A christmas related colour scheme that stands out, but not overwhelming.
 
+---
+
 ## FINAL DESIGN
 
 ![Final project image home page](assets/images/readme/responsive-image.png)
@@ -50,6 +52,8 @@ completion of the challenge.
 
 * [Acknowledgements](#ACKNOWLEDGEMENTS)    
 
+---
+
 ## USER EXPERIENCE
 The structure of the site was designed to be simple, easy to use and have a good content balance as to not
 overload the user and give them enough information as not to leave them lost of needing more information in what to do.
@@ -80,24 +84,31 @@ overload the user and give them enough information as not to leave them lost of 
 
 [Back to top](#christmas-hackathon)
 
+---
 ## DESIGN
 
 ### COLOR SCHEME
 This overall color scheme used throughout the site was the variety of colours in the image below.
 
-![Site Color Scheme](assets/images/readme/colour-scheme.png)
+![Site Color Scheme](assets/images/readme/design/colour-scheme.png)
 
 This color theme was used to represent slightly off traditional christmas colors, which is world wide know to be green and red,
 with hint 
 1. Persian Plum Color (#621622) *was chosen as a background color to create nice contrast with the rest of the content.*
-1. Blue Green Color Wheel (#285B52) *was chosen as a background of the l*
-1. Keppel Color (#58B69B)
-1. Ghost White Color(#F2F3F8)
-1. Saffron Color (#F8C51F)
+1. Blue Green Color Wheel (#285B52) *was chosen for the doors of the challenges to create the contrast with the background image and to guide the user to click on a door challenge*
+1. Keppel Color (#58B69B) *was chosen as a background of the last door reward to emphasis that the user finished all challenges*
+1. Ghost White Color(#F2F3F8) *was chosen as a primary text color to increase readability*
+1. Saffron Color (#F8C51F) *was chosen as an accent color to make the name of the website and the name of the team more noticeable*
 
+* ### FONT FAMILY
+
+![LoRes Font Family](assets/images/readme/design/font_lores.png)
+
+[Font Family LoRes 12 OT Regular](https://fonts.adobe.com/fonts/lo-res) was chosen to create the atmosphere of an old computer game as this font makes a synthesis of pixelated designs.
 
 [Back to top](#christmas-hackathon)
 
+---
 ## WIREFRAMES
 
 * [Here is the main page wireframes](assets/images/readme/codevent-wireframe1.jpg)
@@ -264,6 +275,9 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 #### SEO:
 
+---
+
+## CREDITS
 ## CONTENT
 
 ### IMAGES & Audio
