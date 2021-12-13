@@ -1,6 +1,4 @@
-import {
-  randomInt
-} from './libs.mjs';
+import { randomInt } from './libs.mjs';
 
 export const challenge = {
   title: "Day Six - Average gift cost",
