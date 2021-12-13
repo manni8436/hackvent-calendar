@@ -1,3 +1,4 @@
+/*jshint multistr: true */
 
 export const challenge = {
     title: "Day Nine - Snow crash",

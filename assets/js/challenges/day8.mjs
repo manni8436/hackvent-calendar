@@ -1,3 +1,4 @@
+/*jshint multistr: true */
 
 import { randomInt } from './libs.mjs';
 

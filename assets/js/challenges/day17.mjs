@@ -1,21 +1,11 @@
-
-/*
- * This is a template for the advent challenge definitions.
- */
-
-// Any required library imports:
-//import { /* imports here */ } from './libs.mjs';
-
+/*jshint multistr: true */
 
 export const challenge = {
     title: "Day 17 - List Length",
     description:"Santa needs to know how many houses he needs to visit! \
                 Write a javascript function that finds the length of his nice list, \
                 and assigns the length to the variable 'houses'.",
-
-    // Code to be append to the user submission.
-    // Here it converts the first argument to an input variable,
-    // (so the user can access the first parameter as input instead of arg[0]).
+                
     boilerPlate: "return listLength(args[0]);",
 
     // Code to be initial placed in the code panel

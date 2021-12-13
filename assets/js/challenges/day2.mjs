@@ -1,5 +1,4 @@
-
-//import {} from './libs.mjs';
+/*jshint multistr: true */
 
 export const challenge = {
     title: "Day Two - Sleigh scramble",

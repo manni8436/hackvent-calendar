@@ -1,8 +1,18 @@
+/* jshint esversion:8, expr:true */
 
-import { setupAdvent, setWindow } from './modules/advent.mjs';
-import { ChallengeManager } from './modules/eval.mjs';
-import { ChallengeStorage } from "./modules/storage.mjs";
-import { CodeWindow } from './modules/codewindow.mjs';
+import {
+  setupAdvent,
+  setWindow
+} from './modules/advent.mjs';
+import {
+  ChallengeManager
+} from './modules/eval.mjs';
+import {
+  ChallengeStorage
+} from "./modules/storage.mjs";
+import {
+  CodeWindow
+} from './modules/codewindow.mjs';
 
 const storage = new ChallengeStorage();
 const codeWindow = new CodeWindow(new ChallengeManager(), storage, updateWindow);
@@ -24,21 +34,21 @@ function generateWindowText() {
 setupAdvent(windowMap);
 
 function updateWindow(day, complete) {
-  windowMap[day-1].started = true;
-  windowMap[day-1].complete = complete;
-  setWindow(windowMap[day-1]);
+  windowMap[day - 1].started = true;
+  windowMap[day - 1].complete = complete;
+  setWindow(windowMap[day - 1]);
 }
 
 // Load sound settings
-$( "#sound-toggle" ).prop('checked', storage.getSoundSetting());
+$("#sound-toggle").prop('checked', storage.getSoundSetting());
 
 // Save sound settings
-$( "#sound-toggle" ).change(function() {
-  storage.setSoundSetting($( this ).prop("checked"));
+$("#sound-toggle").change(function () {
+  storage.setSoundSetting($(this).prop("checked"));
 });
 
 // Solve now button. Hides challenge brief and shows code panel
-$("#show-code-panel").click(function() {
+$("#show-code-panel").click(function () {
   codeWindow.showPage("code");
 });
 
@@ -54,12 +64,12 @@ $("#done-btn").click(codeWindow.close);
 $("#code-submit").click(codeWindow.submitCode);
 
 // Return to description from code pane
-$("#back-btn").click(function() {
+$("#back-btn").click(function () {
   codeWindow.showPage("challenge");
 });
 
 // Retry button - Return to code view
-$("#retry-btn").click(function() {
+$("#retry-btn").click(function () {
   codeWindow.showPage("code");
 });
 

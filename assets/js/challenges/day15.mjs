@@ -1,6 +1,4 @@
-// Any required library imports:
-//import { /* imports here */ } from './libs.mjs';
-
+/*jshint multistr: true */
 
 export const challenge = {
     title: "Day Fifteen - Pizza Party",

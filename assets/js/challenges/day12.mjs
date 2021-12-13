@@ -1,3 +1,5 @@
+/*jshint multistr: true */
+
 export const challenge = {
   title: "Day Twelve - Arrange Elves",
   description: "Help Santa to arrange elves in alphabetic order and make it more visible. \

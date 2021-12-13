@@ -1,3 +1,5 @@
+/*jshint multistr: true */
+
 export const challenge = {
   title: "Day Eleven - Send Christmas Cards",
   description: "Elves are overwhelmed with all chores that they have to do before the Christmas. \

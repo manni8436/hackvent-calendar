@@ -1,4 +1,4 @@
-//import { /* imports here */ } from './libs.mjs';
+/*jshint multistr: true */
 
 export const challenge = {
   title: "Day Twenty-one - Santa's Mile Mix Up",

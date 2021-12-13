@@ -69,7 +69,7 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 
 ### JS Validation
-*   - No errors or warnings were found when passing through the official [JSHint](https://jshint.com/) validator except the warnings that pointing at the use of webkits  
+*   - No errors or warnings were found when passing through the official [JSHint](https://jshint.com/) 
 
 [Back to top](#christmas-hackathon)
 ## LIGHTHOUSE

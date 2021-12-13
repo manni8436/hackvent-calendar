@@ -1,3 +1,5 @@
+/*jshint multistr: true */
+
 export const challenge = {
   title: "Day Ten - Elves' Report",
   description: "Elves has to count how many balls of each color they have to decorate their Christmas tree. \
