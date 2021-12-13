@@ -21,7 +21,7 @@ completion of the challenge.
 
 ## FINAL DESIGN
 
-![Final project image home page](assets/images/readme/responsive-image.png)
+![Final project image home page](documentation/mock_design.png)
 
 ## CONTENTS
 
@@ -90,7 +90,7 @@ overload the user and give them enough information as not to leave them lost of 
 ### COLOR SCHEME
 This overall color scheme used throughout the site was the variety of colours in the image below.
 
-![Site Color Scheme](assets/images/readme/design/colour-scheme.png)
+![Site Color Scheme](documentation/design/colour-scheme.png)
 
 This color theme was used to represent slightly off traditional christmas colors, which is world wide know to be green and red,
 with hint.
@@ -103,7 +103,7 @@ with hint.
 
 * ### FONT FAMILY
 
-![LoRes Font Family](assets/images/readme/design/font_lores.png)
+![LoRes Font Family](documentation/design/font_lores.png)
 
 [Font Family LoRes 12 OT Regular](https://fonts.adobe.com/fonts/lo-res) was chosen to create the atmosphere of an old computer game as this font makes a synthesis of pixelated designs.
 
@@ -283,8 +283,7 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 * Lo-Res font-family was imported from [Adobe Fonts](https://fonts.adobe.com/).
 * Background image & reward images created using [Canva](https://www.canva.com/).
 * Door opening audio sourced from [Zapsplat.com](https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/).
-
-* The insapration for the color scheme was taken from the website [Sarah Renae Clark](https://sarahrenaeclark.com/25-christmas-color-palettes/)
+* The inspiration for the color scheme was taken from the website [Sarah Renae Clark](https://sarahrenaeclark.com/25-christmas-color-palettes/)
 * Content of the challenges was mode by the members of "Santa lil' Hackers".
 
 [Back to top](#christmas-hackathon)
