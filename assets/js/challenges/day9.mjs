@@ -1,6 +1,4 @@
 
-import { randomInt } from './libs.mjs';
-
 export const challenge = {
     title: "Day Nine - Snow crash",
     description: "Oh no! Santa's computer has crashed and now it's just \
