@@ -2,7 +2,7 @@
  * Manages loading of challenge code and execution of user submission code
  * 
  */
-const testing = true;
+const testing = false;
 export class ChallengeManager {
     constructor() {
         this._challenge = null;
