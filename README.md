@@ -268,17 +268,35 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 ![Lighthouse Report](documentation/lighthouse_report.png)
 
-### DESKTOP
+### Responsiveness:
 
-### MOBILE
++ The app was checked with [Responsive Website Design Tester](https://responsivedesignchecker.com/).
 
-#### Performance:
+  1. Mobile Screens:
 
-#### Accessibility:
+    - Mobile 320x480, 320x568, 360x640, 375x667, 384x640, 411x731, 414x736:
 
-#### Best Practices:
+     ![Mobile](documentation/responsiveness/responsiveness_mobile_devices.gif)
 
-#### SEO:
+      
+  1. Tablets Screens:
+
+    - Tablet 600x960, 768x1024, 800x1280, 1366x1024, 1600x900, 1680x1050, 1920x1080, 1920x1200:
+        
+    ![Tablet](documentation/responsiveness/responsiveness_tablet_devices.gif)
+      
+  1. Desktop Screens:
+
+    - Desktop 1024x600, 1024x800, 1366x768, 1440x900:
+        
+    ![Desktop](documentation/responsiveness/responsiveness_desktop_devices.gif)
+
+
++ Functionality:
+
+The functionality of the links in the app was checked as well by different users.
+
+ ![Functionality](documentation/responsiveness/observe_functionality.gif)
 
 ---
 
