@@ -89,7 +89,7 @@ body.code {
 }
 
 .sound-toggle label {
-  color: #68dac5;
+  color: rgba(0,0,0,0.5);
   font-size: 2rem;
   line-height: 1;
   text-align: center;
