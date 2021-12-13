@@ -93,12 +93,13 @@ This overall color scheme used throughout the site was the variety of colours in
 ![Site Color Scheme](assets/images/readme/design/colour-scheme.png)
 
 This color theme was used to represent slightly off traditional christmas colors, which is world wide know to be green and red,
-with hint 
+with hint.
+
 1. Persian Plum Color (#621622) *was chosen as a background color to create nice contrast with the rest of the content.*
-1. Blue Green Color Wheel (#285B52) *was chosen for the doors of the challenges to create the contrast with the background image and to guide the user to click on a door challenge*
-1. Keppel Color (#58B69B) *was chosen as a background of the last door reward to emphasis that the user finished all challenges*
-1. Ghost White Color(#F2F3F8) *was chosen as a primary text color to increase readability*
-1. Saffron Color (#F8C51F) *was chosen as an accent color to make the name of the website and the name of the team more noticeable*
+1. Blue Green Color Wheel (#285B52) *was chosen for the doors of the challenges to create the contrast with the background image and to guide the user to click on a door challenge.*
+1. Keppel Color (#58B69B) *was chosen as a background of the last door reward to emphasis that the user finished all challenges.*
+1. Ghost White Color(#F2F3F8) *was chosen as a primary text color to increase readability.*
+1. Saffron Color (#F8C51F) *was chosen as an accent color to make the name of the website and the name of the team more noticeable.*
 
 * ### FONT FAMILY
 
@@ -278,12 +279,17 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 ---
 
 ## CREDITS
-## CONTENT
 
-### IMAGES & Audio
+* Lo-Res font-family was imported from [Adobe Fonts](https://fonts.adobe.com/).
+* Background image & reward images created using [Canva](https://www.canva.com/).
+* Door opening audio sourced from [Zapsplat.com](https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/).
 
-- Background image & reward images created using [Canva](https://www.canva.com/).
-- Door opening audio sourced from [Zapsplat.com](https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/).
+* The insapration for the color scheme was taken from the website [Sarah Renae Clark](https://sarahrenaeclark.com/25-christmas-color-palettes/)
+* Content of the challenges was mode by the members of "Santa lil' Hackers".
+
+[Back to top](#christmas-hackathon)
+
+---
 
 ## ACKNOWLEDGEMENTS:
 
