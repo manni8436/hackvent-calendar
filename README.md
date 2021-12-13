@@ -72,7 +72,7 @@ overload the user and give them enough information as not to leave them lost of 
 
 #### FIRST TIME VISITORS
 * The site to be easy to understand and self explanatory.
-* The site content to be easily read and understandble.
+* The site content to be easily read and understandable.
 
 #### RETURNING USER
 * To recommend the site to friends and family.
@@ -88,7 +88,13 @@ This overall color scheme used throughout the site was the variety of colours in
 ![Site Color Scheme](assets/images/readme/colour-scheme.png)
 
 This color theme was used to represent slightly off traditional christmas colors, which is world wide know to be green and red,
-with hint of yellow and white for text on the site to stand out.
+with hint 
+1. Persian Plum Color (#621622) *was chosen as a background color to create nice contrast with the rest of the content.*
+1. Blue Green Color Wheel (#285B52) *was chosen as a background of the l*
+1. Keppel Color (#58B69B)
+1. Ghost White Color(#F2F3F8)
+1. Saffron Color (#F8C51F)
+
 
 [Back to top](#christmas-hackathon)
 
