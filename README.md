@@ -262,10 +262,6 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 ### IMAGES
 
-### TEXT CONTENT
-
-[Back to top](#christmas-hackathon)
-
 ## ACKNOWLEDGEMENTS:
 
 
