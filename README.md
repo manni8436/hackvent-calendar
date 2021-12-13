@@ -234,7 +234,7 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 * W3C HTML Validator Results
     
 * W3C CSS Validator Results
-    * [CSS]()
+    * [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fmanni8436.github.io%252Fhackvent-calendar%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 * JavaScript Validator
 
