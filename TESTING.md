@@ -70,7 +70,32 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 ### JS Validation
 *  js files were checked by the official [JSHint](https://jshint.com/):
-
+    * [script.js](documentation/js_validation/jshint_script.png);
+    * [day1.mjs](documentation/wireframes/jshint_day1.png);
+    * [day2.mjs](documentation/wireframes/jshint_day2.png);
+    * [day3.mjs](documentation/wireframes/jshint_day3.png);
+    * [day4.mjs](documentation/wireframes/jshint_day4.png);
+    * [day5.mjs](documentation/wireframes/jshint_day5.png);
+    * [day6.mjs](documentation/wireframes/jshint_day6.png);
+    * [day7.mjs](documentation/wireframes/jshint_day7.png);
+    * [day8.mjs](documentation/wireframes/jshint_day8.png);
+    * [day9.mjs](documentation/wireframes/jshint_day9.png);
+    * [day10.mjs](documentation/wireframes/jshint_day10.png);
+    * [day11.mjs](documentation/wireframes/jshint_day11.png);
+    * [day12.mjs](documentation/wireframes/jshint_day12.png);
+    * [day13.mjs](documentation/wireframes/jshint_day13.png);
+    * [day14.mjs](documentation/wireframes/jshint_day14.png);
+    * [day15.mjs](documentation/wireframes/jshint_day15.png);
+    * [day16.mjs](documentation/wireframes/jshint_day16.png);
+    * [day17.mjs](documentation/wireframes/jshint_day17.png);
+    * [day18.mjs](documentation/wireframes/jshint_day18.png);
+    * [day19.mjs](documentation/wireframes/jshint_day19.png);
+    * [day20.mjs](documentation/wireframes/jshint_day20.png);
+    * [day21.mjs](documentation/wireframes/jshint_day21.png);
+    * [day22.mjs](documentation/wireframes/jshint_day22.png);
+    * [day23.mjs](documentation/wireframes/jshint_day23.png);
+    * [day24.mjs](documentation/wireframes/jshint_day24.png);
+    * [day25.mjs](documentation/wireframes/jshint_day25.png);
 
 
 [Back to top](#christmas-hackathon)
