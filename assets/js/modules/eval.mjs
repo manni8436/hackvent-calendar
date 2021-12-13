@@ -63,10 +63,17 @@ export class ChallengeManager {
             if (this._challenge) {
                 // Setup
                 const args = this._challenge.setup();
+                
                 // Create function
-                const func = new Function('...args', (this._challenge.boilerPlate + solution));
+                const con = console;
+                console = {}; console.log=function(...args){let out='';for(let i=0;i<args.length;i++)out+=((i>0)?',':'')+args[i];output(out)};
+                const code = this._challenge.boilerPlate + solution;
+                const func = new Function('...args', code);
+                const ret = this._challenge.runTests(func, output);
+                console = con;
+
                 // Run code
-                return this._challenge.runTests(func, output);
+                return ret;
             }
         } catch(err) {
             if (output) output(`\nError: ${err}`);

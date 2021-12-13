@@ -117,7 +117,7 @@ export class CodeWindow {
 
   output(msg) {
     this._elements.output.value = (
-      this._elements.output.value + msg
+      this._elements.output.value + msg + '\n'
     );
   }
 }
