@@ -38,4 +38,12 @@
 | Pressing X Button | Closes puzzle input box | Press X Button | Closes puzzle input box | Pass |
 | Pressing Submit Button | submit puzzle code  | press submit button | Submits input code | Pass |
 
+
+### **Coding Puzzle Testing**
+
+| Feature     | Expected  | Testing  | Result | Pass/Fail |
+|-------------|-------------|-----|----------|:-----:|
+| Testing puzzles | Expecting all input area to be typable, submitable | Attempt to solve puzzles | Solved puzzles and able to submit them | Pass|
+| Submiting Code Solution | Expecting solution to be adviced that it is correct | Attempt to submit puzzles | submit puzzles and receive success message and reward | Pass|
+
 [Back to contents](#contents)

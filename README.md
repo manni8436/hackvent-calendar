@@ -265,10 +265,6 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 - Background image & reward images created using [Canva](https://www.canva.com/).
 - Door opening audio sourced from [Zapsplat.com](https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/).
 
-### TEXT CONTENT
-
-[Back to top](#christmas-hackathon)
-
 ## ACKNOWLEDGEMENTS:
 
 
