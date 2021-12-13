@@ -15,11 +15,11 @@ export function setupAdvent(windows) {
       let item = $(this);
 
       // Open past windows
-      if (day !== adventwindow && adventwindow < day) {
-        window.setTimeout(function () {
-          item.children(".door").addClass("open");
-        }, timeDelay);
-      }
+      // if (day !== adventwindow && adventwindow < day) {
+      //   window.setTimeout(function () {
+      //     item.children(".door").addClass("open");
+      //   }, timeDelay);
+      // }
 
       // timeout offset for past window opening animation
       timeDelay += 100;
