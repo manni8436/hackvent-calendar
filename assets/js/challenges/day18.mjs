@@ -1,6 +1,5 @@
-// Any required library imports:
-//import { /* imports here */ } from './libs.mjs';
-
+/* jshint esversion:8, expr:true */
+/*jshint multistr: true */
 
 export const challenge = {
   title: "Day 18 - Square Area Calculation",
@@ -61,4 +60,4 @@ export const challenge = {
     let area = side * side;
     return area;
   }
-}
+};

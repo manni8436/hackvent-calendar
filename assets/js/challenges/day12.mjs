@@ -1,3 +1,6 @@
+/* jshint esversion:8, expr:true */
+/*jshint multistr: true */
+
 export const challenge = {
   title: "Day Twelve - Arrange Elves",
   description: "Help Santa to arrange elves in alphabetic order and make it more visible. \
@@ -38,14 +41,14 @@ export const challenge = {
 
   test: function (elves) {
 
-    elves.sort()
-    let elvesUpper = []
+    elves.sort();
+    let elvesUpper = [];
     for (let elf of elves) {
-      let elfUpper = ''
-      elfUpper = elf.toUpperCase()
-      elvesUpper.push(elfUpper)
+      let elfUpper = '';
+      elfUpper = elf.toUpperCase();
+      elvesUpper.push(elfUpper);
     }
 
-    return elvesUpper
+    return elvesUpper;
   }
-}
+};

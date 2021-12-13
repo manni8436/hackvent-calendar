@@ -1,3 +1,6 @@
+/* jshint esversion:8, expr:true */
+/*jshint multistr: true */
+
 export const challenge = {
   title: "Day Eleven - Send Christmas Cards",
   description: "Elves are overwhelmed with all chores that they have to do before the Christmas. \
@@ -39,15 +42,15 @@ export const challenge = {
   test: function (stranger) {
     class Human {
       constructor(name) {
-        this.name = name
+        this.name = name;
       }
       congratulations() {
-        return `Dear ${this.name[0].toUpperCase() + this.name.slice(1)}, Merry Christmas!`
+        return `Dear ${this.name[0].toUpperCase() + this.name.slice(1)}, Merry Christmas!`;
       }
     }
 
-    let person = new Human(stranger)
-    let mess = person.congratulations()
-    return mess
+    let person = new Human(stranger);
+    let mess = person.congratulations();
+    return mess;
   }
-}
+};

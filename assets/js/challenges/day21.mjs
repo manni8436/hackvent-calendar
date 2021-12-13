@@ -1,4 +1,5 @@
-//import { /* imports here */ } from './libs.mjs';
+/* jshint esversion:8, expr:true */
+/*jshint multistr: true */
 
 export const challenge = {
   title: "Day Twenty-one - Santa's Mile Mix Up",
@@ -60,4 +61,4 @@ export const challenge = {
   test: function (miles) {
     return miles * 1.6;
   }
-}
+};
