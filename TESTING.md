@@ -8,11 +8,15 @@
   * [**Pop Up Box Puzzle Instructions**](#pop-up-box-puzzle-instructions)
   * [**Github image links**](#github-image-links)
   * [**Github image links**](#github-image-links)
+  * [**Validator testing**](#Validator-testing)
+    * [**HTML Validation**](#HTML-Validation)
+    * [**CSS Validation**](#CSS-Validation)
+    * [**JS Validation**](#JS-Validation)
+  * [**Lighthouse report**](#Lighthouse-Report)
+  * [**Compatibility**](#Compatibility)
+  * [**Responsiveness**](#Responsiveness)
+  * [**Functionality**](#Functionality)
 
-* [Validator testing](#Validator testing)
-    * [Code Validators](#CODE-VALIDATORS)
-  
-  
 # **Testing**
 
 ### **Navigation** 
@@ -65,8 +69,9 @@
 
 ### CSS Validation
 
-- No errors or warnings were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator except the 3 warnings: 
+- No errors were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator: 
     * [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmanni8436.github.io%2Fhackvent-calendar%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- The CSS validator shows the multiple warning regardless the use of webkit and clip property. However, everything works perfectly well without any issues.
 
 
 ### JS Validation
@@ -100,7 +105,7 @@
 
 
 [Back to top](#christmas-hackathon)
-## LIGHTHOUSE
+## Lighthouse Report
 
 ![Lighthouse Report](documentation/lighthouse_report.png)
 
@@ -143,7 +148,7 @@
     ![Desktop](documentation/responsiveness/responsiveness_desktop_devices.gif)
 
 
-+ Functionality:
+## Functionality:
 
 The functionality of the links in the app was checked as well by different users.
 
