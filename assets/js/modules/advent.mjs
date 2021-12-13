@@ -63,5 +63,6 @@ export function setWindow(window) {
 
   if (window.complete) {
     elem.addClass("complete");
+    elem.children(".door").addClass("open");
   }
 }
