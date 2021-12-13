@@ -1,3 +1,4 @@
+/* jshint esversion:8, expr:true */
 /*jshint multistr: true */
 
 export const challenge = {
@@ -63,8 +64,6 @@ export const challenge = {
       }
     }
     let nice = list;
-    return nice
+    return nice;
   }
-
-
-}
+};

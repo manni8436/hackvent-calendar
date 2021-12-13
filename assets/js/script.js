@@ -1,5 +1,11 @@
 /* jshint esversion:8, expr:true */
 
+// {    
+//   "globals": {
+//       "$": false
+//   }
+// }
+
 import {
   setupAdvent,
   setWindow

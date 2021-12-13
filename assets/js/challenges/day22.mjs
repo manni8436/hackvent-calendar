@@ -1,3 +1,4 @@
+/* jshint esversion:8, expr:true */
 /*jshint multistr: true */
 
 export const challenge = {
@@ -45,19 +46,19 @@ export const challenge = {
         count++;
         current = toys[toy];
       } else {
-        toysPop.push([toys[toy], count])
-        current = toys[toy]
-        count = 1
+        toysPop.push([toys[toy], count]);
+        current = toys[toy];
+        count = 1;
       }
     }
-    toysPop.push([toys[toys.length - 1], count])
-    let mostPopCount = 0
+    toysPop.push([toys[toys.length - 1], count]);
+    let mostPopCount = 0;
     for (let x of toysPop) {
       if (x[1] > mostPopCount) {
-        mostPopularToy = x[0]
-        mostPopCount = x[1]
+        mostPopularToy = x[0];
+        mostPopCount = x[1];
       }
     }
-    return mostPopularToy
+    return mostPopularToy;
   }
-}
+};

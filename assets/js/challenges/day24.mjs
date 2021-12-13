@@ -1,3 +1,4 @@
+/* jshint esversion:8, expr:true */
 /*jshint multistr: true */
 
 export const challenge = {
@@ -47,4 +48,4 @@ export const challenge = {
     let sacks = Math.ceil((miles * 1000 * reindeer) / 400);
     return sacks;
   }
-}
+};

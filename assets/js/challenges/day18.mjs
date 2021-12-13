@@ -1,3 +1,4 @@
+/* jshint esversion:8, expr:true */
 /*jshint multistr: true */
 
 export const challenge = {
@@ -59,4 +60,4 @@ export const challenge = {
     let area = side * side;
     return area;
   }
-}
+};

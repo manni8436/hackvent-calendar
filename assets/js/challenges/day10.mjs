@@ -1,3 +1,4 @@
+/* jshint esversion:8, expr:true */
 /*jshint multistr: true */
 
 export const challenge = {
@@ -43,14 +44,14 @@ export const challenge = {
     let yellowBalls = [];
     for (let i of arr) {
       if (i === 'red') {
-        redBalls.push(i)
+        redBalls.push(i);
       } else if (i === 'blue') {
-        blueBalls.push(i)
+        blueBalls.push(i);
       } else if (i === 'yellow') {
-        yellowBalls.push(i)
+        yellowBalls.push(i);
       }
     }
-    let message = `We have ${redBalls.length} red balls, ${blueBalls.length} blue balls, ${yellowBalls.length} yellow balls.`
-    return message
+    let message = `We have ${redBalls.length} red balls, ${blueBalls.length} blue balls, ${yellowBalls.length} yellow balls.`;
+    return message;
   }
-}
+};

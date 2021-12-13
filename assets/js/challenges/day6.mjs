@@ -1,6 +1,9 @@
+/* jshint esversion:8, expr:true */
 /*jshint multistr: true */
 
-import { randomInt } from './libs.mjs';
+import {
+  randomInt
+} from './libs.mjs';
 
 export const challenge = {
   title: "Day Six - Average gift cost",
@@ -46,4 +49,4 @@ export const challenge = {
   test: function (gifts) {
     return Math.round(gifts.reduce((p, c) => p += c) / gifts.length);
   }
-}
+};

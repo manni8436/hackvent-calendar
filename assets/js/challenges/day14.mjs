@@ -1,6 +1,10 @@
+/* jshint esversion:8, expr:true */
 /*jshint multistr: true */
+/*jshint -W009 */
 
-import { randomInt } from './libs.mjs';
+import {
+  randomInt
+} from './libs.mjs';
 
 export const challenge = {
   title: "Day Fourteen - Distance Dilemma part 2",
@@ -57,6 +61,6 @@ export const challenge = {
       distances.push(Math.sqrt((x * x) + (y * y)));
     }
     let sortedDist = distances.sort((a, b) => a - b);
-    return sortedDist
+    return sortedDist;
   }
-}
+};
