@@ -36,7 +36,7 @@ body.code {
 .navbar {
   height: 15vh;
   background-color: rgba(98, 22, 34, 0.25);
-  backdrop-filter: blur(3px) saturate(105%);
+  backdrop-filter: blur(5px) saturate(105%);
   -webkit-backdrop-filter: blur(3px) saturate(200%);
   z-index: 9999;
   display: flex;
@@ -68,7 +68,6 @@ body.code {
 
 
 /* Mute button */
-
 .sound-toggle {
   display: flex;
   justify-content: center;
@@ -76,6 +75,9 @@ body.code {
   position: absolute;
   top: 2vh;
   right: 5vw;
+  background-color: #651522;
+  border-radius: 0.5rem;
+  opacity: 0.9;
 }
 
 .sound-toggle input {
@@ -88,11 +90,11 @@ body.code {
 }
 
 .sound-toggle label {
-  color: black;
-  font-size: 20px;
+  color: #68dac5;
+  font-size: 2rem;
   line-height: 1;
   text-align: center;
-  padding: 8px 16px;
+  padding: 15px 25px;
   margin-right: -1px;
   transition: all 0.4s ease-in-out;
 }
@@ -101,9 +103,9 @@ body.code {
   cursor: pointer;
 }
 
-.sound-toggle input:checked ~ label#sound-on,
-.sound-toggle input:not(:checked) ~ label#sound-off {
-  color: #fff;
+.sound-toggle input:checked~label#sound-on,
+.sound-toggle input:not(:checked)~label#sound-off {
+  color: #f8c51f;
 }
 
 /* Main */
@@ -246,7 +248,6 @@ body.code {
 
 .code-wrapper {
   padding: 2rem;
-
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -298,7 +299,7 @@ body.code {
 
 .code-pane {
   flex: 1;
-  resize: none; 
+  resize: none;
   font-size: 1rem;
   padding: 1em;
   border-radius: 0.4rem;
@@ -447,16 +448,24 @@ footer {
   font-size: 1.5rem;
 }
 
+
+
 @media screen and (min-width: 1400px) {
   #code-window {
     width: 80vw;
   }
 }
 
+@media screen and (max-width: 1150px) {
+  #navigation #logo {
+    font-size: 4rem;
+  }
+}
+
 @media screen and (max-width: 1000px) {
 
   #navigation #logo {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 
   #main-content {
@@ -486,6 +495,21 @@ footer {
 }
 
 @media screen and (max-width: 850px) {
+
+  .sound-toggle {
+    all: unset;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background-color: #651522;
+    border-radius: 0.5rem;
+    opacity: 0.9;
+  }
+
   #code-window {
     position: relative;
     width: 100vw;
@@ -501,7 +525,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 90%;
+    max-width: 100%;
     font-size: 2.5rem;
     text-align: center;
   }
@@ -537,125 +561,138 @@ footer {
 
 #door-1.complete {
   background: #f2f3f8 url("../images/rewards/1cracker.png") no-repeat center;
-  background-size: contain;
+  background-size: 90% 60%;
 }
 
 #door-2.complete {
-  background: #f2f3f8 url("../images/rewards/2latte.svg") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/2latte.svg") no-repeat;
+  background-position: 50% 45%;
+  background-size: 50% 30%;
 }
 
 #door-3.complete {
-  background: #f2f3f8 url("../images/rewards/3xmas-cat.png") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/3xmas-cat.png") no-repeat;
+  background-position: 50% 45%;
+  background-size: 60% 30%;
 }
 
 #door-4.complete {
-  background: #f2f3f8 url("../images/rewards/4menorah.svg") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/4menorah.svg") no-repeat;
+  background-position: 50% 45%;
+  background-size: 50% 30%;
 }
 
 #door-5.complete {
-  background: #f2f3f8 url("../images/rewards/5hotchoc.svg") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/5hotchoc.svg") no-repeat;
+  background-position: 50% 45%;
+  background-size: 50% 35%;
 }
 
 #door-6.complete {
-  background: #f2f3f8 url("../images/rewards/6present.png") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/6present.png") no-repeat;
+  background-position: 50% 45%;
+  background-size: 45% 35%;
 }
 
 #door-7.complete {
-  background: #f2f3f8 url("../images/rewards/7pixelcandycane.svg") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/7pixelcandycane.svg") no-repeat;
+  background-position: 50% 45%;
+  background-size: 50% 35%;
 }
 
 #door-8.complete {
-  background: #f2f3f8 url("../images/rewards/8tree-cookie.png") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/8tree-cookie.png") no-repeat;
+  background-position: 50% 45%;
+  background-size: 60% 40%;
 }
 
 #door-9.complete {
-  background: #f2f3f8 url("../images/rewards/9cookies.svg") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/9cookies.svg") no-repeat;
+  background-position: 50% 45%;
+  background-size: 50% 35%;
 }
 
 #door-10.complete {
-  background: #f2f3f8 url("../images/rewards/10holidayarmadillo.svg") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/10holidayarmadillo.svg") no-repeat;
+  background-position: 50% 43%;
+  background-size: 50% 35%;
 }
 
 #door-11.complete {
-  background: #f2f3f8 url("../images/rewards/11reindeer.png") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/11reindeer.png") no-repeat;
+  background-position: 50% 45%;
+  background-size: 60% 40%;
 }
 
 #door-12.complete {
-  background: #f2f3f8 url("../images/rewards/12Tree.png") no-repeat center;
-  background-size: contain;
+  background: #f2f3f8 url("../images/rewards/12Tree.png") no-repeat;
+  background-position: 50% 40%;
+  background-size: 70% 50%;
 }
 
 #door-13.complete {
   background: #f2f3f8 url("../images/rewards/13pixelgingerbread.svg") no-repeat center;
-  background-size: contain;
+  background-size: 70% 35%;
 }
 
 #door-14.complete {
   background: #f2f3f8 url("../images/rewards/14xmas-shark.png") no-repeat center;
-  background-size: contain;
+  background-size: 90% 50%;
 }
 
 #door-15.complete {
   background: #f2f3f8 url("../images/rewards/15xmaspenguin.png") no-repeat center;
-  background-size: contain;
+  background-size: 90% 45%;
 }
 
 #door-16.complete {
   background: #f2f3f8 url("../images/rewards/16dreidel.svg") no-repeat center;
-  background-size: contain;
+  background-size: 70% 40%;
 }
 
 #door-17.complete {
   background: #f2f3f8 url("../images/rewards/17jumper2.svg") no-repeat center;
-  background-size: contain;
+  background-size: 80% 30%;
 }
 
 #door-18.complete {
   background: #f2f3f8 url("../images/rewards/18mittens.png") no-repeat center;
-  background-size: contain;
+  background-size: 70% 35%;
 }
 
 #door-19.complete {
   background: #f2f3f8 url("../images/rewards/19snowglobe.svg") no-repeat center;
-  background-size: contain;
+  background-size: 70% 25%;
 }
 
 #door-20.complete {
   background: #f2f3f8 url("../images/rewards/20bauble.png") no-repeat center;
-  background-size: contain;
+  background-size: 90% 50%;
 }
 
 #door-21.complete {
   background: #f2f3f8 url("../images/rewards/21snowday.svg") no-repeat center;
-  background-size: cover;
+  background-size: 60% 30%;
 }
 
 #door-22.complete {
   background: #f2f3f8 url("../images/rewards/22xmasmouse.png") no-repeat center;
-  background-size: contain;
+  background-size: 70% 35%;
 }
 
 #door-23.complete {
   background: #f2f3f8 url("../images/rewards/23Wreath.png") no-repeat center;
-  background-size: contain;
+  background-size: 70% 40%;
 }
 
 #door-24.complete {
   background: #f2f3f8 url("../images/rewards/24owls.png") no-repeat center;
-  background-size: contain;
+  background-position: 50% 25%;
+  background-size: 90% 60%;
 }
 
 #door-25.complete {
-  background: #58b69b url("../images/rewards/25pixelsanta.svg") no-repeat center;
-  background-size: contain;
+  background: #58b69b url("../images/rewards/25pixelsanta.svg") no-repeat;
+  background-position: 50% 45%;
+  background-size: 90% 30%;
 }
