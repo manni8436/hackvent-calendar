@@ -80,8 +80,6 @@ overload the user and give them enough information as not to leave them lost of 
 * To come back every year to see and try new challenges.
 
 [Back to top](#christmas-hackathon)
-
-
 ---
 
 ## TECHNOLOGIES USED
@@ -246,8 +244,6 @@ If you need to make a local clone:
 ### FULL TESTING
 
 [Click Here](TESTING.md) to view the full testing steps that were completed on every device and browser.
-
-
 
 ---
 

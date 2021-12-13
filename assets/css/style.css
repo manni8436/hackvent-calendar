@@ -108,6 +108,10 @@ body.code {
   color: #f8c51f;
 }
 
+.hidden_header {
+  display: none;
+}
+
 /* Main */
 #main-content {
   padding-top: 5vh;
