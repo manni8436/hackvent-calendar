@@ -58,11 +58,11 @@ export class ChallengeManager {
      * @param {Function} output
      * @returns {Boolean} whether the result matches expected result
      */
-    evaluate(solution, output=null) {
+    evaluate(solution, output=s=>s) {
         try {
             if (this._challenge) {
                 // Setup
-                const args = this._challenge.setup();
+                this._challenge.setup();
                 
                 // Create function
                 const con = console;
