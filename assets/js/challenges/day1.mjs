@@ -40,6 +40,7 @@ export const challenge = {
     },
 
     test: function(degrees, unit) {
+        console.log(degrees,unit);
         if (unit === 'f') {
             return ((degrees - 32) / 1.8);
         } else {
