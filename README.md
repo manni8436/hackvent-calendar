@@ -43,9 +43,6 @@ completion of the challenge.
     * [How To Clone A Repository](#HOW-TO-CLONE-A-REPOSITORY)
     * [How To Make A Local Clone](#HOW-TO-MAKE-A-LOCAL-CLONE)
 
-* [Testing](#TESTING)
-    * [Code Validators](#CODE-VALIDATORS)
-
 * [Content](#CONTENT)
     * [Images](#IMAGES)
     * [Text Content](#TEXT-CONTENT)
@@ -245,58 +242,12 @@ If you need to make a local clone:
 [Back to top](#christmas-hackathon)
 
 ---
-## TESTING
-
-### CODE VALIDATORS
-
-The W3C Markup Validator and W3C CSS Validator was used to validate my project to make sure there were no errors within the site.
-
-* W3C HTML Validator Results
-    
-* W3C CSS Validator Results
-    * [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fmanni8436.github.io%252Fhackvent-calendar%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-
-* JavaScript Validator
-
-[Back to top](#christmas-hackathon)
 
 ### FULL TESTING
 
 [Click Here](TESTING.md) to view the full testing steps that were completed on every device and browser.
 
-### LIGHTHOUSE
 
-![Lighthouse Report](documentation/lighthouse_report.png)
-
-### Responsiveness:
-
-+ The app was checked with [Responsive Website Design Tester](https://responsivedesignchecker.com/).
-
-  1. Mobile Screens:
-
-    - Mobile 320x480, 320x568, 360x640, 375x667, 384x640, 411x731, 414x736:
-
-     ![Mobile](documentation/responsiveness/responsiveness_mobile_devices.gif)
-
-      
-  1. Tablets Screens:
-
-    - Tablet 600x960, 768x1024, 800x1280, 1366x1024, 1600x900, 1680x1050, 1920x1080, 1920x1200:
-        
-    ![Tablet](documentation/responsiveness/responsiveness_tablet_devices.gif)
-      
-  1. Desktop Screens:
-
-    - Desktop 1024x600, 1024x800, 1366x768, 1440x900:
-        
-    ![Desktop](documentation/responsiveness/responsiveness_desktop_devices.gif)
-
-
-+ Functionality:
-
-The functionality of the links in the app was checked as well by different users.
-
- ![Functionality](documentation/responsiveness/observe_functionality.gif)
 
 ---
 
