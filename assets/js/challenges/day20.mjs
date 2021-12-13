@@ -41,7 +41,7 @@ export const challenge = {
         output("Starting tests:\n");
         for (const test of this.args) {
             output("Running: triangleArea(): ");
-            if (func([...test]) != this.test([...test])) {
+            if (func() != this.test()) {
                 output("Failed!\n");
                 return false;
             } else {
@@ -57,12 +57,12 @@ export const challenge = {
     // Credit: https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-9.php
     test: function() {
         today=new Date();
-        var cmas=new Date(today.getFullYear(), 11, 25);
+        let cmas=new Date(today.getFullYear(), 11, 25);
         if (today.getMonth()==11 && today.getDate()>25) 
         {
         cmas.setFullYear(cmas.getFullYear()+1); 
         }  
-        var one_day=1000*60*60*24;
+        let one_day=1000*60*60*24;
         let countdownDays = Math.ceil((cmas.getTime()-today.getTime())/(one_day));
         console.log(countdownDays);
         return countdownDays;

@@ -40,9 +40,11 @@ export class CodeWindow {
   }
 
   _saveCode() {
-    const day = this._challenges.day;
-    
-    if (day > 0) this._storage.setChallengeCode(day, this._editor.getValue());
+    if (this._editor.getValue()) {
+      const day = this._challenges.day;
+      
+      if (day > 0) this._storage.setChallengeCode(day, this._editor.getValue());
+    }
   }
 
   _getCode() {
@@ -115,7 +117,7 @@ export class CodeWindow {
 
   output(msg) {
     this._elements.output.value = (
-      this._elements.output.value + msg
+      this._elements.output.value + msg + '\n'
     );
   }
 }

@@ -26,9 +26,9 @@ export const challenge = {
     // list to be sent to the user code for each test.
     args: [
         ["Sean", "Julia", "Manni", "John", "Alison"],
-        ["Julia", "Manni", "John", "Alison", "Sean"],
-        ["Manni", "John", "Alison", "Sean", "Julia"],
-        ["Alison", "Julia", "John", "Sean", "Manni"],
+        ["Julia", "Manni", "John", "Alison", "Sean", "Barry"],
+        ["Manni", "John", "Alison", "Sean"],
+        ["Alison", "Julia", "Manni"],
     ],
 
     /**
@@ -49,7 +49,7 @@ export const challenge = {
         output("Starting tests:\n");
         for (const test of this.args) {
             output("Running: listLength(): ");
-            if (func([...test]).join(',') != this.test([...test]).join(',')) {
+            if (func([...test]) != this.test([...test])) {
                 output("Failed!\n");
                 return false;
             } else {

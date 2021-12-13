@@ -6,7 +6,7 @@ export const challenge = {
     title: "Day 19 - Triangle Area Calculation",
     description:"Uh Oh! Some names have been moved to the naughty list at the last minute!\
                 Now the area that Santa needs deliver gifts to is a perfect triangle, and he needs to find out how big the area of the triangle is. \
-                Luckily, the area is a perfect square! He knows that the length of 1 side of the square is 10,000 KM. \
+                Luckily, the area is a perfect triangle! He knows that the length of 1 side of the square is 10,000 KM. \
                 We know that the triangle's base = 7000 KM, and it's height = 9000 KM.\
                 Complete the Javascript function to calculate the area of the triangle. \
                 (You will need to define the base & height variables in your code)",
