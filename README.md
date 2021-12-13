@@ -25,29 +25,31 @@ completion of the challenge.
 
 ## CONTENTS
 
-* [User Experience](#USER-EXPERIENCE)  
+* [**User Experience**](#USER-EXPERIENCE)  
     * [User Stories](#USER-STORIES)    
 
-* [Design](#DESIGN)   
+* [**Technologies Used**](#TECHNOLOGIES-USED) 
+
+* [**Design**](#DESIGN)   
     * [Color Scheme](#COLOR-SCHEME)
 
-* [Wireframes](#WIREFRAMES) 
+* [**Wireframes**](#WIREFRAMES) 
 
-* [Technologies Used](#TECHNOLOGIES-USED) 
-    * [Languages Used](#LANGUAGES-USED)
-    * [Programs Used](#PROGRAMS-USED)
+* [**Bugs**](#BUGS) 
+    * [Bugs Found](#BUGS-FOUND)
+    * [Solved Bugs](#SOLVED-BUGS) 
 
-* [Deployment](#DEPLOYMENT)
+* [**Deployment**](#DEPLOYMENT)
     * [Initial Deployment](#INITIAL-DEPLOYMENT)
     * [How To Fork A Repository](#HOW-TO-FORK-A-REPOSITORY)
     * [How To Clone A Repository](#HOW-TO-CLONE-A-REPOSITORY)
     * [How To Make A Local Clone](#HOW-TO-MAKE-A-LOCAL-CLONE)
 
-* [Content](#CONTENT)
-    * [Images](#IMAGES)
-    * [Text Content](#TEXT-CONTENT)
+* [**Full Testing**](#FULL-TESTING)
 
-* [Acknowledgements](#ACKNOWLEDGEMENTS)    
+* [**Credits**](#CREDITS)
+
+* [**Acknowledgements**](#ACKNOWLEDGEMENTS)
 
 ---
 
@@ -63,6 +65,7 @@ overload the user and give them enough information as not to leave them lost of 
 
 [Back to top](#christmas-hackathon)
 
+---
 ## USER STORIES
 
 #### CLIENT GOALS
@@ -80,8 +83,8 @@ overload the user and give them enough information as not to leave them lost of 
 * To come back every year to see and try new challenges.
 
 [Back to top](#christmas-hackathon)
----
 
+---
 ## TECHNOLOGIES USED
 
 ###  Languages were used:
@@ -154,7 +157,10 @@ The following features have been used in this project:
 
 [Back to top](#christmas-hackathon)
 
-## BUGS FOUND
+---
+## BUGS
+
+### BUGS FOUND
 
 1. While creating the footer, the bug below was found on the firefox browser where the footer github image links would sit horizontal on the page instead of vertical.
 
@@ -168,7 +174,7 @@ The following features have been used in this project:
 
 ![Code Window Bug](documentation/bugs/code-window-bug.png)
 
-## SOLVED BUGS
+### SOLVED BUGS
 
 1. In the `footer`, the width value was changed from `100vw` to `100%` and also in the `links-holder` class selector the `max-width`
 was changed from `80%` to `80vw` and added `padding-left: 0;` and the results are shown below.
@@ -241,7 +247,7 @@ If you need to make a local clone:
 
 ---
 
-### FULL TESTING
+## FULL TESTING
 
 [Click Here](TESTING.md) to view the full testing steps that were completed on every device and browser.
 
