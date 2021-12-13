@@ -36,7 +36,7 @@ body.code {
 .navbar {
   height: 15vh;
   background-color: rgba(98, 22, 34, 0.25);
-  backdrop-filter: blur(3px) saturate(105%);
+  backdrop-filter: blur(5px) saturate(105%);
   -webkit-backdrop-filter: blur(3px) saturate(200%);
   z-index: 9999;
   display: flex;
@@ -68,7 +68,6 @@ body.code {
 
 
 /* Mute button */
-
 .sound-toggle {
   display: flex;
   justify-content: center;
@@ -76,6 +75,9 @@ body.code {
   position: absolute;
   top: 2vh;
   right: 5vw;
+  background-color: #651522;
+  border-radius: 0.5rem;
+  opacity: 0.9;
 }
 
 .sound-toggle input {
@@ -88,11 +90,11 @@ body.code {
 }
 
 .sound-toggle label {
-  color: black;
-  font-size: 20px;
+  color: #68dac5;
+  font-size: 2rem;
   line-height: 1;
   text-align: center;
-  padding: 8px 16px;
+  padding: 15px 25px;
   margin-right: -1px;
   transition: all 0.4s ease-in-out;
 }
@@ -101,9 +103,9 @@ body.code {
   cursor: pointer;
 }
 
-.sound-toggle input:checked ~ label#sound-on,
-.sound-toggle input:not(:checked) ~ label#sound-off {
-  color: #fff;
+.sound-toggle input:checked~label#sound-on,
+.sound-toggle input:not(:checked)~label#sound-off {
+  color: #f8c51f;
 }
 
 /* Main */
@@ -298,7 +300,7 @@ body.code {
 
 .code-pane {
   flex: 1;
-  resize: none; 
+  resize: none;
   font-size: 1rem;
   padding: 1em;
   border-radius: 0.4rem;
@@ -447,16 +449,24 @@ footer {
   font-size: 1.5rem;
 }
 
+
+
 @media screen and (min-width: 1400px) {
   #code-window {
     width: 80vw;
   }
 }
 
+@media screen and (max-width: 1150px) {
+  #navigation #logo {
+    font-size: 4rem;
+  }
+}
+
 @media screen and (max-width: 1000px) {
 
   #navigation #logo {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 
   #main-content {
