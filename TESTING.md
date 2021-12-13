@@ -57,15 +57,16 @@
 
 ### HTML Validation
 
-The W3C Markup Validator and W3C CSS Validator was used to validate my project to make sure there were no errors within the site.
+- No errors or warnings were found when passing through the official [W3C](https://validator.w3.org/) validator.
 
-* W3C HTML Validator Results
+* [HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmanni8436.github.io%2Fhackvent-calendar%2F)
+
 
 
 ### CSS Validation
 
-* W3C CSS Validator Results
-    * [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fmanni8436.github.io%252Fhackvent-calendar%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- No errors or warnings were found when passing through the official [W3C (Jigsaw)](https://jigsaw.w3.org/css-validator/#validate_by_uri) validator except the 3 warnings: 
+    * [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmanni8436.github.io%2Fhackvent-calendar%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 
 ### JS Validation
