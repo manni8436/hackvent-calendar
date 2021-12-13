@@ -1,4 +1,4 @@
-![Final project image home page](assets/images/readme/responsive-image.png)
+![Final project image home page](documentation/mock_design.png)
 
 ## **Contents**
 

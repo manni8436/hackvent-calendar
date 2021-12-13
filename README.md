@@ -17,9 +17,11 @@ completion of the challenge.
     * Easy to read information.
     * A christmas related colour scheme that stands out, but not overwhelming.
 
+---
+
 ## FINAL DESIGN
 
-![Final project image home page](assets/images/readme/responsive-image.png)
+![Final project image home page](documentation/mock_design.png)
 
 ## CONTENTS
 
@@ -49,6 +51,8 @@ completion of the challenge.
     * [Text Content](#TEXT-CONTENT)
 
 * [Acknowledgements](#ACKNOWLEDGEMENTS)    
+
+---
 
 ## USER EXPERIENCE
 The structure of the site was designed to be simple, easy to use and have a good content balance as to not
@@ -80,29 +84,68 @@ overload the user and give them enough information as not to leave them lost of 
 
 [Back to top](#christmas-hackathon)
 
+
+---
+
+## TECHNOLOGIES USED
+
+###  Languages were used:
+
+<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript logo" width="50px" height="50px" />
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - was used as the foundation of the site.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) - was used to add the styles and layout of the site.
+- [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) - was used to arrange items symmetrically on the pages.
+- [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) - was used to make "doors" and "footer" pages responsive.
+- [CSS roots](https://developer.mozilla.org/en-US/docs/Web/CSS/:root) - was used to declaring global CSS variables and apply them throughout the project.
+- [JS](https://www.javascript.com/) - was used to make calculations and display content on the page.
+
+## Additionally:
+
+- [jQuery Library](https://jquery.com/) was used to handle event handling, animations, and traverse and manipulate DOM. 
+- [ACE](https://ace.c9.io/) was used to embed code editor into the code window.
+- [Bootstrap](https://getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/) was used for a few icons in the footer on all of this site's pages.
+- [Adobe Fonts Lo-Res](https://fonts.adobe.com/fonts/lo-res) from Adobe Fonts was used for all the text content on the site pages.
+- [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
+- [Git](https://git-scm.com/) was used for version control by using the Gitpod terminal to add and commit to Git and push to Github.
+- [GitPod](https://gitpod.io) was used as an IDE whilst coding this site.
+- [GitHub](https://github.com/) is being used to store all the code for this project after being pushed from GitPod.
+- [Am i Responsive](http://ami.responsivedesign.is/) was used to create the image in my [Final Design](#FINAL-DESIGN) section.
+- [Adode](https://www.adobe.com/products/xd.html) was used in the initial design process to make wireframes.
+
+[Back to top](#christmas-hackathon)
+
+---
 ## DESIGN
 
 ### COLOR SCHEME
 This overall color scheme used throughout the site was the variety of colours in the image below.
 
-![Site Color Scheme](assets/images/readme/colour-scheme.png)
+![Site Color Scheme](documentation/design/colour-scheme.png)
 
 This color theme was used to represent slightly off traditional christmas colors, which is world wide know to be green and red,
-with hint 
-1. Persian Plum Color (#621622) *was chosen as a background color to create nice contrast with the rest of the content.*
-1. Blue Green Color Wheel (#285B52) *was chosen as a background of the l*
-1. Keppel Color (#58B69B)
-1. Ghost White Color(#F2F3F8)
-1. Saffron Color (#F8C51F)
+with hint.
 
+1. Persian Plum Color (#621622) *was chosen as a background color to create nice contrast with the rest of the content.*
+1. Blue Green Color Wheel (#285B52) *was chosen for the doors of the challenges to create the contrast with the background image and to guide the user to click on a door challenge.*
+1. Keppel Color (#58B69B) *was chosen as a background of the last door reward to emphasis that the user finished all challenges.*
+1. Ghost White Color(#F2F3F8) *was chosen as a primary text color to increase readability.*
+1. Saffron Color (#F8C51F) *was chosen as an accent color to make the name of the website and the name of the team more noticeable.*
+
+* ### FONT FAMILY
+
+![LoRes Font Family](documentation/design/font_lores.png)
+
+[Font Family LoRes 12 OT Regular](https://fonts.adobe.com/fonts/lo-res) was chosen to create the atmosphere of an old computer game as this font makes a synthesis of pixelated designs.
 
 [Back to top](#christmas-hackathon)
 
+---
 ## WIREFRAMES
 
-* [Here is the main page wireframes](assets/images/readme/codevent-wireframe1.jpg)
-* [Here is the code challenge wireframes](assets/images/readme/codevent-wireframe2.jpg)
-* [Here is the code challenge input box wireframes](assets/images/readme/codevent-wireframe3.jpg)
+* [Here is the main page wireframes](documentation/wireframes/codevent-wireframe1.jpg)
+* [Here is the code challenge wireframes](documentation/wireframes/codevent-wireframe2.jpg)
+* [Here is the code challenge input box wireframes](documentation/wireframes/codevent-wireframe3.jpg)
 
 ## FEATURES
 The following features have been used in this project:
@@ -118,66 +161,36 @@ The following features have been used in this project:
 
 ## BUGS FOUND
 
-1. While creating the footer, the bug below was found on the firefox browser where the footer github image links would sit horizonatal on the page instead of vertical.
+1. While creating the footer, the bug below was found on the firefox browser where the footer github image links would sit horizontal on the page instead of vertical.
 
-![Footer Bug](assets/images/readme/horizontal-footer-bug.png)
+![Footer Bug](documentation/bugs/horizontal-footer-bug.png)
 
 2. A horizontal overflow was found after the footer was created.
 
-![Footer Bug](assets/images/readme/footer-horizontal-overflow.png)
+![Footer Bug](documentation/bugs/footer-horizontal-overflow.png)
 
 3. While working on the code window, it would overflow the screen height and couldn't be scrolled, leading to parts of the interface being inaccessible.
 
-![Code Window Bug](assets/images/readme/code-window-bug.png)
+![Code Window Bug](documentation/bugs/code-window-bug.png)
 
 ## SOLVED BUGS
 
 1. In the `footer`, the width value was changed from `100vw` to `100%` and also in the `links-holder` class selector the `max-width`
 was changed from `80%` to `80vw` and added `padding-left: 0;` and the results are shown below.
 
-![Solved Footer Bug](assets/images/readme/solved-footer-bug.png)
+![Solved Footer Bug](documentation/bugs/solved-footer-bug.png)
 
 2. To resolve this issue, `width: 100vw;` was removed from the `footer` selector.
 
-![Solved Footer Horizontal Overflow Bug](assets/images/readme/solved-footer-horizontal-overflow.png)
+![Solved Footer Horizontal Overflow Bug](documentation/bugs/solved-footer-horizontal-overflow.png)
 
 3. In order to fix the code window bug, two additions were made in `body.code`, `max-height: 70vh;` and `overflow-y: auto;` was added.
 
-![Solved Code Window Bug](assets/images/readme/solved-code-window-bug.png)
+![Solved Code Window Bug](documentation/bugs/solved-code-window-bug.png)
 
 [Back to top](#christmas-hackathon)
 
-## TECHNOLOGIES USED
-
-###  LANGUAGES USED
-
-<img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-plain-wordmark.svg" alt="HTML logo" width="50px" height="50px" />  <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg" alt="CSS logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript logo" width="50px" height="50px" /> <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap logo" height="50px" width="50px" /> 
-
-### PROGRAMS USED:
-
-#### Font Awesome:
-[Font Awesome](https://fontawesome.com/) was used for a few icons in the footer on all of this site's pages.
-
-#### Adobe Fonts:
-[Low-res](https://fonts.adobe.com/fonts/lo-res) from Adobe Fonts was used for all the text content on the site pages.
-
-#### Git:
-[Git](https://git-scm.com/) was used for version control by using the Gitpod terminal to add and commit to Git and push to Github.
-
-#### GitPod:
-[GitPod](https://gitpod.io) was used as an IDE whilst coding this site.
-    
-#### GitHub:
-[GitHub](https://github.com/) is being used to store all the code for this project after being pushed from GitPod.
-
-#### Am i Responsive:
-[Am i Responsive](http://ami.responsivedesign.is/) was used to create the image in my [Final Design](#FINAL-DESIGN) section.
-
-#### Adode:
-[Adode](https://www.adobe.com/products/xd.html) was used in the initial design process to make wireframes.
-
-[Back to top](#christmas-hackathon)
-
+---
 ## DEPLOYMENT:
 
 ### INITIAL DEPLOYMENT
@@ -231,6 +244,7 @@ If you need to make a local clone:
 
 [Back to top](#christmas-hackathon)
 
+---
 ## TESTING
 
 ### CODE VALIDATORS
@@ -252,24 +266,54 @@ The W3C Markup Validator and W3C CSS Validator was used to validate my project t
 
 ### LIGHTHOUSE
 
-### DESKTOP
+![Lighthouse Report](documentation/lighthouse_report.png)
 
-### MOBILE
+### Responsiveness:
 
-#### Performance:
++ The app was checked with [Responsive Website Design Tester](https://responsivedesignchecker.com/).
 
-#### Accessibility:
+  1. Mobile Screens:
 
-#### Best Practices:
+    - Mobile 320x480, 320x568, 360x640, 375x667, 384x640, 411x731, 414x736:
 
-#### SEO:
+     ![Mobile](documentation/responsiveness/responsiveness_mobile_devices.gif)
 
-## CONTENT
+      
+  1. Tablets Screens:
 
-### IMAGES & Audio
+    - Tablet 600x960, 768x1024, 800x1280, 1366x1024, 1600x900, 1680x1050, 1920x1080, 1920x1200:
+        
+    ![Tablet](documentation/responsiveness/responsiveness_tablet_devices.gif)
+      
+  1. Desktop Screens:
 
-- Background image & reward images created using [Canva](https://www.canva.com/).
-- Door opening audio sourced from [Zapsplat.com](https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/).
+    - Desktop 1024x600, 1024x800, 1366x768, 1440x900:
+        
+    ![Desktop](documentation/responsiveness/responsiveness_desktop_devices.gif)
+
+
++ Functionality:
+
+The functionality of the links in the app was checked as well by different users.
+
+ ![Functionality](documentation/responsiveness/observe_functionality.gif)
+
+---
+
+## CREDITS
+
+* Lo-Res font-family was imported from [Adobe Fonts](https://fonts.adobe.com/).
+* Background image & reward images created using [Canva](https://www.canva.com/).
+* Door opening audio sourced from [Zapsplat.com](https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/).
+* The inspiration for the color scheme was taken from the website [Sarah Renae Clark](https://sarahrenaeclark.com/25-christmas-color-palettes/).
+* Content of the challenges was mode by the members of "Santa lil' Hackers".
+* To implement code editor was used [ACE](https://ace.c9.io/).
+* Icons were sources from [Font Awesome](https://fontawesome.com/).
+
+
+[Back to top](#christmas-hackathon)
+
+---
 
 ## ACKNOWLEDGEMENTS:
 

@@ -548,6 +548,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 450px) {
+  #main-content {
+    padding-top: 10rem;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .toolbar {
     display: flex;
