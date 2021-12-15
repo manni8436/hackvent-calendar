@@ -1,9 +1,7 @@
 /* jshint esversion:8, expr:true */
 /*jshint multistr: true */
 
-import {
-  randomInt
-} from './libs.mjs';
+import { randomInt } from './libs.mjs';
 
 export const challenge = {
   title: "Day Five - Total gift cost",
@@ -19,7 +17,7 @@ export const challenge = {
   setup: function () {
     for (let i = 0; i < 4; i++) {
       this.args.push(
-        new Array(randomInt(15)).fill().map(() => randomInt(100))
+        new Array(randomInt(15)+5).fill().map(() => randomInt(100))
       );
     }
   },
