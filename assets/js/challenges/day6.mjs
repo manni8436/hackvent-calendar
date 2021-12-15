@@ -1,9 +1,7 @@
 /* jshint esversion:8, expr:true */
 /*jshint multistr: true */
 
-import {
-  randomInt
-} from './libs.mjs';
+import { randomInt } from './libs.mjs';
 
 export const challenge = {
   title: "Day Six - Average gift cost",
@@ -14,17 +12,12 @@ export const challenge = {
   boilerPlate: "return getAverageCost(args[0]); ",
   initial: "function getAverageCost(gifts) {\n    return gifts;\n}",
 
-  args: [
-    [20, 40, 230, 70, 90, 5],
-    [84, 29, 100, 70, 30, 78],
-    [84, 40, 100, 70, 30, 78, 20, 40, 230, 70, 90, 5],
-    [77, 34, 333, 98, 23, 145]
-  ],
+  args: [],
 
   setup: function () {
     for (let i = 0; i < 4; i++) {
       this.args.push(
-        new Array(randomInt(15)).fill().map(() => randomInt(100))
+        new Array(randomInt(15)+5).fill().map(() => randomInt(100))
       );
     }
   },
