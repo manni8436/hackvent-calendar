@@ -41,8 +41,9 @@ export class ChallengeManager {
         const date = new Date();
         const today = date.getDate();
         const month = date.getMonth() + 1;
+        const year = date.getFullYear();
 
-        if (testing || (month===12 && today >= day)) {
+        if (testing || (month===12 && today >= day) || year > 2021) {
             this._day = day;
             this._challenge = null;
 

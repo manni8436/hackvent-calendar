@@ -4,11 +4,12 @@ export function setupAdvent(windows) {
   const date = new Date();
   const day = date.getDate();
   const month = date.getMonth() + 1;
+  const year = date.getFullYear();
 
   let timeDelay = 200;
 
   // Only work in December
-  if (month === 12) {
+  if (month === 12 || year > 2021) {
     // Loop through each calendar window
     $("ul.cards_holder li").each(function (index) {
       let adventwindow = index + 1;
@@ -27,7 +28,7 @@ export function setupAdvent(windows) {
 
       // On clicking a window, toggle it open/closed
       $(this).on("click", function () {
-        if (adventwindow <= day) {
+        if (adventwindow <= day || year > 2021) {
           // Sound from Zapsplat.com https://www.zapsplat.com/music/card-chocolate-filled-advent-calender-door-open/
           // Play door open audio
           if (!$(this).children(".door").hasClass("open")) {
